@@ -2,8 +2,11 @@
 
 Trabalho final da disciplina de Modelos de Linguagens de Programação
 
+## Linguagem
 
-## Desenvolvido por:
+Swift
+
+## Desenvolvido por
 
 - [Augusto Boranga](https://github.com/gutoboranga)
 - [Rodrigo Franzoi](https://github.com/rodrigofranzoi)
