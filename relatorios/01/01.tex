@@ -49,7 +49,7 @@
 %  {1em}
 %  {}
 
-  
+
 % isso muda a fonte de tudo:
 % \renewcommand\familydefault{\sfdefault}
 
@@ -84,7 +84,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % título
-\title{Tower Defense e Swift: Uma Dupla da Pesada}
+\title{Implementação de um Tower Defense com Swift}
 
 % autor
 %\author{Autor2}{Aluno} % {sobrenome}{nome} 1 para cada aluno
@@ -144,24 +144,59 @@
 
 \chapter{PROBLEMA} \label{intro}
 
-Neste capítulo daremos um panorama a respeito do problema escolhido.
+Escolhemos para implementar o problema do jogo Tower Defense.
+
+Tower Defense é um subgênero de jogos de estratégia, onde o jogador deve defender seu território (que varia de acordo com a temática do jogo) contra o ataque de inimigos, podendo utilizar um montante inicial para adquirir elementos do jogo que o ajudem na defesa.
 
 
 %%%%%%%%%% Seção 1
 
-\section{Sobre o objetivo}
+\section{Dinâmica do jogo}
 
-O objetivo é defender as torres.
+Basicamente, há dois elementos essenciais em um jogo do estilo Tower Defense:
+
+\setlength{\itemindent}{1em}
+
+    \item Territórios ou propriedades com certa quantidade de vida (o esgotamento desta implica em fim de jogo), que o jogador deve defender;
+
+    \item Inimigos (com outra quantidade de vida) atacando os territórios do jogador;
+
+\end{itemize}
+
+A dinâmica do jogo com estes elementos é de que há "ondas" de ataques dos inimigos ao jogador. Isto é, o ataque ocorre em partes, com pequenas pausas entre eles.
+
+O jogador pode então, entre ou durante as ondas de ataques (isto varia de jogo para jogo), utilizar-se de subterfúgios que atrapalhem a missão dos inimigos (como por exemplo, posicionar obstáculos ou outras estruturas que os ataquem). A aquisição destes equipamentos de defesa custa um certo valor que é decrementado do montante disponível para o jogador.
+
+O objetivo do jogador é sobreviver ao final das N ondas de ataques inimigos.
 
 
 \section{Historicamente}
 
-Não sei ainda, vamos pesquisar.
+Os primeiros jogos de Tower Defense datam da década de 1980, considerada a Era de Ouro dos video-games.
 
+No jogo \textit{Space Invaders} - um clássico dos video-games lançado em 1978 -, o jogador deve defender seu território atirando em invasores alienígenas. É tido por uns como um precursor dos jogos de Tower Defense, mas isto é contestado por outros pelo fato de não possuir um elemento fundamental do gênero: a possibilidade de aquisição de elementos extras que auxiliem o jogador na defesa.
 
-\section{Exemplos famosos}
+Já o jogo \textit{Rampart} - lançado em 1990 -, é amplamente considerado como o jogo que definiu o gênero, por possuir todos os elementos fundamentais deste. Em \textit{Rampart}, as fases de preparação (posicionamento dos itens de defesa), ação (momento em que a base é atacada e o jogador deve defendê-la) e reparação (consertar elementos danificados pelos ataques) são bem distintas.
 
-Aqui haverá alguns bons exemplos.
+\begin{figure}[htb]
+    \centering
+    \caption{Space Invaders, um dos pioneiros}
+    \fbox{
+        \includegraphics[width=12cm,height=8cm,keepaspectratio]{images/space-invaders.png}
+    }
+    \label{fig:figura1}
+    \fonte{http://fantendo.wikia.com/wiki/File:Space-Invaders.png}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Rampart, o Tower Defense clássico}
+    \fbox{
+        \includegraphics[width=12cm,height=8cm,keepaspectratio]{images/rampart.png}
+    }
+    \label{fig:figura1}
+    \fonte{http://fantendo.wikia.com/wiki/File:Space-Invaders.png}
+\end{figure}
 
 
 
@@ -171,23 +206,62 @@ Aqui haverá alguns bons exemplos.
 
 \chapter{LINGUAGEM} \label{intro}
 
+Swift é uma linguagem de programação multiparadigma que se apresenta como uma linguagem moderna e focada em três aspectos: segurança, performance e suporte à aplicação de design patterns.
+
+Mesmo sendo consideravelmente recente, Swift demonstra uma comunidade de bom tamanho, ficando em 11º nas linguagens mais populares e a 4ª mais amada no site stackoverflow em 2017.
+
 Neste capítulo daremos um panorama a respeito da linguagem adotada, explanando acerca de suas origens e discutindo seus pontos positivos e negativos.
 
-\section{Sobre a origem}
 
-Swift foi criado pelo Jobs.
+\section{História}
 
-\section{Sobre a utilização}
+Swift é uma das linguagens de programação mais recentes desenvolvidas no mercado. Foi apresentada em 2014 na WWDC (Worldwide Developers Conference, evento organizado pela Apple para divulgação de novos produtos e features).
 
-Swift é pra fazer app.
+Baseada e influenciada por Objective-C, Ruby e Python, se mostrou uma linguagem poderosa e de fácil compreensão (devido principalmente, à sua sintaxe simples).
 
-Também pra servidores.
+Inicialmente, Swift era de uso exclusivo por usuários de Mac OS, visto que este era o único sistema operacional habilitado a compilar a linguagem. Em dezembro de 2015, porém, um grande anúncio mudou o jogo: Swift viraria open source, abrindo um leque ainda maior de possibilidades de uso para a linguagem.
 
-E só, acho.
 
-\section{Sobre o motivo da escolha}
+\section{Aspectos técnicos}
 
-Gostamos.
+Swift é uma linguagem multiparadigma, suportando programação funcional e também oferecendo recursos de Orientação a Objetos, como classes e protocolos.
+
+A linguagem possui tipagem estática, o que proporciona maior segurança (garantia dos tipos de dados esperados no código, evitando erros de tipos) e performance (não há gasto de máquina com checagem dos tipos) às aplicações que a utilizam.
+
+Por ser construída pela Apple, possui alta integração com Obj-C, outra linguagem consagrada da Apple. Assim sendo, o programador que utiliza Swift tem à sua disposição uma série de bibliotecas em Obj-C, como por exemplo \textit{SpriteKit}, a biblioteca de construção de jogos que utilizaremos no desenvolvimento do trabalho.
+
+Sua sintaxe foi pensada para ser o mais simples e expressiva possível, tornando o código mais fácil de ler e escrever.
+
+
+\section{Utilização}
+
+Mesmo sendo uma linguagem relativamente recente, Swift agradou a comunidade de desenvolvimento. Na pesquisa do site stackoverflow realizada em 2017, Swift ficou em 4º lugar nas linguagens preferidas pelos usuários.
+
+Suas principais aplicações são:
+
+\begin{itemize}[leftmargin=3em] % [label={--}]
+
+\setlength{\itemindent}{1em}
+
+    \item \textbf{Mobile}: Swift é a linguagem oficial para desenvolvimento de aplicativos para a plataforma iOS. Obj-C também é suportada em iOS, mas o programador mobile é encorajado pela própria Apple a utilizar Swift por esta ser uma linguagem mais recente e simples de usar;
+
+    \item \textbf{Desktop}: Similar à plataforma mobile (citada acima), aplicações para o sistema operacional dos computadores da Apple (macOS, antigamente chamado OS X) também podem ser escritas em Swift;
+
+    \item \textbf{Servidor}: Além disso, Swift também pode ser utilizado para o desenvolvimento de aplicações no lado do servidor. Existem alguns frameworks e toolkits (como o Perfect) que auxiliam o desenvolvedor nesta tarefa.
+
+\end{itemize}
+
+\section{Motivo da escolha}
+
+Optamos por Swift por dois motivos:
+
+\setlength{\itemindent}{1em}
+
+    \item Ambos os integrantes do grupo tem familiaridade com a linguagem, devido a experiência prévia desenvolvendo aplicativos mobile.
+
+    \item Swift é uma linguagem muito intuitiva e possui uma variedade de bibliotecas auxiliares disponíveis.
+
+\end{itemize}
 
 \section{Análise}
 
