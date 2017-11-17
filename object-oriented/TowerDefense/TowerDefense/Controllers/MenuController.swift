@@ -49,12 +49,15 @@ class MenuController: NSViewController, MenuDelegate {
     }
     
     func newGame() {
-        // TODO: Aqui deve direcionar à GameScene
         print("New Game")
+        
+        let game = Game()
+        
+        var gameController = GameController(newGame: game)
     }
     
     func quit() {
-        // TODO: Aqui deve sair do programa
+        // TODO: Aqui deve fechar tudo
         print("Quit")
     }
 }

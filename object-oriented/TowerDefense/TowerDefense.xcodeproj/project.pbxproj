@@ -13,7 +13,6 @@
 		4A37069D1FBE509700688810 /* TowerDefenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37069C1FBE509700688810 /* TowerDefenseTests.swift */; };
 		4A3706A81FBE509800688810 /* TowerDefenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3706A71FBE509800688810 /* TowerDefenseUITests.swift */; };
 		4AD22FBD1FBE5153009A52A3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FBC1FBE5153009A52A3 /* Game.swift */; };
-		4AD22FBF1FBE518A009A52A3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FBE1FBE518A009A52A3 /* Player.swift */; };
 		4AD22FC31FBE51EB009A52A3 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FC21FBE51EB009A52A3 /* Character.swift */; };
 		4AD22FC51FBE51F8009A52A3 /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FC41FBE51F8009A52A3 /* Tower.swift */; };
 		4AD22FC71FBE5E21009A52A3 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FC61FBE5E21009A52A3 /* Enemy.swift */; };
@@ -55,7 +54,6 @@
 		4A3706A71FBE509800688810 /* TowerDefenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerDefenseUITests.swift; sourceTree = "<group>"; };
 		4A3706A91FBE509800688810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AD22FBC1FBE5153009A52A3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		4AD22FBE1FBE518A009A52A3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4AD22FC21FBE51EB009A52A3 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		4AD22FC41FBE51F8009A52A3 /* Tower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower.swift; sourceTree = "<group>"; };
 		4AD22FC61FBE5E21009A52A3 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			children = (
 				4AD22FBC1FBE5153009A52A3 /* Game.swift */,
 				4AD22FC81FBE5F32009A52A3 /* Wave.swift */,
-				4AD22FBE1FBE518A009A52A3 /* Player.swift */,
 				4AD22FC21FBE51EB009A52A3 /* Character.swift */,
 				4AD22FC41FBE51F8009A52A3 /* Tower.swift */,
 				4AD22FC61FBE5E21009A52A3 /* Enemy.swift */,
@@ -317,7 +314,6 @@
 				4AD22FC51FBE51F8009A52A3 /* Tower.swift in Sources */,
 				4AD22FC71FBE5E21009A52A3 /* Enemy.swift in Sources */,
 				4AD22FC31FBE51EB009A52A3 /* Character.swift in Sources */,
-				4AD22FBF1FBE518A009A52A3 /* Player.swift in Sources */,
 				4AD22FBD1FBE5153009A52A3 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

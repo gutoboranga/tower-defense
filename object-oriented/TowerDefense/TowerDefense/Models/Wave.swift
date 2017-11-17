@@ -9,5 +9,8 @@
 import Foundation
 
 class Wave {
+    
+    var towers = [Tower]()
     var enemies = [Enemy]()
+    
 }

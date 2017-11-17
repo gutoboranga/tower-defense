@@ -9,5 +9,8 @@
 import Foundation
 
 class Game {
+    
     var waves = [Wave]()
+    var money = 0
+
 }

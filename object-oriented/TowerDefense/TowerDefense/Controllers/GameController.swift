@@ -6,4 +6,21 @@
 //  Copyright © 2017 gatosDeSchnorrdinger. All rights reserved.
 //
 
-import Foundation
+import Cocoa
+import SpriteKit
+import GameplayKit
+
+
+class GameController: NSViewController {
+    
+    var game: Game?
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    init(newGame: Game) {
+        super.init(nibName: nil, bundle: nil)
+        self.game = newGame
+    }
+}
