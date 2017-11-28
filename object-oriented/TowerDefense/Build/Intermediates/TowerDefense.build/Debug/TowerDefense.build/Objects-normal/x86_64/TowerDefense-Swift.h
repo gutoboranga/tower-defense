@@ -196,9 +196,18 @@ SWIFT_CLASS("_TtC12TowerDefense11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEvent;
 @class NSCoder;
 @class SKTexture;
 @class NSColor;
+
+SWIFT_CLASS("_TtC12TowerDefense10ButtonNode")
+@interface ButtonNode : SKSpriteNode
+- (void)mouseDown:(NSEvent * _Nonnull)event;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
 
 SWIFT_CLASS("_TtC12TowerDefense6Castle")
 @interface Castle : SKSpriteNode
@@ -217,17 +226,17 @@ SWIFT_CLASS("_TtC12TowerDefense5Enemy")
 
 SWIFT_CLASS("_TtC12TowerDefense14GameController")
 @interface GameController : NSViewController
+- (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-@class NSEvent;
+@class SKPhysicsContact;
 
 SWIFT_CLASS("_TtC12TowerDefense9GameScene")
-@interface GameScene : SKScene
+@interface GameScene : SKScene <SKPhysicsContactDelegate>
 - (void)sceneDidLoad;
 - (void)mouseDown:(NSEvent * _Nonnull)event;
-- (void)mouseUp:(NSEvent * _Nonnull)event;
+- (void)didBeginContact:(SKPhysicsContact * _Nonnull)contact;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -238,6 +247,14 @@ SWIFT_CLASS("_TtC12TowerDefense6Ground")
 @interface Ground : SKSpriteNode
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC12TowerDefense8HudLayer")
+@interface HudLayer : SKSpriteNode
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
+- (void)mouseDown:(NSEvent * _Nonnull)event;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -271,6 +288,13 @@ SWIFT_CLASS("_TtC12TowerDefense9MenuScene")
 
 SWIFT_CLASS("_TtC12TowerDefense5Spawn")
 @interface Spawn : SKSpriteNode
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC12TowerDefense5Tower")
+@interface Tower : SKSpriteNode
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
 @end

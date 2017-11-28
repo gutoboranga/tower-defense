@@ -6,4 +6,7 @@
 //  Copyright © 2017 gatosDeSchnorrdinger. All rights reserved.
 //
 
-import Foundation
+struct ColliderType {
+    static var Enemy    : UInt32 = 1
+    static var Castle   : UInt32 = 2
+}

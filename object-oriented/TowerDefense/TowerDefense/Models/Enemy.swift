@@ -10,33 +10,35 @@ import SpriteKit
 
 class Enemy: SKSpriteNode {
     
-    let directions : [[CGFloat]] = [[2.0,0.0],
-                                    [0.0,-12.0],
-                                    [3.0,0.0],
-                                    [0.0,13.0],
-                                    [7.0,0.0],
-                                    [0.0,-4.0],
-                                    [-5.0,0.0],
-                                    [0.0,-9.0],
-                                    [3.0,0.0],
-                                    [0.0,5.0],
-                                    [4.0,0.0],
-                                    [0.0,5.0],
-                                    [3.0,0.0],
-                                    [0.0,-8.0],
-                                    [2.0,0.0]]
+    private let directions : [[CGFloat]] = [[2.0,0.0],
+                                            [0.0,-12.0],
+                                            [3.0,0.0],
+                                            [0.0,13.0],
+                                            [7.0,0.0],
+                                            [0.0,-4.0],
+                                            [-5.0,0.0],
+                                            [0.0,-9.0],
+                                            [3.0,0.0],
+                                            [0.0,5.0],
+                                            [4.0,0.0],
+                                            [0.0,5.0],
+                                            [3.0,0.0],
+                                            [0.0,-8.0],
+                                            [2.0,0.0]]
     
-    let eSpeed  : Double = 0.2
-    let eDamage : Double = 0.1
+    private let eSpeed  : Double = 0.05
+    private var lifeBar : LifeBar
     
-    var lifeBar : LifeBar
-    
+    public let eDamage : Double = 0.02
     
     init(name : String, position: CGPoint, life: Double) {
-        self.lifeBar = LifeBar(size: CGSize(width: 32, height: 32), lifeNumber: life)
+        
+        let size = CGSize(width: 32, height: 32)
+        
+        self.lifeBar = LifeBar(size: size, lifeNumber: life)
         
         let texture = SKTexture(imageNamed: name)
-        super.init(texture: texture, color: .clear, size: CGSize(width: 32, height: 32))
+        super.init(texture: texture, color: .clear, size: size)
         
         self.position = position
         self.zPosition = 4
@@ -44,12 +46,20 @@ class Enemy: SKSpriteNode {
 
         self.addChild(lifeBar)
         
+        self.physicsBody = SKPhysicsBody(texture: texture, size: size)
+        self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.isDynamic = true
+        
+        self.physicsBody?.collisionBitMask = ColliderType.Castle
+        self.physicsBody?.categoryBitMask = ColliderType.Enemy
+        self.physicsBody?.contactTestBitMask = ColliderType.Castle
+        
     }
     
     func move() {
         let firstMove = directions.first!
         let time : Double = eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
-        let action  = SKAction.moveBy(x: 32.0 * firstMove[0] , y: 32 * firstMove[1], duration: abs(time))
+        let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
         run(action) {
             var dir = self.directions
             dir.removeFirst()
@@ -60,7 +70,7 @@ class Enemy: SKSpriteNode {
     func move(_ newDir : [[CGFloat]]) {
         if let firstMove = newDir.first {
             let time : Double = eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
-            let action  = SKAction.moveBy(x: 32.0 * firstMove[0] , y: 32 * firstMove[1], duration: abs(time))
+            let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
             run(action) {
                 var dir = newDir
                 dir.removeFirst()

@@ -1,0 +1,485 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ButtonDelegate"
+- "ButtonNode"
+provides-nominal:
+- "12TowerDefense14ButtonDelegateP"
+- "12TowerDefense10ButtonNodeC"
+provides-member:
+- ["12TowerDefense14ButtonDelegateP", ""]
+- ["12TowerDefense10ButtonNodeC", ""]
+provides-dynamic-lookup:
+- "mouseDown"
+depends-top-level:
+- !private "!"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "ButtonDelegate"
+- "ButtonNode"
+- !private "CGPoint"
+- "CGSize"
+- "NSCoder"
+- "NSEvent"
+- !private "SKAction"
+- "SKSpriteNode"
+- "SKTexture"
+- !private "StringLiteralType"
+- !private "fatalError"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["12TowerDefense14ButtonDelegateP", "ButtonNode"]
+- ["12TowerDefense14ButtonDelegateP", "setDeselectedButton"]
+- ["12TowerDefense14ButtonDelegateP", "setSelectedButton"]
+- ["12TowerDefense10ButtonNodeC", "Bool"]
+- ["12TowerDefense10ButtonNodeC", "ButtonDelegate"]
+- !private ["12TowerDefense10ButtonNodeC", "CGPoint"]
+- ["12TowerDefense10ButtonNodeC", "CGSize"]
+- ["12TowerDefense10ButtonNodeC", "NSCoder"]
+- ["12TowerDefense10ButtonNodeC", "NSEvent"]
+- !private ["12TowerDefense10ButtonNodeC", "SKAction"]
+- ["12TowerDefense10ButtonNodeC", "SKTexture"]
+- !private ["12TowerDefense10ButtonNodeC", "anchorPoint"]
+- !private ["12TowerDefense10ButtonNodeC", "color"]
+- ["12TowerDefense10ButtonNodeC", "deinit"]
+- ["12TowerDefense10ButtonNodeC", "delegate"]
+- ["12TowerDefense10ButtonNodeC", "deselect"]
+- !private ["12TowerDefense10ButtonNodeC", "fatalError"]
+- ["12TowerDefense10ButtonNodeC", "init"]
+- ["12TowerDefense10ButtonNodeC", "isSelected"]
+- ["12TowerDefense10ButtonNodeC", "mouseDown"]
+- !private ["12TowerDefense10ButtonNodeC", "run"]
+- !private ["12TowerDefense10ButtonNodeC", "select"]
+- ["12TowerDefense10ButtonNodeC", "selectButton"]
+- !private ["12TowerDefense10ButtonNodeC", "selected"]
+- !private ["SC7CGPointV", "init"]
+- !private ["s7CVarArgP", "CGPoint"]
+- !private ["s7CVarArgP", "SKAction"]
+- !private ["s7CVarArgP", "anchorPoint"]
+- !private ["s7CVarArgP", "color"]
+- !private ["s7CVarArgP", "cyan"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "deselect"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "run"]
+- !private ["s7CVarArgP", "scale"]
+- !private ["s7CVarArgP", "select"]
+- !private ["s7CVarArgP", "selectButton"]
+- !private ["s7CVarArgP", "selected"]
+- !private ["s7CVarArgP", "yellow"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "SKAction"]
+- !private ["s28CustomDebugStringConvertibleP", "anchorPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "color"]
+- !private ["s28CustomDebugStringConvertibleP", "cyan"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "deselect"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "run"]
+- !private ["s28CustomDebugStringConvertibleP", "scale"]
+- !private ["s28CustomDebugStringConvertibleP", "select"]
+- !private ["s28CustomDebugStringConvertibleP", "selectButton"]
+- !private ["s28CustomDebugStringConvertibleP", "selected"]
+- !private ["s28CustomDebugStringConvertibleP", "yellow"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "CGPoint"]
+- !private ["s29CustomPlaygroundQuickLookableP", "SKAction"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "anchorPoint"]
+- !private ["s29CustomPlaygroundQuickLookableP", "color"]
+- !private ["s29CustomPlaygroundQuickLookableP", "delegate"]
+- !private ["s29CustomPlaygroundQuickLookableP", "deselect"]
+- !private ["s29CustomPlaygroundQuickLookableP", "fatalError"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "run"]
+- !private ["s29CustomPlaygroundQuickLookableP", "select"]
+- !private ["s29CustomPlaygroundQuickLookableP", "selectButton"]
+- !private ["s29CustomPlaygroundQuickLookableP", "selected"]
+- ["s29CustomPlaygroundQuickLookableP", ""]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "CGPoint"]
+- !private ["s23CustomStringConvertibleP", "SKAction"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "anchorPoint"]
+- !private ["s23CustomStringConvertibleP", "color"]
+- !private ["s23CustomStringConvertibleP", "cyan"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "deselect"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "run"]
+- !private ["s23CustomStringConvertibleP", "scale"]
+- !private ["s23CustomStringConvertibleP", "select"]
+- !private ["s23CustomStringConvertibleP", "selectButton"]
+- !private ["s23CustomStringConvertibleP", "selected"]
+- !private ["s23CustomStringConvertibleP", "yellow"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "CGPoint"]
+- !private ["s9EquatableP", "SKAction"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "anchorPoint"]
+- !private ["s9EquatableP", "color"]
+- !private ["s9EquatableP", "cyan"]
+- !private ["s9EquatableP", "delegate"]
+- !private ["s9EquatableP", "deselect"]
+- !private ["s9EquatableP", "fatalError"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "run"]
+- !private ["s9EquatableP", "scale"]
+- !private ["s9EquatableP", "select"]
+- !private ["s9EquatableP", "selectButton"]
+- !private ["s9EquatableP", "selected"]
+- !private ["s9EquatableP", "yellow"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "CGPoint"]
+- !private ["s8HashableP", "SKAction"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "anchorPoint"]
+- !private ["s8HashableP", "color"]
+- !private ["s8HashableP", "cyan"]
+- !private ["s8HashableP", "delegate"]
+- !private ["s8HashableP", "deselect"]
+- !private ["s8HashableP", "fatalError"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "run"]
+- !private ["s8HashableP", "scale"]
+- !private ["s8HashableP", "select"]
+- !private ["s8HashableP", "selectButton"]
+- !private ["s8HashableP", "selected"]
+- !private ["s8HashableP", "yellow"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "CGPoint"]
+- !private ["So8NSCodingP", "SKAction"]
+- !private ["So8NSCodingP", "anchorPoint"]
+- !private ["So8NSCodingP", "color"]
+- !private ["So8NSCodingP", "cyan"]
+- !private ["So8NSCodingP", "delegate"]
+- !private ["So8NSCodingP", "deselect"]
+- !private ["So8NSCodingP", "fatalError"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "run"]
+- !private ["So8NSCodingP", "scale"]
+- !private ["So8NSCodingP", "select"]
+- !private ["So8NSCodingP", "selectButton"]
+- !private ["So8NSCodingP", "selected"]
+- !private ["So8NSCodingP", "yellow"]
+- ["So8NSCodingP", ""]
+- !private ["So7NSColorC", "cyan"]
+- !private ["So7NSColorC", "yellow"]
+- !private ["So9NSCopyingP", "CGPoint"]
+- !private ["So9NSCopyingP", "SKAction"]
+- !private ["So9NSCopyingP", "anchorPoint"]
+- !private ["So9NSCopyingP", "color"]
+- !private ["So9NSCopyingP", "cyan"]
+- !private ["So9NSCopyingP", "delegate"]
+- !private ["So9NSCopyingP", "deselect"]
+- !private ["So9NSCopyingP", "fatalError"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "run"]
+- !private ["So9NSCopyingP", "scale"]
+- !private ["So9NSCopyingP", "select"]
+- !private ["So9NSCopyingP", "selectButton"]
+- !private ["So9NSCopyingP", "selected"]
+- !private ["So9NSCopyingP", "yellow"]
+- ["So9NSCopyingP", ""]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "ButtonDelegate"]
+- !private ["So8NSObjectC", "CGPoint"]
+- ["So8NSObjectC", "CGSize"]
+- ["So8NSObjectC", "NSCoder"]
+- ["So8NSObjectC", "NSEvent"]
+- !private ["So8NSObjectC", "SKAction"]
+- ["So8NSObjectC", "SKTexture"]
+- !private ["So8NSObjectC", "anchorPoint"]
+- !private ["So8NSObjectC", "color"]
+- !private ["So8NSObjectC", "cyan"]
+- ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "deselect"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isSelected"]
+- ["So8NSObjectC", "mouseDown"]
+- !private ["So8NSObjectC", "run"]
+- !private ["So8NSObjectC", "scale"]
+- ["So8NSObjectC", "select"]
+- ["So8NSObjectC", "selectButton"]
+- ["So8NSObjectC", "selected"]
+- !private ["So8NSObjectC", "yellow"]
+- !private ["So16NSObjectProtocolP", "CGPoint"]
+- !private ["So16NSObjectProtocolP", "SKAction"]
+- !private ["So16NSObjectProtocolP", "anchorPoint"]
+- !private ["So16NSObjectProtocolP", "color"]
+- !private ["So16NSObjectProtocolP", "cyan"]
+- !private ["So16NSObjectProtocolP", "delegate"]
+- !private ["So16NSObjectProtocolP", "deselect"]
+- !private ["So16NSObjectProtocolP", "fatalError"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "run"]
+- !private ["So16NSObjectProtocolP", "scale"]
+- !private ["So16NSObjectProtocolP", "select"]
+- !private ["So16NSObjectProtocolP", "selectButton"]
+- !private ["So16NSObjectProtocolP", "selected"]
+- !private ["So16NSObjectProtocolP", "yellow"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So19NSPasteboardReadingP", "cyan"]
+- !private ["So19NSPasteboardReadingP", "init"]
+- !private ["So19NSPasteboardReadingP", "yellow"]
+- !private ["So19NSPasteboardWritingP", "cyan"]
+- !private ["So19NSPasteboardWritingP", "init"]
+- !private ["So19NSPasteboardWritingP", "yellow"]
+- ["So11NSResponderC", "Bool"]
+- ["So11NSResponderC", "ButtonDelegate"]
+- !private ["So11NSResponderC", "CGPoint"]
+- ["So11NSResponderC", "CGSize"]
+- ["So11NSResponderC", "NSCoder"]
+- ["So11NSResponderC", "NSEvent"]
+- !private ["So11NSResponderC", "SKAction"]
+- ["So11NSResponderC", "SKTexture"]
+- !private ["So11NSResponderC", "anchorPoint"]
+- !private ["So11NSResponderC", "color"]
+- ["So11NSResponderC", "delegate"]
+- ["So11NSResponderC", "deselect"]
+- !private ["So11NSResponderC", "fatalError"]
+- ["So11NSResponderC", "init"]
+- ["So11NSResponderC", "isSelected"]
+- ["So11NSResponderC", "mouseDown"]
+- !private ["So11NSResponderC", "run"]
+- ["So11NSResponderC", "select"]
+- ["So11NSResponderC", "selectButton"]
+- ["So11NSResponderC", "selected"]
+- !private ["So14NSSecureCodingP", "cyan"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "yellow"]
+- !private ["So8NSStringC", "init"]
+- !private ["So18NSTouchBarProviderP", "CGPoint"]
+- !private ["So18NSTouchBarProviderP", "SKAction"]
+- !private ["So18NSTouchBarProviderP", "anchorPoint"]
+- !private ["So18NSTouchBarProviderP", "color"]
+- !private ["So18NSTouchBarProviderP", "delegate"]
+- !private ["So18NSTouchBarProviderP", "deselect"]
+- !private ["So18NSTouchBarProviderP", "fatalError"]
+- !private ["So18NSTouchBarProviderP", "init"]
+- !private ["So18NSTouchBarProviderP", "run"]
+- !private ["So18NSTouchBarProviderP", "select"]
+- !private ["So18NSTouchBarProviderP", "selectButton"]
+- !private ["So18NSTouchBarProviderP", "selected"]
+- ["So18NSTouchBarProviderP", ""]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["So8SKActionC", "scale"]
+- ["So6SKNodeC", "Bool"]
+- ["So6SKNodeC", "ButtonDelegate"]
+- !private ["So6SKNodeC", "CGPoint"]
+- ["So6SKNodeC", "CGSize"]
+- ["So6SKNodeC", "NSCoder"]
+- ["So6SKNodeC", "NSEvent"]
+- !private ["So6SKNodeC", "SKAction"]
+- ["So6SKNodeC", "SKTexture"]
+- !private ["So6SKNodeC", "anchorPoint"]
+- !private ["So6SKNodeC", "color"]
+- ["So6SKNodeC", "delegate"]
+- ["So6SKNodeC", "deselect"]
+- !private ["So6SKNodeC", "fatalError"]
+- ["So6SKNodeC", "init"]
+- ["So6SKNodeC", "isSelected"]
+- ["So6SKNodeC", "mouseDown"]
+- !private ["So6SKNodeC", "run"]
+- ["So6SKNodeC", "select"]
+- ["So6SKNodeC", "selectButton"]
+- ["So6SKNodeC", "selected"]
+- ["So12SKSpriteNodeC", "Bool"]
+- ["So12SKSpriteNodeC", "ButtonDelegate"]
+- !private ["So12SKSpriteNodeC", "CGPoint"]
+- ["So12SKSpriteNodeC", "CGSize"]
+- ["So12SKSpriteNodeC", "NSCoder"]
+- ["So12SKSpriteNodeC", "NSEvent"]
+- !private ["So12SKSpriteNodeC", "SKAction"]
+- ["So12SKSpriteNodeC", "SKTexture"]
+- !private ["So12SKSpriteNodeC", "anchorPoint"]
+- !private ["So12SKSpriteNodeC", "color"]
+- ["So12SKSpriteNodeC", "delegate"]
+- ["So12SKSpriteNodeC", "deselect"]
+- !private ["So12SKSpriteNodeC", "fatalError"]
+- ["So12SKSpriteNodeC", "init"]
+- ["So12SKSpriteNodeC", "isSelected"]
+- ["So12SKSpriteNodeC", "mouseDown"]
+- !private ["So12SKSpriteNodeC", "run"]
+- ["So12SKSpriteNodeC", "select"]
+- ["So12SKSpriteNodeC", "selectButton"]
+- ["So12SKSpriteNodeC", "selected"]
+- ["So12SKSpriteNodeC", ""]
+- !private ["So10SKWarpableP", "CGPoint"]
+- !private ["So10SKWarpableP", "SKAction"]
+- !private ["So10SKWarpableP", "anchorPoint"]
+- !private ["So10SKWarpableP", "color"]
+- !private ["So10SKWarpableP", "delegate"]
+- !private ["So10SKWarpableP", "deselect"]
+- !private ["So10SKWarpableP", "fatalError"]
+- !private ["So10SKWarpableP", "init"]
+- !private ["So10SKWarpableP", "run"]
+- !private ["So10SKWarpableP", "select"]
+- !private ["So10SKWarpableP", "selectButton"]
+- !private ["So10SKWarpableP", "selected"]
+- ["So10SKWarpableP", ""]
+- !private ["s8SequenceP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "cyan"]
+- !private ["s26_ExpressibleByColorLiteralP", "yellow"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SKAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "anchorPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "color"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cyan"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "deselect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "run"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "select"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectButton"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selected"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "yellow"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- "12TowerDefense14ButtonDelegateP"
+- "12TowerDefense10ButtonNodeC"
+- !private "SC7CGPointV"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- !private "So7NSColorC"
+- "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So19NSPasteboardReadingP"
+- !private "So19NSPasteboardWritingP"
+- "So11NSResponderC"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "So18NSTouchBarProviderP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "So8SKActionC"
+- "So6SKNodeC"
+- "So12SKSpriteNodeC"
+- "So10SKWarpableP"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ModelIO.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/ModelIO.framework/Headers/ModelIO.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GLKit.framework/Headers/GLKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SpriteKit.framework/Headers/SpriteKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "23fe3a657f21c0a954ddcb8d3464f68d"

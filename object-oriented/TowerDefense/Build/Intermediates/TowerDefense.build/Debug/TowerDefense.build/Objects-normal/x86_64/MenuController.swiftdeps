@@ -144,6 +144,8 @@ depends-member:
 - !private ["s8HashableP", "skView"]
 - !private ["s8HashableP", "viewDidLoad"]
 - ["s8HashableP", ""]
+- !private ["12TowerDefense16HudLayerDelegateP", "init"]
+- !private ["12TowerDefense16HudLayerDelegateP", "scaleMode"]
 - ["s25LosslessStringConvertibleP", "init"]
 - !private ["12TowerDefense12MapDeglegateP", "init"]
 - !private ["12TowerDefense12MapDeglegateP", "scaleMode"]
@@ -383,6 +385,8 @@ depends-member:
 - !private ["So6SKNodeC", "menuDelegate"]
 - !private ["So6SKNodeC", "scaleMode"]
 - !private ["So6SKNodeC", "size"]
+- !private ["So24SKPhysicsContactDelegateP", "init"]
+- !private ["So24SKPhysicsContactDelegateP", "scaleMode"]
 - !private ["So7SKSceneC", "init"]
 - !private ["So7SKSceneC", "menuDelegate"]
 - !private ["So7SKSceneC", "scaleMode"]
@@ -398,6 +402,8 @@ depends-member:
 - !private ["So10SKWarpableP", "scaleMode"]
 - !private ["So10SKWarpableP", "size"]
 - ["s8SequenceP", "init"]
+- !private ["12TowerDefense13SpawnDelegateP", "init"]
+- !private ["12TowerDefense13SpawnDelegateP", "scaleMode"]
 - !private ["s12StaticStringV", "init"]
 - ["SS", "init"]
 - ["s14StringProtocolP", "init"]
@@ -459,6 +465,7 @@ depends-nominal:
 - !private "So19GKSceneRootNodeTypeP"
 - !private "12TowerDefense9GameSceneC"
 - "s8HashableP"
+- !private "12TowerDefense16HudLayerDelegateP"
 - "s25LosslessStringConvertibleP"
 - !private "12TowerDefense12MapDeglegateP"
 - "12TowerDefense14MenuControllerC"
@@ -492,11 +499,13 @@ depends-nominal:
 - !private "s16RawRepresentableP"
 - !private "So12SKEffectNodeC"
 - !private "So6SKNodeC"
+- !private "So24SKPhysicsContactDelegateP"
 - !private "So7SKSceneC"
 - !private "SC16SKSceneScaleModeO"
 - !private "So6SKViewC"
 - !private "So10SKWarpableP"
 - "s8SequenceP"
+- !private "12TowerDefense13SpawnDelegateP"
 - !private "s12StaticStringV"
 - "SS"
 - "s14StringProtocolP"

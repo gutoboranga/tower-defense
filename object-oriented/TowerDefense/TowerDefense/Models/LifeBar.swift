@@ -10,12 +10,10 @@ import SpriteKit
 
 class LifeBar: SKSpriteNode {
     
-    var life      : Double
-    var atualLife : Double
-    
-    var lifeBarSize : Double
-    
-    var lifeBar   : SKSpriteNode
+    private var life      : Double
+    private var atualLife : Double
+    private var lifeBarSize : Double
+    private var lifeBar   : SKSpriteNode
     
     init(size: CGSize, lifeNumber: Double) {
         
@@ -39,7 +37,7 @@ class LifeBar: SKSpriteNode {
         self.addChild(lifeBar)
     }
     
-    func getDamaged(damage: Double, completion: () -> Void) {
+    func loseLife(with damage: Double, completion: () -> Void) {
         self.atualLife -= damage
         
         if self.atualLife <= 0 {

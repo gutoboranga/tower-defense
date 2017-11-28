@@ -8,15 +8,24 @@
 
 import SpriteKit
 
+protocol SpawnDelegate {
+    func addEnemy(enemyNode: Enemy)
+    func endLevel()
+}
+
 class Spawn: SKSpriteNode {
     
-    let enemiesLvl = [[1,1,1,1], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1]]
+    private let enemiesLvl = [[1,1,1,1], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]    
+    private var atualLevel    = -1
+    private var enemiesAlive : NSMutableArray = NSMutableArray()
+    private var state : GameStateMachine
     
-    var atualLevel    = -1
+    public var delegate : SpawnDelegate!
     
     init(position: CGPoint, code: Int, size: CGSize) {
-        let txt = SKTexture(imageNamed: code.description)
+        self.state = .idle
         
+        let txt = SKTexture(imageNamed: code.description)
         super.init(texture: txt, color: .clear, size: size)
         self.anchorPoint = CGPoint(x: 0, y: 0)
         self.name = "Spawn"
@@ -35,13 +44,21 @@ class Spawn: SKSpriteNode {
         spawnEnemy(enemiesLvl[level])
     }
     
+    func removeEnemy(enemy: Enemy) {
+        self.enemiesAlive.remove(enemy)
+        enemy.removeFromParent()
+        if self.enemiesAlive.count == 0 {
+            self.delegate.endLevel()
+        }
+    }
+    
     func spawnEnemy(_ enemies: [Int]) {
         if let enemy = enemies.first {
             switch enemy {
             case 1:
                 let enemy = Enemy(name: "frog", position: self.position, life: 10)
-                self.scene?.addChild(enemy)
-                enemy.move()
+                self.delegate.addEnemy(enemyNode: enemy)
+                self.enemiesAlive.add(enemy)
             default:
                 print("error")
             }
@@ -52,6 +69,18 @@ class Spawn: SKSpriteNode {
                 newEnemies.removeFirst()
                 self.spawnEnemy(newEnemies)
             })
+        }
+    }
+    
+    public func setState(newState: GameStateMachine) {
+        if state != newState {
+            self.state = newState
+            switch newState {
+            case .idle:
+                break
+            case .playing:
+                self.startRound()
+            }
         }
     }
     

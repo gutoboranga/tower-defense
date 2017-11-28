@@ -11,11 +11,11 @@ import SpriteKit
 
 class Castle: SKSpriteNode {
 
-    var lifeBar : LifeBar
+    private var lifeBar : LifeBar
     
     init(position: CGPoint, code: Int, size: CGSize) {
         
-        self.lifeBar = LifeBar(size: CGSize(width: 32, height: 32), lifeNumber: 100)
+        self.lifeBar = LifeBar(size: size, lifeNumber: 10)
         
         let txt = SKTexture(imageNamed: code.description)
         super.init(texture: txt, color: .clear, size: size)
@@ -27,6 +27,18 @@ class Castle: SKSpriteNode {
         
         self.addChild(lifeBar)
         
+        //Castle Physiscs
+        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: size.width - 0.1, height: size.height - 0.1))
+        self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.isDynamic = false
+        self.physicsBody?.categoryBitMask = ColliderType.Castle
+        
+    }
+    
+    func loseLife(with damage:Double) {
+        lifeBar.loseLife(with: damage) {
+            removeFromParent()
+        }
     }
     
     
