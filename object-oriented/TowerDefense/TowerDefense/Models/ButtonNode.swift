@@ -1,5 +1,5 @@
 //
-//  Tower.swift
+//  ButtonNode.swift
 //  TowerDefense
 //
 //  Created by Rodrigo Franzoi Scroferneker on 28/11/17.
@@ -8,6 +8,6 @@
 
 import Cocoa
 
-class Tower: SKSpriteNode {
+class ButtonNode: SKSpriteNode {
 
 }
