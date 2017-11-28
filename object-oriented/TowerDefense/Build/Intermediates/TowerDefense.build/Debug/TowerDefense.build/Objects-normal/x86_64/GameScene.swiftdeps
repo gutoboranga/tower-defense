@@ -1,0 +1,378 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GameScene"
+provides-nominal:
+- "12TowerDefense9GameSceneC"
+provides-member:
+- ["12TowerDefense9GameSceneC", ""]
+provides-dynamic-lookup:
+- "mouseDown"
+- "mouseUp"
+- "sceneDidLoad"
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "CGPoint"
+- "GameScene"
+- "MapDeglegate"
+- "MapLoader"
+- "NSEvent"
+- "SKScene"
+- "SKSpriteNode"
+- "Spawn"
+depends-member:
+- !private ["SC7CGPointV", "init"]
+- !private ["s7CVarArgP", "CGPoint"]
+- !private ["s7CVarArgP", "MapLoader"]
+- !private ["s7CVarArgP", "addChild"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "location"]
+- !private ["s7CVarArgP", "mapLoader"]
+- ["s7CVarArgP", "nodeForMatrix"]
+- !private ["s7CVarArgP", "position"]
+- !private ["s7CVarArgP", "scene"]
+- !private ["s7CVarArgP", "sceneDidLoad"]
+- !private ["s7CVarArgP", "spawn"]
+- ["s7CVarArgP", "spawnner"]
+- !private ["s7CVarArgP", "startRound"]
+- ["s7CVarArgP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "MapLoader"]
+- !private ["s28CustomDebugStringConvertibleP", "addChild"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "location"]
+- !private ["s28CustomDebugStringConvertibleP", "mapLoader"]
+- ["s28CustomDebugStringConvertibleP", "nodeForMatrix"]
+- !private ["s28CustomDebugStringConvertibleP", "position"]
+- !private ["s28CustomDebugStringConvertibleP", "scene"]
+- !private ["s28CustomDebugStringConvertibleP", "sceneDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "spawn"]
+- ["s28CustomDebugStringConvertibleP", "spawnner"]
+- !private ["s28CustomDebugStringConvertibleP", "startRound"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "startRound"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "CGPoint"]
+- !private ["s23CustomStringConvertibleP", "MapLoader"]
+- !private ["s23CustomStringConvertibleP", "addChild"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "location"]
+- !private ["s23CustomStringConvertibleP", "mapLoader"]
+- ["s23CustomStringConvertibleP", "nodeForMatrix"]
+- !private ["s23CustomStringConvertibleP", "position"]
+- !private ["s23CustomStringConvertibleP", "scene"]
+- !private ["s23CustomStringConvertibleP", "sceneDidLoad"]
+- !private ["s23CustomStringConvertibleP", "spawn"]
+- ["s23CustomStringConvertibleP", "spawnner"]
+- !private ["s23CustomStringConvertibleP", "startRound"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "CGPoint"]
+- !private ["s9EquatableP", "MapLoader"]
+- !private ["s9EquatableP", "addChild"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "location"]
+- !private ["s9EquatableP", "mapLoader"]
+- ["s9EquatableP", "nodeForMatrix"]
+- !private ["s9EquatableP", "position"]
+- !private ["s9EquatableP", "scene"]
+- !private ["s9EquatableP", "sceneDidLoad"]
+- !private ["s9EquatableP", "spawn"]
+- ["s9EquatableP", "spawnner"]
+- !private ["s9EquatableP", "startRound"]
+- ["s9EquatableP", ""]
+- !private ["So19GKSceneRootNodeTypeP", "CGPoint"]
+- !private ["So19GKSceneRootNodeTypeP", "MapLoader"]
+- !private ["So19GKSceneRootNodeTypeP", "addChild"]
+- !private ["So19GKSceneRootNodeTypeP", "init"]
+- !private ["So19GKSceneRootNodeTypeP", "mapLoader"]
+- ["So19GKSceneRootNodeTypeP", "nodeForMatrix"]
+- !private ["So19GKSceneRootNodeTypeP", "position"]
+- !private ["So19GKSceneRootNodeTypeP", "scene"]
+- !private ["So19GKSceneRootNodeTypeP", "sceneDidLoad"]
+- !private ["So19GKSceneRootNodeTypeP", "spawn"]
+- ["So19GKSceneRootNodeTypeP", "spawnner"]
+- ["So19GKSceneRootNodeTypeP", ""]
+- !private ["12TowerDefense9GameSceneC", "CGPoint"]
+- ["12TowerDefense9GameSceneC", "MapLoader"]
+- ["12TowerDefense9GameSceneC", "NSEvent"]
+- ["12TowerDefense9GameSceneC", "SKSpriteNode"]
+- ["12TowerDefense9GameSceneC", "Spawn"]
+- ["12TowerDefense9GameSceneC", "deinit"]
+- ["12TowerDefense9GameSceneC", "init"]
+- ["12TowerDefense9GameSceneC", "mapLoader"]
+- ["12TowerDefense9GameSceneC", "mouseDown"]
+- ["12TowerDefense9GameSceneC", "mouseUp"]
+- ["12TowerDefense9GameSceneC", "nodeForMatrix"]
+- !private ["12TowerDefense9GameSceneC", "scene"]
+- ["12TowerDefense9GameSceneC", "sceneDidLoad"]
+- ["12TowerDefense9GameSceneC", "spawn"]
+- ["12TowerDefense9GameSceneC", "spawnner"]
+- !private ["s8HashableP", "CGPoint"]
+- !private ["s8HashableP", "MapLoader"]
+- !private ["s8HashableP", "addChild"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "location"]
+- !private ["s8HashableP", "mapLoader"]
+- ["s8HashableP", "nodeForMatrix"]
+- !private ["s8HashableP", "position"]
+- !private ["s8HashableP", "scene"]
+- !private ["s8HashableP", "sceneDidLoad"]
+- !private ["s8HashableP", "spawn"]
+- ["s8HashableP", "spawnner"]
+- !private ["s8HashableP", "startRound"]
+- ["s8HashableP", ""]
+- !private ["12TowerDefense12MapDeglegateP", "CGPoint"]
+- !private ["12TowerDefense12MapDeglegateP", "MapLoader"]
+- !private ["12TowerDefense12MapDeglegateP", "mapLoader"]
+- ["12TowerDefense12MapDeglegateP", "nodeForMatrix"]
+- !private ["12TowerDefense12MapDeglegateP", "scene"]
+- !private ["12TowerDefense12MapDeglegateP", "spawn"]
+- ["12TowerDefense12MapDeglegateP", "spawnner"]
+- ["12TowerDefense12MapDeglegateP", ""]
+- !private ["12TowerDefense9MapLoaderC", "delegate"]
+- !private ["12TowerDefense9MapLoaderC", "init"]
+- !private ["12TowerDefense9MapLoaderC", "loadMap"]
+- !private ["So8NSCodingP", "CGPoint"]
+- !private ["So8NSCodingP", "MapLoader"]
+- !private ["So8NSCodingP", "addChild"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "location"]
+- !private ["So8NSCodingP", "mapLoader"]
+- ["So8NSCodingP", "nodeForMatrix"]
+- !private ["So8NSCodingP", "position"]
+- !private ["So8NSCodingP", "scene"]
+- !private ["So8NSCodingP", "sceneDidLoad"]
+- !private ["So8NSCodingP", "spawn"]
+- ["So8NSCodingP", "spawnner"]
+- !private ["So8NSCodingP", "startRound"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "CGPoint"]
+- !private ["So9NSCopyingP", "MapLoader"]
+- !private ["So9NSCopyingP", "addChild"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "location"]
+- !private ["So9NSCopyingP", "mapLoader"]
+- ["So9NSCopyingP", "nodeForMatrix"]
+- !private ["So9NSCopyingP", "position"]
+- !private ["So9NSCopyingP", "scene"]
+- !private ["So9NSCopyingP", "sceneDidLoad"]
+- !private ["So9NSCopyingP", "spawn"]
+- ["So9NSCopyingP", "spawnner"]
+- !private ["So9NSCopyingP", "startRound"]
+- ["So9NSCopyingP", ""]
+- !private ["So7NSEventC", "location"]
+- !private ["So8NSObjectC", "CGPoint"]
+- ["So8NSObjectC", "MapLoader"]
+- ["So8NSObjectC", "NSEvent"]
+- ["So8NSObjectC", "SKSpriteNode"]
+- ["So8NSObjectC", "Spawn"]
+- !private ["So8NSObjectC", "addChild"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "location"]
+- ["So8NSObjectC", "mapLoader"]
+- ["So8NSObjectC", "mouseDown"]
+- ["So8NSObjectC", "mouseUp"]
+- ["So8NSObjectC", "nodeForMatrix"]
+- !private ["So8NSObjectC", "position"]
+- !private ["So8NSObjectC", "scene"]
+- ["So8NSObjectC", "sceneDidLoad"]
+- ["So8NSObjectC", "spawn"]
+- ["So8NSObjectC", "spawnner"]
+- !private ["So8NSObjectC", "startRound"]
+- !private ["So16NSObjectProtocolP", "CGPoint"]
+- !private ["So16NSObjectProtocolP", "MapLoader"]
+- !private ["So16NSObjectProtocolP", "addChild"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "location"]
+- !private ["So16NSObjectProtocolP", "mapLoader"]
+- ["So16NSObjectProtocolP", "nodeForMatrix"]
+- !private ["So16NSObjectProtocolP", "position"]
+- !private ["So16NSObjectProtocolP", "scene"]
+- !private ["So16NSObjectProtocolP", "sceneDidLoad"]
+- !private ["So16NSObjectProtocolP", "spawn"]
+- ["So16NSObjectProtocolP", "spawnner"]
+- !private ["So16NSObjectProtocolP", "startRound"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So11NSResponderC", "CGPoint"]
+- ["So11NSResponderC", "MapLoader"]
+- ["So11NSResponderC", "NSEvent"]
+- ["So11NSResponderC", "SKSpriteNode"]
+- ["So11NSResponderC", "Spawn"]
+- !private ["So11NSResponderC", "addChild"]
+- ["So11NSResponderC", "init"]
+- ["So11NSResponderC", "mapLoader"]
+- ["So11NSResponderC", "mouseDown"]
+- ["So11NSResponderC", "mouseUp"]
+- ["So11NSResponderC", "nodeForMatrix"]
+- !private ["So11NSResponderC", "position"]
+- !private ["So11NSResponderC", "scene"]
+- ["So11NSResponderC", "sceneDidLoad"]
+- ["So11NSResponderC", "spawn"]
+- ["So11NSResponderC", "spawnner"]
+- !private ["So11NSResponderC", "startRound"]
+- !private ["So18NSTouchBarProviderP", "CGPoint"]
+- !private ["So18NSTouchBarProviderP", "MapLoader"]
+- !private ["So18NSTouchBarProviderP", "addChild"]
+- !private ["So18NSTouchBarProviderP", "init"]
+- !private ["So18NSTouchBarProviderP", "mapLoader"]
+- ["So18NSTouchBarProviderP", "nodeForMatrix"]
+- !private ["So18NSTouchBarProviderP", "position"]
+- !private ["So18NSTouchBarProviderP", "scene"]
+- !private ["So18NSTouchBarProviderP", "sceneDidLoad"]
+- !private ["So18NSTouchBarProviderP", "spawn"]
+- ["So18NSTouchBarProviderP", "spawnner"]
+- !private ["So18NSTouchBarProviderP", "startRound"]
+- ["So18NSTouchBarProviderP", ""]
+- !private ["So12SKEffectNodeC", "CGPoint"]
+- ["So12SKEffectNodeC", "MapLoader"]
+- ["So12SKEffectNodeC", "NSEvent"]
+- ["So12SKEffectNodeC", "SKSpriteNode"]
+- ["So12SKEffectNodeC", "Spawn"]
+- !private ["So12SKEffectNodeC", "addChild"]
+- ["So12SKEffectNodeC", "init"]
+- ["So12SKEffectNodeC", "mapLoader"]
+- ["So12SKEffectNodeC", "mouseDown"]
+- ["So12SKEffectNodeC", "mouseUp"]
+- ["So12SKEffectNodeC", "nodeForMatrix"]
+- !private ["So12SKEffectNodeC", "position"]
+- !private ["So12SKEffectNodeC", "scene"]
+- ["So12SKEffectNodeC", "sceneDidLoad"]
+- ["So12SKEffectNodeC", "spawn"]
+- ["So12SKEffectNodeC", "spawnner"]
+- !private ["So6SKNodeC", "CGPoint"]
+- ["So6SKNodeC", "MapLoader"]
+- ["So6SKNodeC", "NSEvent"]
+- ["So6SKNodeC", "SKSpriteNode"]
+- ["So6SKNodeC", "Spawn"]
+- !private ["So6SKNodeC", "addChild"]
+- ["So6SKNodeC", "init"]
+- ["So6SKNodeC", "mapLoader"]
+- ["So6SKNodeC", "mouseDown"]
+- ["So6SKNodeC", "mouseUp"]
+- ["So6SKNodeC", "nodeForMatrix"]
+- !private ["So6SKNodeC", "position"]
+- !private ["So6SKNodeC", "scene"]
+- ["So6SKNodeC", "sceneDidLoad"]
+- ["So6SKNodeC", "spawn"]
+- ["So6SKNodeC", "spawnner"]
+- !private ["So6SKNodeC", "startRound"]
+- !private ["So7SKSceneC", "CGPoint"]
+- ["So7SKSceneC", "MapLoader"]
+- ["So7SKSceneC", "NSEvent"]
+- ["So7SKSceneC", "SKSpriteNode"]
+- ["So7SKSceneC", "Spawn"]
+- !private ["So7SKSceneC", "addChild"]
+- ["So7SKSceneC", "init"]
+- ["So7SKSceneC", "mapLoader"]
+- ["So7SKSceneC", "mouseDown"]
+- ["So7SKSceneC", "mouseUp"]
+- ["So7SKSceneC", "nodeForMatrix"]
+- !private ["So7SKSceneC", "position"]
+- !private ["So7SKSceneC", "scene"]
+- ["So7SKSceneC", "sceneDidLoad"]
+- ["So7SKSceneC", "spawn"]
+- ["So7SKSceneC", "spawnner"]
+- ["So7SKSceneC", ""]
+- !private ["So12SKSpriteNodeC", "startRound"]
+- !private ["So10SKWarpableP", "CGPoint"]
+- !private ["So10SKWarpableP", "MapLoader"]
+- !private ["So10SKWarpableP", "addChild"]
+- !private ["So10SKWarpableP", "init"]
+- !private ["So10SKWarpableP", "mapLoader"]
+- ["So10SKWarpableP", "nodeForMatrix"]
+- !private ["So10SKWarpableP", "position"]
+- !private ["So10SKWarpableP", "scene"]
+- !private ["So10SKWarpableP", "sceneDidLoad"]
+- !private ["So10SKWarpableP", "spawn"]
+- ["So10SKWarpableP", "spawnner"]
+- !private ["So10SKWarpableP", "startRound"]
+- ["So10SKWarpableP", ""]
+- !private ["12TowerDefense5SpawnC", "startRound"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MapLoader"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addChild"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "location"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mapLoader"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "nodeForMatrix"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "position"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scene"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sceneDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "spawn"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "spawnner"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startRound"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- !private "SC7CGPointV"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- "So19GKSceneRootNodeTypeP"
+- "12TowerDefense9GameSceneC"
+- "s8HashableP"
+- "12TowerDefense12MapDeglegateP"
+- !private "12TowerDefense9MapLoaderC"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So7NSEventC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So11NSResponderC"
+- "So18NSTouchBarProviderP"
+- "So12SKEffectNodeC"
+- "So6SKNodeC"
+- "So7SKSceneC"
+- !private "So12SKSpriteNodeC"
+- "So10SKWarpableP"
+- !private "12TowerDefense5SpawnC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ModelIO.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/ModelIO.framework/Headers/ModelIO.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GLKit.framework/Headers/GLKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SpriteKit.framework/Headers/SpriteKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "3f10711d9cf1de7803616863905f2c2a"

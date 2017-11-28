@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Character {
+class Character{
     var name = ""
     var energy = 100
     

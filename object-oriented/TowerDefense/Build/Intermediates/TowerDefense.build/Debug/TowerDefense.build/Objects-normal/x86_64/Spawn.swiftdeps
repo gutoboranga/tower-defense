@@ -1,0 +1,707 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Spawn"
+provides-nominal:
+- "12TowerDefense5SpawnC"
+provides-member:
+- ["12TowerDefense5SpawnC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+="
+- !private "<"
+- "Array"
+- "AssignmentPrecedence"
+- "CGPoint"
+- "CGSize"
+- !private "Enemy"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "NSCoder"
+- !private "SKAction"
+- "SKSpriteNode"
+- !private "SKTexture"
+- "Spawn"
+- !private "StringLiteralType"
+- !private "fatalError"
+- !private "print"
+- !private "~="
+depends-member:
+- !private ["Sa", "count"]
+- !private ["Sa", "first"]
+- !private ["Sa", "removeFirst"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "first"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "removeFirst"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "description"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["SC7CGPointV", "init"]
+- !private ["s7CVarArgP", "CGPoint"]
+- !private ["s7CVarArgP", "Enemy"]
+- !private ["s7CVarArgP", "SKAction"]
+- !private ["s7CVarArgP", "SKTexture"]
+- !private ["s7CVarArgP", "addChild"]
+- !private ["s7CVarArgP", "anchorPoint"]
+- !private ["s7CVarArgP", "atualLevel"]
+- !private ["s7CVarArgP", "clear"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s7CVarArgP", "enemiesLvl"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "move"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "position"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "removeFirst"]
+- !private ["s7CVarArgP", "run"]
+- !private ["s7CVarArgP", "scene"]
+- !private ["s7CVarArgP", "spawnEnemies"]
+- !private ["s7CVarArgP", "spawnEnemy"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "wait"]
+- !private ["s7CVarArgP", "zPosition"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "first"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "removeFirst"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "description"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "Enemy"]
+- !private ["s28CustomDebugStringConvertibleP", "SKAction"]
+- !private ["s28CustomDebugStringConvertibleP", "SKTexture"]
+- !private ["s28CustomDebugStringConvertibleP", "addChild"]
+- !private ["s28CustomDebugStringConvertibleP", "anchorPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "atualLevel"]
+- !private ["s28CustomDebugStringConvertibleP", "clear"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "enemiesLvl"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "move"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "position"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "removeFirst"]
+- !private ["s28CustomDebugStringConvertibleP", "run"]
+- !private ["s28CustomDebugStringConvertibleP", "scene"]
+- !private ["s28CustomDebugStringConvertibleP", "spawnEnemies"]
+- !private ["s28CustomDebugStringConvertibleP", "spawnEnemy"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "wait"]
+- !private ["s28CustomDebugStringConvertibleP", "zPosition"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "CGPoint"]
+- !private ["s29CustomPlaygroundQuickLookableP", "Enemy"]
+- !private ["s29CustomPlaygroundQuickLookableP", "SKAction"]
+- !private ["s29CustomPlaygroundQuickLookableP", "SKTexture"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "anchorPoint"]
+- !private ["s29CustomPlaygroundQuickLookableP", "atualLevel"]
+- !private ["s29CustomPlaygroundQuickLookableP", "description"]
+- !private ["s29CustomPlaygroundQuickLookableP", "enemiesLvl"]
+- !private ["s29CustomPlaygroundQuickLookableP", "fatalError"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "move"]
+- !private ["s29CustomPlaygroundQuickLookableP", "name"]
+- !private ["s29CustomPlaygroundQuickLookableP", "position"]
+- !private ["s29CustomPlaygroundQuickLookableP", "print"]
+- !private ["s29CustomPlaygroundQuickLookableP", "run"]
+- !private ["s29CustomPlaygroundQuickLookableP", "scene"]
+- !private ["s29CustomPlaygroundQuickLookableP", "spawnEnemies"]
+- !private ["s29CustomPlaygroundQuickLookableP", "spawnEnemy"]
+- !private ["s29CustomPlaygroundQuickLookableP", "zPosition"]
+- ["s29CustomPlaygroundQuickLookableP", ""]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "description"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "removeFirst"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "CGPoint"]
+- !private ["s23CustomStringConvertibleP", "Enemy"]
+- !private ["s23CustomStringConvertibleP", "SKAction"]
+- !private ["s23CustomStringConvertibleP", "SKTexture"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addChild"]
+- !private ["s23CustomStringConvertibleP", "anchorPoint"]
+- !private ["s23CustomStringConvertibleP", "atualLevel"]
+- !private ["s23CustomStringConvertibleP", "clear"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "enemiesLvl"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "move"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "position"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "removeFirst"]
+- !private ["s23CustomStringConvertibleP", "run"]
+- !private ["s23CustomStringConvertibleP", "scene"]
+- !private ["s23CustomStringConvertibleP", "spawnEnemies"]
+- !private ["s23CustomStringConvertibleP", "spawnEnemy"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "wait"]
+- !private ["s23CustomStringConvertibleP", "zPosition"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "description"]
+- !private ["s9DecodableP", "first"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "removeFirst"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "description"]
+- !private ["s9EncodableP", "first"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "removeFirst"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["12TowerDefense5EnemyC", "deinit"]
+- !private ["12TowerDefense5EnemyC", "init"]
+- !private ["12TowerDefense5EnemyC", "move"]
+- !private ["s9EquatableP", "CGPoint"]
+- !private ["s9EquatableP", "Enemy"]
+- !private ["s9EquatableP", "SKAction"]
+- !private ["s9EquatableP", "SKTexture"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addChild"]
+- !private ["s9EquatableP", "anchorPoint"]
+- !private ["s9EquatableP", "atualLevel"]
+- !private ["s9EquatableP", "clear"]
+- !private ["s9EquatableP", "description"]
+- !private ["s9EquatableP", "enemiesLvl"]
+- !private ["s9EquatableP", "fatalError"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "move"]
+- !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "position"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "run"]
+- !private ["s9EquatableP", "scene"]
+- !private ["s9EquatableP", "spawnEnemies"]
+- !private ["s9EquatableP", "spawnEnemy"]
+- !private ["s9EquatableP", "wait"]
+- !private ["s9EquatableP", "zPosition"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeFirst"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "description"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "description"]
+- !private ["So19GKSceneRootNodeTypeP", "addChild"]
+- !private ["s8HashableP", "CGPoint"]
+- !private ["s8HashableP", "Enemy"]
+- !private ["s8HashableP", "SKAction"]
+- !private ["s8HashableP", "SKTexture"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addChild"]
+- !private ["s8HashableP", "anchorPoint"]
+- !private ["s8HashableP", "atualLevel"]
+- !private ["s8HashableP", "clear"]
+- !private ["s8HashableP", "description"]
+- !private ["s8HashableP", "enemiesLvl"]
+- !private ["s8HashableP", "fatalError"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "move"]
+- !private ["s8HashableP", "name"]
+- !private ["s8HashableP", "position"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "run"]
+- !private ["s8HashableP", "scene"]
+- !private ["s8HashableP", "spawnEnemies"]
+- !private ["s8HashableP", "spawnEnemy"]
+- !private ["s8HashableP", "wait"]
+- !private ["s8HashableP", "zPosition"]
+- ["s8HashableP", ""]
+- !private ["Si", "description"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "description"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "description"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "first"]
+- !private ["s17MutableCollectionP", "removeFirst"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "CGPoint"]
+- !private ["So8NSCodingP", "Enemy"]
+- !private ["So8NSCodingP", "SKAction"]
+- !private ["So8NSCodingP", "SKTexture"]
+- !private ["So8NSCodingP", "addChild"]
+- !private ["So8NSCodingP", "anchorPoint"]
+- !private ["So8NSCodingP", "atualLevel"]
+- !private ["So8NSCodingP", "clear"]
+- !private ["So8NSCodingP", "enemiesLvl"]
+- !private ["So8NSCodingP", "fatalError"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "move"]
+- !private ["So8NSCodingP", "name"]
+- !private ["So8NSCodingP", "position"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "run"]
+- !private ["So8NSCodingP", "scene"]
+- !private ["So8NSCodingP", "spawnEnemies"]
+- !private ["So8NSCodingP", "spawnEnemy"]
+- !private ["So8NSCodingP", "wait"]
+- !private ["So8NSCodingP", "zPosition"]
+- ["So8NSCodingP", ""]
+- !private ["So7NSColorC", "clear"]
+- !private ["So9NSCopyingP", "CGPoint"]
+- !private ["So9NSCopyingP", "Enemy"]
+- !private ["So9NSCopyingP", "SKAction"]
+- !private ["So9NSCopyingP", "SKTexture"]
+- !private ["So9NSCopyingP", "addChild"]
+- !private ["So9NSCopyingP", "anchorPoint"]
+- !private ["So9NSCopyingP", "atualLevel"]
+- !private ["So9NSCopyingP", "clear"]
+- !private ["So9NSCopyingP", "enemiesLvl"]
+- !private ["So9NSCopyingP", "fatalError"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "move"]
+- !private ["So9NSCopyingP", "name"]
+- !private ["So9NSCopyingP", "position"]
+- !private ["So9NSCopyingP", "print"]
+- !private ["So9NSCopyingP", "run"]
+- !private ["So9NSCopyingP", "scene"]
+- !private ["So9NSCopyingP", "spawnEnemies"]
+- !private ["So9NSCopyingP", "spawnEnemy"]
+- !private ["So9NSCopyingP", "wait"]
+- !private ["So9NSCopyingP", "zPosition"]
+- ["So9NSCopyingP", ""]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "CGPoint"]
+- ["So8NSObjectC", "CGSize"]
+- !private ["So8NSObjectC", "Enemy"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NSCoder"]
+- !private ["So8NSObjectC", "SKAction"]
+- !private ["So8NSObjectC", "SKTexture"]
+- !private ["So8NSObjectC", "addChild"]
+- !private ["So8NSObjectC", "anchorPoint"]
+- ["So8NSObjectC", "atualLevel"]
+- !private ["So8NSObjectC", "clear"]
+- ["So8NSObjectC", "enemiesLvl"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "move"]
+- !private ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "position"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "run"]
+- !private ["So8NSObjectC", "scene"]
+- ["So8NSObjectC", "spawnEnemies"]
+- ["So8NSObjectC", "spawnEnemy"]
+- ["So8NSObjectC", "startRound"]
+- !private ["So8NSObjectC", "wait"]
+- !private ["So8NSObjectC", "zPosition"]
+- !private ["So16NSObjectProtocolP", "CGPoint"]
+- !private ["So16NSObjectProtocolP", "Enemy"]
+- !private ["So16NSObjectProtocolP", "SKAction"]
+- !private ["So16NSObjectProtocolP", "SKTexture"]
+- !private ["So16NSObjectProtocolP", "addChild"]
+- !private ["So16NSObjectProtocolP", "anchorPoint"]
+- !private ["So16NSObjectProtocolP", "atualLevel"]
+- !private ["So16NSObjectProtocolP", "clear"]
+- !private ["So16NSObjectProtocolP", "enemiesLvl"]
+- !private ["So16NSObjectProtocolP", "fatalError"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "move"]
+- !private ["So16NSObjectProtocolP", "name"]
+- !private ["So16NSObjectProtocolP", "position"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "run"]
+- !private ["So16NSObjectProtocolP", "scene"]
+- !private ["So16NSObjectProtocolP", "spawnEnemies"]
+- !private ["So16NSObjectProtocolP", "spawnEnemy"]
+- !private ["So16NSObjectProtocolP", "wait"]
+- !private ["So16NSObjectProtocolP", "zPosition"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So19NSPasteboardReadingP", "clear"]
+- !private ["So19NSPasteboardReadingP", "init"]
+- !private ["So19NSPasteboardWritingP", "clear"]
+- !private ["So19NSPasteboardWritingP", "init"]
+- ["So11NSResponderC", "CGPoint"]
+- ["So11NSResponderC", "CGSize"]
+- !private ["So11NSResponderC", "Enemy"]
+- ["So11NSResponderC", "Int"]
+- ["So11NSResponderC", "NSCoder"]
+- !private ["So11NSResponderC", "SKAction"]
+- !private ["So11NSResponderC", "SKTexture"]
+- !private ["So11NSResponderC", "addChild"]
+- !private ["So11NSResponderC", "anchorPoint"]
+- ["So11NSResponderC", "atualLevel"]
+- ["So11NSResponderC", "enemiesLvl"]
+- !private ["So11NSResponderC", "fatalError"]
+- ["So11NSResponderC", "init"]
+- !private ["So11NSResponderC", "move"]
+- !private ["So11NSResponderC", "name"]
+- !private ["So11NSResponderC", "position"]
+- !private ["So11NSResponderC", "print"]
+- !private ["So11NSResponderC", "run"]
+- !private ["So11NSResponderC", "scene"]
+- ["So11NSResponderC", "spawnEnemies"]
+- ["So11NSResponderC", "spawnEnemy"]
+- ["So11NSResponderC", "startRound"]
+- !private ["So11NSResponderC", "zPosition"]
+- !private ["So14NSSecureCodingP", "clear"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["So18NSTouchBarProviderP", "CGPoint"]
+- !private ["So18NSTouchBarProviderP", "Enemy"]
+- !private ["So18NSTouchBarProviderP", "SKAction"]
+- !private ["So18NSTouchBarProviderP", "SKTexture"]
+- !private ["So18NSTouchBarProviderP", "addChild"]
+- !private ["So18NSTouchBarProviderP", "anchorPoint"]
+- !private ["So18NSTouchBarProviderP", "atualLevel"]
+- !private ["So18NSTouchBarProviderP", "enemiesLvl"]
+- !private ["So18NSTouchBarProviderP", "fatalError"]
+- !private ["So18NSTouchBarProviderP", "init"]
+- !private ["So18NSTouchBarProviderP", "move"]
+- !private ["So18NSTouchBarProviderP", "name"]
+- !private ["So18NSTouchBarProviderP", "position"]
+- !private ["So18NSTouchBarProviderP", "print"]
+- !private ["So18NSTouchBarProviderP", "run"]
+- !private ["So18NSTouchBarProviderP", "scene"]
+- !private ["So18NSTouchBarProviderP", "spawnEnemies"]
+- !private ["So18NSTouchBarProviderP", "spawnEnemy"]
+- !private ["So18NSTouchBarProviderP", "zPosition"]
+- ["So18NSTouchBarProviderP", ""]
+- !private ["s7NumericP", "description"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "first"]
+- !private ["s22RandomAccessCollectionP", "removeFirst"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "first"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "removeFirst"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["So8SKActionC", "wait"]
+- !private ["So12SKEffectNodeC", "addChild"]
+- ["So6SKNodeC", "CGPoint"]
+- ["So6SKNodeC", "CGSize"]
+- !private ["So6SKNodeC", "Enemy"]
+- ["So6SKNodeC", "Int"]
+- ["So6SKNodeC", "NSCoder"]
+- !private ["So6SKNodeC", "SKAction"]
+- !private ["So6SKNodeC", "SKTexture"]
+- !private ["So6SKNodeC", "addChild"]
+- !private ["So6SKNodeC", "anchorPoint"]
+- ["So6SKNodeC", "atualLevel"]
+- ["So6SKNodeC", "enemiesLvl"]
+- !private ["So6SKNodeC", "fatalError"]
+- ["So6SKNodeC", "init"]
+- !private ["So6SKNodeC", "move"]
+- !private ["So6SKNodeC", "name"]
+- !private ["So6SKNodeC", "position"]
+- !private ["So6SKNodeC", "print"]
+- !private ["So6SKNodeC", "run"]
+- !private ["So6SKNodeC", "scene"]
+- ["So6SKNodeC", "spawnEnemies"]
+- ["So6SKNodeC", "spawnEnemy"]
+- ["So6SKNodeC", "startRound"]
+- !private ["So6SKNodeC", "zPosition"]
+- !private ["So7SKSceneC", "addChild"]
+- ["So12SKSpriteNodeC", "CGPoint"]
+- ["So12SKSpriteNodeC", "CGSize"]
+- !private ["So12SKSpriteNodeC", "Enemy"]
+- ["So12SKSpriteNodeC", "Int"]
+- ["So12SKSpriteNodeC", "NSCoder"]
+- !private ["So12SKSpriteNodeC", "SKAction"]
+- !private ["So12SKSpriteNodeC", "SKTexture"]
+- !private ["So12SKSpriteNodeC", "anchorPoint"]
+- ["So12SKSpriteNodeC", "atualLevel"]
+- ["So12SKSpriteNodeC", "enemiesLvl"]
+- !private ["So12SKSpriteNodeC", "fatalError"]
+- ["So12SKSpriteNodeC", "init"]
+- !private ["So12SKSpriteNodeC", "move"]
+- !private ["So12SKSpriteNodeC", "name"]
+- !private ["So12SKSpriteNodeC", "position"]
+- !private ["So12SKSpriteNodeC", "print"]
+- !private ["So12SKSpriteNodeC", "run"]
+- !private ["So12SKSpriteNodeC", "scene"]
+- ["So12SKSpriteNodeC", "spawnEnemies"]
+- ["So12SKSpriteNodeC", "spawnEnemy"]
+- ["So12SKSpriteNodeC", "startRound"]
+- !private ["So12SKSpriteNodeC", "zPosition"]
+- ["So12SKSpriteNodeC", ""]
+- !private ["So9SKTextureC", "init"]
+- !private ["So10SKWarpableP", "CGPoint"]
+- !private ["So10SKWarpableP", "Enemy"]
+- !private ["So10SKWarpableP", "SKAction"]
+- !private ["So10SKWarpableP", "SKTexture"]
+- !private ["So10SKWarpableP", "addChild"]
+- !private ["So10SKWarpableP", "anchorPoint"]
+- !private ["So10SKWarpableP", "atualLevel"]
+- !private ["So10SKWarpableP", "enemiesLvl"]
+- !private ["So10SKWarpableP", "fatalError"]
+- !private ["So10SKWarpableP", "init"]
+- !private ["So10SKWarpableP", "move"]
+- !private ["So10SKWarpableP", "name"]
+- !private ["So10SKWarpableP", "position"]
+- !private ["So10SKWarpableP", "print"]
+- !private ["So10SKWarpableP", "run"]
+- !private ["So10SKWarpableP", "scene"]
+- !private ["So10SKWarpableP", "spawnEnemies"]
+- !private ["So10SKWarpableP", "spawnEnemy"]
+- !private ["So10SKWarpableP", "zPosition"]
+- ["So10SKWarpableP", ""]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "first"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "removeFirst"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "description"]
+- !private ["s13SignedNumericP", "description"]
+- ["12TowerDefense5SpawnC", "CGPoint"]
+- ["12TowerDefense5SpawnC", "CGSize"]
+- !private ["12TowerDefense5SpawnC", "Enemy"]
+- ["12TowerDefense5SpawnC", "Int"]
+- ["12TowerDefense5SpawnC", "NSCoder"]
+- !private ["12TowerDefense5SpawnC", "SKAction"]
+- !private ["12TowerDefense5SpawnC", "SKTexture"]
+- !private ["12TowerDefense5SpawnC", "anchorPoint"]
+- ["12TowerDefense5SpawnC", "atualLevel"]
+- ["12TowerDefense5SpawnC", "deinit"]
+- ["12TowerDefense5SpawnC", "enemiesLvl"]
+- !private ["12TowerDefense5SpawnC", "fatalError"]
+- ["12TowerDefense5SpawnC", "init"]
+- !private ["12TowerDefense5SpawnC", "name"]
+- !private ["12TowerDefense5SpawnC", "position"]
+- !private ["12TowerDefense5SpawnC", "print"]
+- !private ["12TowerDefense5SpawnC", "run"]
+- !private ["12TowerDefense5SpawnC", "scene"]
+- ["12TowerDefense5SpawnC", "spawnEnemies"]
+- ["12TowerDefense5SpawnC", "spawnEnemy"]
+- ["12TowerDefense5SpawnC", "startRound"]
+- !private ["12TowerDefense5SpawnC", "zPosition"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "description"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "removeFirst"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s23_BidirectionalIndexableP", "count"]
+- !private ["s23_BidirectionalIndexableP", "first"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "removeFirst"]
+- !private ["s23_BidirectionalIndexableP", "subscript"]
+- !private ["s18_BitwiseOperationsP", "description"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "removeFirst"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "description"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "clear"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "count"]
+- !private ["s10_IndexableP", "first"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "removeFirst"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "count"]
+- !private ["s14_IndexableBaseP", "first"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "removeFirst"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Enemy"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SKAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SKTexture"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addChild"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "anchorPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "atualLevel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clear"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "enemiesLvl"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "move"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "position"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "run"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scene"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "spawnEnemies"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "spawnEnemy"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "wait"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "zPosition"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "count"]
+- !private ["s17_MutableIndexableP", "first"]
+- !private ["s17_MutableIndexableP", "removeFirst"]
+- !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "description"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "removeFirst"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s22_RandomAccessIndexableP", "count"]
+- !private ["s22_RandomAccessIndexableP", "first"]
+- !private ["s22_RandomAccessIndexableP", "removeFirst"]
+- !private ["s22_RandomAccessIndexableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "count"]
+- !private ["s26_RangeReplaceableIndexableP", "first"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "removeFirst"]
+- !private ["s26_RangeReplaceableIndexableP", "subscript"]
+- !private ["s11_StrideableP", "description"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- !private "SC7CGPointV"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "12TowerDefense5EnemyC"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "So19GKSceneRootNodeTypeP"
+- "s8HashableP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- !private "So7NSColorC"
+- "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So19NSPasteboardReadingP"
+- !private "So19NSPasteboardWritingP"
+- "So11NSResponderC"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "So18NSTouchBarProviderP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "So8SKActionC"
+- !private "So12SKEffectNodeC"
+- "So6SKNodeC"
+- !private "So7SKSceneC"
+- "So12SKSpriteNodeC"
+- !private "So9SKTextureC"
+- "So10SKWarpableP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- "12TowerDefense5SpawnC"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s11_StrideableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ModelIO.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/ModelIO.framework/Headers/ModelIO.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GLKit.framework/Headers/GLKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SpriteKit.framework/Headers/SpriteKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "f98e7a59336673c2738429b912ae7741"

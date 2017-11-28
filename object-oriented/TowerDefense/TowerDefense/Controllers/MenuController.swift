@@ -50,10 +50,22 @@ class MenuController: NSViewController, MenuDelegate {
     
     func newGame() {
         print("New Game")
+        //let game = Game()
+        //var gameController = GameController(newGame: game)
         
-        let game = Game()
-        
-        var gameController = GameController(newGame: game)
+        let gameScene = GameScene(size: skView.scene!.size)
+        gameScene.scaleMode = .aspectFill
+                
+        // Present the scene
+        if let view = self.skView {
+            view.presentScene(gameScene)
+            
+            view.ignoresSiblingOrder = true
+            
+            view.showsFPS = true
+            view.showsNodeCount = true
+                
+        }
     }
     
     func quit() {

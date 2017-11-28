@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AB1521A1FCCCAFB0051BB92 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB152191FCCCAFB0051BB92 /* GameScene.swift */; };
+		2AB1521E1FCCD6860051BB92 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1521D1FCCD6860051BB92 /* Ground.swift */; };
+		2AB152201FCCE0480051BB92 /* MapLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1521F1FCCE0480051BB92 /* MapLoader.swift */; };
+		2AB152221FCCE9DE0051BB92 /* Spawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB152211FCCE9DE0051BB92 /* Spawn.swift */; };
+		2AB152281FCD00AE0051BB92 /* LifeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB152271FCD00AE0051BB92 /* LifeBar.swift */; };
+		2AB1522A1FCD0DB10051BB92 /* Tower-Defense.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AB152291FCD0DB10051BB92 /* Tower-Defense.json */; };
+		2AB1522C1FCD0DE30051BB92 /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1522B1FCD0DE30051BB92 /* Castle.swift */; };
 		4A3706841FBE509700688810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3706831FBE509700688810 /* AppDelegate.swift */; };
 		4A37068E1FBE509700688810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A37068D1FBE509700688810 /* Assets.xcassets */; };
 		4A3706911FBE509700688810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A37068F1FBE509700688810 /* Main.storyboard */; };
@@ -41,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2AB152191FCCCAFB0051BB92 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		2AB1521D1FCCD6860051BB92 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		2AB1521F1FCCE0480051BB92 /* MapLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLoader.swift; sourceTree = "<group>"; };
+		2AB152211FCCE9DE0051BB92 /* Spawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spawn.swift; sourceTree = "<group>"; };
+		2AB152271FCD00AE0051BB92 /* LifeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBar.swift; sourceTree = "<group>"; };
+		2AB152291FCD0DB10051BB92 /* Tower-Defense.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Tower-Defense.json"; sourceTree = "<group>"; };
+		2AB1522B1FCD0DE30051BB92 /* Castle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
 		4A3706801FBE509700688810 /* TowerDefense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerDefense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3706831FBE509700688810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A37068D1FBE509700688810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +126,7 @@
 		4A3706821FBE509700688810 /* TowerDefense */ = {
 			isa = PBXGroup;
 			children = (
+				2AB152291FCD0DB10051BB92 /* Tower-Defense.json */,
 				4AD22FCD1FBE63FD009A52A3 /* GameScenes */,
 				4AD22FCA1FBE620B009A52A3 /* Controllers */,
 				4AD22FBB1FBE5137009A52A3 /* Models */,
@@ -150,6 +165,11 @@
 				4AD22FC21FBE51EB009A52A3 /* Character.swift */,
 				4AD22FC41FBE51F8009A52A3 /* Tower.swift */,
 				4AD22FC61FBE5E21009A52A3 /* Enemy.swift */,
+				2AB1521D1FCCD6860051BB92 /* Ground.swift */,
+				2AB1521F1FCCE0480051BB92 /* MapLoader.swift */,
+				2AB152211FCCE9DE0051BB92 /* Spawn.swift */,
+				2AB152271FCD00AE0051BB92 /* LifeBar.swift */,
+				2AB1522B1FCD0DE30051BB92 /* Castle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +188,7 @@
 			children = (
 				4AD22FCE1FBE645E009A52A3 /* MenuScene.swift */,
 				4AD22FD01FBE647D009A52A3 /* MenuScene.sks */,
+				2AB152191FCCCAFB0051BB92 /* GameScene.swift */,
 			);
 			path = GameScenes;
 			sourceTree = "<group>";
@@ -281,6 +302,7 @@
 			files = (
 				4A37068E1FBE509700688810 /* Assets.xcassets in Resources */,
 				4AD22FD11FBE647D009A52A3 /* MenuScene.sks in Resources */,
+				2AB1522A1FCD0DB10051BB92 /* Tower-Defense.json in Resources */,
 				4A3706911FBE509700688810 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,15 +328,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB152221FCCE9DE0051BB92 /* Spawn.swift in Sources */,
+				2AB1521A1FCCCAFB0051BB92 /* GameScene.swift in Sources */,
 				4AD22FCC1FBE6229009A52A3 /* MenuController.swift in Sources */,
 				4AFC81711FBE7A0F00DE459C /* GameController.swift in Sources */,
 				4AD22FCF1FBE645E009A52A3 /* MenuScene.swift in Sources */,
+				2AB152281FCD00AE0051BB92 /* LifeBar.swift in Sources */,
 				4A3706841FBE509700688810 /* AppDelegate.swift in Sources */,
 				4AD22FC91FBE5F32009A52A3 /* Wave.swift in Sources */,
 				4AD22FC51FBE51F8009A52A3 /* Tower.swift in Sources */,
+				2AB152201FCCE0480051BB92 /* MapLoader.swift in Sources */,
 				4AD22FC71FBE5E21009A52A3 /* Enemy.swift in Sources */,
 				4AD22FC31FBE51EB009A52A3 /* Character.swift in Sources */,
+				2AB1522C1FCD0DE30051BB92 /* Castle.swift in Sources */,
 				4AD22FBD1FBE5153009A52A3 /* Game.swift in Sources */,
+				2AB1521E1FCCD6860051BB92 /* Ground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
