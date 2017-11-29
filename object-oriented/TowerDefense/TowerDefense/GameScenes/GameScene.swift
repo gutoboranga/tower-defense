@@ -16,8 +16,8 @@ enum GameStateMachine {
 
 class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysicsContactDelegate{
     
-    private let xIniPos = 716.0
-    private let yIniPos = 390.0
+    private let xIniPos = 732.0
+    private let yIniPos = 406.0
     
     private var mapLoader : MapLoader!
     private var spawn     : Spawn!

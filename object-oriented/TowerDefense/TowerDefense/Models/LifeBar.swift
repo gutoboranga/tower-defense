@@ -23,15 +23,17 @@ class LifeBar: SKSpriteNode {
         self.lifeBarSize = Double(size.width * 0.25)
         
         self.lifeBar = SKSpriteNode(color: .green, size: CGSize(width:  lifeBarSize, height: 2))
-        self.lifeBar.anchorPoint = CGPoint(x: 0, y: 0)
-        self.lifeBar.position    = CGPoint(x: 1, y: 1)
+        self.lifeBar.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        self.lifeBar.position    = CGPoint(x: 0, y: 0)
         self.lifeBar.zPosition   = 6
         
         let newSize = CGSize(width: size.width * 0.32, height: 4)
         super.init(texture: nil, color: .black, size: newSize)
         
-        self.position = CGPoint(x: size.width/2 - size.width * 0.32 / 2, y: 0)
-        self.anchorPoint = CGPoint(x: 0, y: 0)
+        self.position = CGPoint(x: 0.0, y: -size.height/2)
+
+        //self.position = CGPoint(x: size.width/2 - size.width * 0.32 / 2, y: 0)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.zPosition   = 5
 
         self.addChild(lifeBar)

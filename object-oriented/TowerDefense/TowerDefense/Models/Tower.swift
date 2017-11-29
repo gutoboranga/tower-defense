@@ -32,7 +32,7 @@ class Tower: SKSpriteNode {
         self.selected    = false
         super.init(texture: texture, color: .blue, size: size)
         
-        self.anchorPoint = CGPoint(x: 0, y: 0)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.zPosition = 5
         self.zRotation = CGFloat(self.orientation.rawValue).degreesToRadians()
     }
@@ -58,8 +58,7 @@ class Tower: SKSpriteNode {
     private func fire(action: SKAction) {
         
         let node = Projectile(damage: damage, size: CGSize(width: 4, height: 4))
-        //node.position = CGPoint(x: position.x + size.width/2, y: position.y + size.height/2)
-        node.position = CGPoint(x: size.width/2, y: size.height/2)
+        node.position = CGPoint(x: 0, y: 0)
         
         let wait = SKAction.wait(forDuration: tSpeed/5)
         run(wait) {

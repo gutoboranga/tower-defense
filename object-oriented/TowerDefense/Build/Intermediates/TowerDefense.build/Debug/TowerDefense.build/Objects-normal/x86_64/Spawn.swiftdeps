@@ -15,6 +15,7 @@ depends-top-level:
 - !private "+="
 - !private "-="
 - !private "<"
+- !private "<="
 - !private "=="
 - "Array"
 - "AssignmentPrecedence"

@@ -36,7 +36,7 @@ class Enemy: SKSpriteNode {
         let size = CGSize(width: 32, height: 32)
         
         self.lifeBar = LifeBar(size: size, lifeNumber: life)
-        
+  
         let texture = SKTexture(imageNamed: name)
         super.init(texture: texture, color: .clear, size: size)
         
@@ -47,7 +47,7 @@ class Enemy: SKSpriteNode {
 
         self.addChild(lifeBar)
         
-        self.physicsBody = SKPhysicsBody(rectangleOf: size, center: CGPoint(x: size.width/2, y: size.height/2))
+        self.physicsBody = SKPhysicsBody(rectangleOf: size, center: CGPoint(x: 0, y: 0))
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = true
         

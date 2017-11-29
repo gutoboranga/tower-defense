@@ -20,7 +20,7 @@ class Castle: SKSpriteNode {
         let txt = SKTexture(imageNamed: code.description)
         super.init(texture: txt, color: .clear, size: size)
         
-        self.anchorPoint = CGPoint(x: 0, y: 0)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.name = "Castle"
         self.position = position
         self.zPosition = 3
@@ -28,7 +28,7 @@ class Castle: SKSpriteNode {
         self.addChild(lifeBar)
         
         //Castle Physiscs
-        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: size.width - 1, height: size.height - 1), center: CGPoint(x: size.width/2, y: size.height/2))
+        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: size.width - 1, height: size.height - 1), center: CGPoint(x: 0, y: 0))
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = false
         self.physicsBody?.categoryBitMask = ColliderType.Castle

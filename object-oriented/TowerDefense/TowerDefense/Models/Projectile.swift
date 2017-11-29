@@ -23,7 +23,7 @@ class Projectile: SKSpriteNode {
         
         self.name = "Projectile"
         
-        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: size.width + 1, height: size.height + 1))
+        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 32, height: 32), center: CGPoint(x: 0, y: 0))
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = true
         self.physicsBody?.categoryBitMask = ColliderType.Castle

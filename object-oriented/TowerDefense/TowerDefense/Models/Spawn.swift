@@ -30,7 +30,7 @@ class Spawn: SKSpriteNode {
         
         let txt = SKTexture(imageNamed: code.description)
         super.init(texture: txt, color: .clear, size: size)
-        self.anchorPoint = CGPoint(x: 0, y: 0)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.name = "Spawn"
         self.position = position
         self.zPosition = 3
@@ -39,8 +39,8 @@ class Spawn: SKSpriteNode {
     func startRound() {
         currentLevel += 1
         if currentLevel < enemiesLvl.count {
-            spawnEnemies(of: currentLevel)
             enemiesToSpawn = enemiesLvl[currentLevel].count
+            spawnEnemies(of: currentLevel)
         }
     }
     
@@ -51,13 +51,15 @@ class Spawn: SKSpriteNode {
     func removeEnemy(enemy: Enemy) {
         self.enemiesAlive.remove(enemy)
         enemy.removeFromParent()
-        if self.enemiesAlive.count == 0 && self.enemiesToSpawn == 0 {
+        if self.enemiesAlive.count == 0 && self.enemiesToSpawn <= 0 {
             self.delegate.endLevel()
         }
     }
     
     func spawnEnemy(_ enemies: [Int]) {
+        
         self.enemiesToSpawn -= 1
+        
         if let enemy = enemies.first {
             switch enemy {
             case 1:
