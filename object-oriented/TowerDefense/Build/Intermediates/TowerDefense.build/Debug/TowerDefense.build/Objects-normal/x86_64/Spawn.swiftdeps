@@ -11,7 +11,9 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "!="
+- !private "&&"
 - !private "+="
+- !private "-="
 - !private "<"
 - !private "=="
 - "Array"
@@ -40,6 +42,7 @@ depends-member:
 - !private ["Sa", "first"]
 - !private ["Sa", "removeFirst"]
 - !private ["Sa", "subscript"]
+- !private ["s10ArraySliceV", "count"]
 - !private ["s23BidirectionalCollectionP", "count"]
 - !private ["s23BidirectionalCollectionP", "first"]
 - !private ["s23BidirectionalCollectionP", "init"]
@@ -64,6 +67,7 @@ depends-member:
 - !private ["s7CVarArgP", "enemiesAlive"]
 - !private ["s7CVarArgP", "enemiesDelay"]
 - !private ["s7CVarArgP", "enemiesLvl"]
+- !private ["s7CVarArgP", "enemiesToSpawn"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "first"]
 - ["s7CVarArgP", "init"]
@@ -104,6 +108,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "enemiesAlive"]
 - !private ["s28CustomDebugStringConvertibleP", "enemiesDelay"]
 - !private ["s28CustomDebugStringConvertibleP", "enemiesLvl"]
+- !private ["s28CustomDebugStringConvertibleP", "enemiesToSpawn"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "first"]
 - ["s28CustomDebugStringConvertibleP", "init"]
@@ -136,6 +141,7 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "enemiesAlive"]
 - !private ["s29CustomPlaygroundQuickLookableP", "enemiesDelay"]
 - !private ["s29CustomPlaygroundQuickLookableP", "enemiesLvl"]
+- !private ["s29CustomPlaygroundQuickLookableP", "enemiesToSpawn"]
 - !private ["s29CustomPlaygroundQuickLookableP", "fatalError"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "name"]
@@ -175,6 +181,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "enemiesAlive"]
 - !private ["s23CustomStringConvertibleP", "enemiesDelay"]
 - !private ["s23CustomStringConvertibleP", "enemiesLvl"]
+- !private ["s23CustomStringConvertibleP", "enemiesToSpawn"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "first"]
 - ["s23CustomStringConvertibleP", "init"]
@@ -225,6 +232,7 @@ depends-member:
 - !private ["s9EquatableP", "enemiesAlive"]
 - !private ["s9EquatableP", "enemiesDelay"]
 - !private ["s9EquatableP", "enemiesLvl"]
+- !private ["s9EquatableP", "enemiesToSpawn"]
 - !private ["s9EquatableP", "fatalError"]
 - ["s9EquatableP", "idle"]
 - ["s9EquatableP", "init"]
@@ -277,6 +285,7 @@ depends-member:
 - !private ["s8HashableP", "enemiesAlive"]
 - !private ["s8HashableP", "enemiesDelay"]
 - !private ["s8HashableP", "enemiesLvl"]
+- !private ["s8HashableP", "enemiesToSpawn"]
 - !private ["s8HashableP", "fatalError"]
 - ["s8HashableP", "idle"]
 - ["s8HashableP", "init"]
@@ -323,6 +332,7 @@ depends-member:
 - !private ["So8NSCodingP", "enemiesAlive"]
 - !private ["So8NSCodingP", "enemiesDelay"]
 - !private ["So8NSCodingP", "enemiesLvl"]
+- !private ["So8NSCodingP", "enemiesToSpawn"]
 - !private ["So8NSCodingP", "fatalError"]
 - ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "name"]
@@ -354,6 +364,7 @@ depends-member:
 - !private ["So9NSCopyingP", "enemiesAlive"]
 - !private ["So9NSCopyingP", "enemiesDelay"]
 - !private ["So9NSCopyingP", "enemiesLvl"]
+- !private ["So9NSCopyingP", "enemiesToSpawn"]
 - !private ["So9NSCopyingP", "fatalError"]
 - ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "name"]
@@ -404,6 +415,7 @@ depends-member:
 - ["So8NSObjectC", "enemiesAlive"]
 - ["So8NSObjectC", "enemiesDelay"]
 - ["So8NSObjectC", "enemiesLvl"]
+- ["So8NSObjectC", "enemiesToSpawn"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "name"]
@@ -435,6 +447,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "enemiesAlive"]
 - !private ["So16NSObjectProtocolP", "enemiesDelay"]
 - !private ["So16NSObjectProtocolP", "enemiesLvl"]
+- !private ["So16NSObjectProtocolP", "enemiesToSpawn"]
 - !private ["So16NSObjectProtocolP", "fatalError"]
 - ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "name"]
@@ -472,6 +485,7 @@ depends-member:
 - ["So11NSResponderC", "enemiesAlive"]
 - ["So11NSResponderC", "enemiesDelay"]
 - ["So11NSResponderC", "enemiesLvl"]
+- ["So11NSResponderC", "enemiesToSpawn"]
 - !private ["So11NSResponderC", "fatalError"]
 - ["So11NSResponderC", "init"]
 - !private ["So11NSResponderC", "name"]
@@ -504,6 +518,7 @@ depends-member:
 - !private ["So18NSTouchBarProviderP", "enemiesAlive"]
 - !private ["So18NSTouchBarProviderP", "enemiesDelay"]
 - !private ["So18NSTouchBarProviderP", "enemiesLvl"]
+- !private ["So18NSTouchBarProviderP", "enemiesToSpawn"]
 - !private ["So18NSTouchBarProviderP", "fatalError"]
 - !private ["So18NSTouchBarProviderP", "init"]
 - !private ["So18NSTouchBarProviderP", "name"]
@@ -546,6 +561,7 @@ depends-member:
 - ["So6SKNodeC", "enemiesAlive"]
 - ["So6SKNodeC", "enemiesDelay"]
 - ["So6SKNodeC", "enemiesLvl"]
+- ["So6SKNodeC", "enemiesToSpawn"]
 - !private ["So6SKNodeC", "fatalError"]
 - ["So6SKNodeC", "init"]
 - !private ["So6SKNodeC", "name"]
@@ -578,6 +594,7 @@ depends-member:
 - ["So12SKSpriteNodeC", "enemiesAlive"]
 - ["So12SKSpriteNodeC", "enemiesDelay"]
 - ["So12SKSpriteNodeC", "enemiesLvl"]
+- ["So12SKSpriteNodeC", "enemiesToSpawn"]
 - !private ["So12SKSpriteNodeC", "fatalError"]
 - ["So12SKSpriteNodeC", "init"]
 - !private ["So12SKSpriteNodeC", "name"]
@@ -606,6 +623,7 @@ depends-member:
 - !private ["So10SKWarpableP", "enemiesAlive"]
 - !private ["So10SKWarpableP", "enemiesDelay"]
 - !private ["So10SKWarpableP", "enemiesLvl"]
+- !private ["So10SKWarpableP", "enemiesToSpawn"]
 - !private ["So10SKWarpableP", "fatalError"]
 - !private ["So10SKWarpableP", "init"]
 - !private ["So10SKWarpableP", "name"]
@@ -647,6 +665,7 @@ depends-member:
 - !private ["12TowerDefense5SpawnC", "enemiesAlive"]
 - !private ["12TowerDefense5SpawnC", "enemiesDelay"]
 - !private ["12TowerDefense5SpawnC", "enemiesLvl"]
+- !private ["12TowerDefense5SpawnC", "enemiesToSpawn"]
 - !private ["12TowerDefense5SpawnC", "fatalError"]
 - ["12TowerDefense5SpawnC", "init"]
 - !private ["12TowerDefense5SpawnC", "name"]
@@ -719,6 +738,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "enemiesAlive"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "enemiesDelay"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "enemiesLvl"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "enemiesToSpawn"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
@@ -758,6 +778,7 @@ depends-member:
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "Sa"
+- !private "s10ArraySliceV"
 - !private "s23BidirectionalCollectionP"
 - !private "s13BinaryIntegerP"
 - !private "Sb"
@@ -886,4 +907,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "a05897d0263f1a514f70f44cb71c5845"
+interface-hash: "d5027611eeed29fe17cfb550f6ef9765"

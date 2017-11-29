@@ -1,62 +1,23 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "GameController"
+- "ColliderType"
 provides-nominal:
-- "12TowerDefense14GameControllerC"
+- "12TowerDefense12ColliderTypeV"
 provides-member:
-- ["12TowerDefense14GameControllerC", ""]
+- ["12TowerDefense12ColliderTypeV", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "GameController"
-- "NSViewController"
+- "ColliderType"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "UInt32"
 depends-member:
-- !private ["s7CVarArgP", "init"]
-- ["s7CVarArgP", ""]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "init"]
-- ["s23CustomStringConvertibleP", ""]
-- !private ["s9EquatableP", "init"]
-- ["s9EquatableP", ""]
-- ["12TowerDefense14GameControllerC", "deinit"]
-- ["12TowerDefense14GameControllerC", "init"]
-- !private ["s8HashableP", "init"]
-- ["s8HashableP", ""]
-- !private ["So8NSCodingP", "init"]
-- ["So8NSCodingP", ""]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
-- ["So26NSExtensionRequestHandlingP", ""]
-- ["So8NSObjectC", "init"]
-- !private ["So16NSObjectProtocolP", "init"]
-- ["So16NSObjectProtocolP", ""]
-- ["So11NSResponderC", "init"]
-- !private ["So17NSSeguePerformingP", "init"]
-- ["So17NSSeguePerformingP", ""]
-- !private ["So18NSTouchBarProviderP", "init"]
-- ["So18NSTouchBarProviderP", ""]
-- !private ["So33NSUserInterfaceItemIdentificationP", "init"]
-- ["So33NSUserInterfaceItemIdentificationP", ""]
-- ["So16NSViewControllerC", "init"]
-- ["So16NSViewControllerC", ""]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["12TowerDefense12ColliderTypeV", "Castle"]
+- ["12TowerDefense12ColliderTypeV", "Enemy"]
+- ["12TowerDefense12ColliderTypeV", "UInt32"]
+- ["12TowerDefense12ColliderTypeV", "init"]
 depends-nominal:
-- "s7CVarArgP"
-- "s28CustomDebugStringConvertibleP"
-- "s23CustomStringConvertibleP"
-- "s9EquatableP"
-- "12TowerDefense14GameControllerC"
-- "s8HashableP"
-- "So8NSCodingP"
-- "So26NSExtensionRequestHandlingP"
-- "So8NSObjectC"
-- "So16NSObjectProtocolP"
-- "So11NSResponderC"
-- "So17NSSeguePerformingP"
-- "So18NSTouchBarProviderP"
-- "So33NSUserInterfaceItemIdentificationP"
-- "So16NSViewControllerC"
-- "10Foundation27_KeyValueCodingAndObservingP"
+- "12TowerDefense12ColliderTypeV"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
@@ -97,4 +58,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "8e49a0ec50d319d898f0a993c40aed12"
+interface-hash: "d113ebbb9864c7e86f95679714b46059"

@@ -16,9 +16,11 @@ protocol SpawnDelegate {
 class Spawn: SKSpriteNode {
     
 
+    
     private let enemiesDelay = 2.0
     private let enemiesLvl = [[1,2,1,2], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]
     private var currentLevel    = -1
+    private var enemiesToSpawn = 0
     
     private var enemiesAlive : NSMutableArray = NSMutableArray()
     private var state : GameStateMachine
@@ -40,6 +42,7 @@ class Spawn: SKSpriteNode {
         currentLevel += 1
         if currentLevel < enemiesLvl.count {
             spawnEnemies(of: currentLevel)
+            enemiesToSpawn = enemiesLvl[currentLevel].count
         }
     }
     
@@ -50,12 +53,13 @@ class Spawn: SKSpriteNode {
     func removeEnemy(enemy: Enemy) {
         self.enemiesAlive.remove(enemy)
         enemy.removeFromParent()
-        if self.enemiesAlive.count == 0 {
+        if self.enemiesAlive.count == 0 && self.enemiesToSpawn == 0 {
             self.delegate.endLevel()
         }
     }
     
     func spawnEnemy(_ enemies: [Int]) {
+        self.enemiesToSpawn -= 1
         if let enemy = enemies.first {
             switch enemy {
             case 1:
