@@ -130,3 +130,40 @@ class SpiderEnemy : Enemy {
         return 0.03
     }
 }
+
+class AstronautEnemy : Enemy {
+    
+    var animationFrames = [SKTexture]()
+    
+    init(position: CGPoint, life: Double) {
+        super.init(name: self.getName() + String(0), position: position, life: life)
+        
+        // cria os frames pra animar
+        self.animationFrames.append(SKTexture(imageNamed: self.getName() + String(0)))
+        self.animationFrames.append(SKTexture(imageNamed: self.getName() + String(1)))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func getName() -> String {
+        return "astronaut"
+    }
+    
+    override func getDamageValue() -> Double {
+        return 0.03
+    }
+    
+    override func move() {
+        let walkAction = SKAction.animate(
+            with: self.animationFrames,
+            timePerFrame: 0.1,
+            resize: false,
+            restore: true)
+        
+        self.run(SKAction.repeatForever(walkAction), withKey: "walkingAstronaut")
+        
+        super.move()
+    }
+}
