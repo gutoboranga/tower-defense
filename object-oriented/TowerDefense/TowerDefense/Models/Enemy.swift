@@ -29,6 +29,8 @@ class Enemy: SKSpriteNode {
     private let eSpeed  : Double = 0.1
     private var lifeBar : LifeBar
 
+    private var orientation = Orientation(direction: .right)
+    
     init(name : String, position: CGPoint, life: Double) {
         
         let size = CGSize(width: 32, height: 32)
@@ -39,8 +41,9 @@ class Enemy: SKSpriteNode {
         super.init(texture: texture, color: .clear, size: size)
         
         self.position = position
+
         self.zPosition = 3
-        self.anchorPoint = CGPoint(x: 0, y: 0)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
         self.addChild(lifeBar)
         
@@ -51,7 +54,6 @@ class Enemy: SKSpriteNode {
         self.physicsBody?.collisionBitMask = 0
         self.physicsBody?.categoryBitMask = ColliderType.Enemy
         self.physicsBody?.contactTestBitMask = ColliderType.Castle
-        
     }
     
     public func loseLife(with damage:Double, completion: () -> ()) {
@@ -74,14 +76,19 @@ class Enemy: SKSpriteNode {
     
     private func move(_ newDir : [[CGFloat]]) {
         if let firstMove = newDir.first {
-            let time : Double = eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
-            let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
-            //let action = SKAction.moveBy(x: 32 * firstMove[0], y: 32 * firstMove[1], duration: abs(time))
-            run(action) {
-                var dir = newDir
-                dir.removeFirst()
-                self.move(dir)
-            }
+            let rotateAction = self.orientation.getAction(move: firstMove)
+            
+            self.run(rotateAction, completion: {
+                self.orientation.updateDirection(move: firstMove)
+                
+                let time : Double = self.eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
+                let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
+                self.run(action) {
+                    var dir = newDir
+                    dir.removeFirst()
+                    self.move(dir)
+                }
+            })
         }
     }
     
@@ -94,7 +101,6 @@ class Enemy: SKSpriteNode {
     }
     
     public func getDamageValue() -> Double {
-        print("damage")
         preconditionFailure("This method must be overridden")
     }
 }
@@ -136,5 +142,61 @@ class SpiderEnemy : Enemy {
     
     override func getDamageValue() -> Double {
         return 0.03
+    }
+}
+
+class AstronautEnemy : Enemy {
+    
+    var animationFrames = [SKTexture]()
+    
+    init(position: CGPoint, life: Double) {
+        super.init(name: self.getName() + String(0), position: position, life: life)
+        
+        // cria os frames pra animar
+        self.animationFrames.append(SKTexture(imageNamed: self.getName() + String(0)))
+        self.animationFrames.append(SKTexture(imageNamed: self.getName() + String(1)))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func getName() -> String {
+        return "astronaut"
+    }
+    
+    override func getDamageValue() -> Double {
+        return 0.03
+    }
+    
+    override func move() {
+        let walkAction = SKAction.animate(
+            with: self.animationFrames,
+            timePerFrame: 0.1,
+            resize: false,
+            restore: true)
+        
+        self.run(SKAction.repeatForever(walkAction), withKey: "walkingAstronaut")
+        
+        super.move()
+    }
+}
+
+class RoverEnemy : Enemy {
+    
+    init(position: CGPoint, life: Double) {
+        super.init(name: self.getName(), position: position, life: life)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func getName() -> String {
+        return "rover"
+    }
+    
+    override func getDamageValue() -> Double {
+        return 0.1
     }
 }

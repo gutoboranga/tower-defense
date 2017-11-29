@@ -15,10 +15,8 @@ protocol SpawnDelegate {
 
 class Spawn: SKSpriteNode {
     
-
-    
     private let enemiesDelay = 2.0
-    private let enemiesLvl = [[1,2,1,2], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]
+    private let enemiesLvl = [[3,2,4,3], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]
     private var currentLevel    = -1
     private var enemiesToSpawn = 0
     
@@ -70,6 +68,15 @@ class Spawn: SKSpriteNode {
                 let enemy = SpiderEnemy(position: self.position, life: 10)
                 self.delegate.addEnemy(enemyNode: enemy)
                 self.enemiesAlive.add(enemy)
+            case 3:
+                let enemy = AstronautEnemy(position: self.position, life: 10)
+                self.delegate.addEnemy(enemyNode: enemy)
+                self.enemiesAlive.add(enemy)
+            case 4:
+                let enemy = RoverEnemy(position: self.position, life: 10)
+                self.delegate.addEnemy(enemyNode: enemy)
+                self.enemiesAlive.add(enemy)
+            
             default:
                 print("error")
             }

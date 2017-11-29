@@ -196,10 +196,23 @@ SWIFT_CLASS("_TtC12TowerDefense11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSEvent;
 @class NSCoder;
 @class SKTexture;
 @class NSColor;
+
+SWIFT_CLASS("_TtC12TowerDefense5Enemy")
+@interface Enemy : SKSpriteNode
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC12TowerDefense14AstronautEnemy")
+@interface AstronautEnemy : Enemy
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSEvent;
 
 SWIFT_CLASS("_TtC12TowerDefense10ButtonNode")
 @interface ButtonNode : SKSpriteNode
@@ -215,12 +228,6 @@ SWIFT_CLASS("_TtC12TowerDefense6Castle")
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
 @end
 
-
-SWIFT_CLASS("_TtC12TowerDefense5Enemy")
-@interface Enemy : SKSpriteNode
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
-@end
 
 
 SWIFT_CLASS("_TtC12TowerDefense9FrogEnemy")
@@ -296,6 +303,12 @@ SWIFT_CLASS("_TtC12TowerDefense10Projectile")
 @interface Projectile : SKSpriteNode
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC12TowerDefense10RoverEnemy")
+@interface RoverEnemy : Enemy
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
