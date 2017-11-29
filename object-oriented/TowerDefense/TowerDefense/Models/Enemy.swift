@@ -28,6 +28,7 @@ class Enemy: SKSpriteNode {
     
     private let eSpeed  : Double = 0.1
     private var lifeBar : LifeBar
+
     private var orientation = Orientation(direction: .right)
     
     init(name : String, position: CGPoint, life: Double) {
@@ -40,24 +41,32 @@ class Enemy: SKSpriteNode {
         super.init(texture: texture, color: .clear, size: size)
         
         self.position = position
-        self.zPosition = 4
+
+        self.zPosition = 3
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
         self.addChild(lifeBar)
         
-        self.physicsBody = SKPhysicsBody(texture: texture, size: size)
+        self.physicsBody = SKPhysicsBody(rectangleOf: size, center: CGPoint(x: size.width/2, y: size.height/2))
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = true
         
-        self.physicsBody?.collisionBitMask = ColliderType.Castle
+        self.physicsBody?.collisionBitMask = 0
         self.physicsBody?.categoryBitMask = ColliderType.Enemy
         self.physicsBody?.contactTestBitMask = ColliderType.Castle
     }
     
-    func move() {
+    public func loseLife(with damage:Double, completion: () -> ()) {
+        lifeBar.loseLife(with: damage) {
+            completion()
+        }
+    }
+    
+    public func move() {
         let firstMove = directions.first!
         let time : Double = eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
         let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
+        //let action = SKAction.moveBy(x: 32 * firstMove[0], y: 32 * firstMove[1], duration: abs(time))
         run(action) {
             var dir = self.directions
             dir.removeFirst()
@@ -65,7 +74,7 @@ class Enemy: SKSpriteNode {
         }
     }
     
-    func move(_ newDir : [[CGFloat]]) {
+    private func move(_ newDir : [[CGFloat]]) {
         if let firstMove = newDir.first {
             let rotateAction = self.orientation.getAction(move: firstMove)
             

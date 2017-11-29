@@ -28,7 +28,7 @@ class Castle: SKSpriteNode {
         self.addChild(lifeBar)
         
         //Castle Physiscs
-        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: size.width - 0.1, height: size.height - 0.1))
+        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: size.width - 1, height: size.height - 1), center: CGPoint(x: size.width/2, y: size.height/2))
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = false
         self.physicsBody?.categoryBitMask = ColliderType.Castle

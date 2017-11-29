@@ -14,7 +14,7 @@ enum GameStateMachine {
     case playing
 }
 
-class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate,SKPhysicsContactDelegate{
+class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysicsContactDelegate{
     
     private let xIniPos = 716.0
     private let yIniPos = 390.0
@@ -45,12 +45,39 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate,SKPhysic
         addChild(hudLayer)
   
     }
+    
+    private func addTower(in ground: Ground) {
+        if let button = hudLayer?.selectedButton {
+            
+            var color : NSColor = .red
+            if button.name == "btn1" {
+                color = .cyan
+            } else if button.name == "btn2" {
+                color = .yellow
+            }
+            
+            let tower = Tower(texture: nil, size: ground.size, damage: 8, range: 700, speed: 1)
+            tower.position = ground.position
+            tower.color = color
+            towers.add(tower)
+            usableGround.remove(tower)
+            addChild(tower)
+            button.deselect()
+        }
+    }
 
     public func setState(newState: GameStateMachine) {
         if state != newState {
             self.state = newState
             self.hudLayer.setState(newState: newState)
             self.spawn.setState(newState: newState)
+            
+            for tower in towers {
+                if let tower = tower as? Tower {
+                    tower.setState(newState: newState)
+                }
+            }
+            
             switch newState {
             case .idle:
                 break
@@ -64,31 +91,29 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate,SKPhysic
         hudLayer.mouseDown(with: event)
         
         let point = event.location(in: self)
+        
+        var shouldAddTower : Bool = true
+        
         for ground in usableGround {
             if let ground = ground as? Ground {
                 if ground.contains(point) {
-                    if let button = hudLayer?.selectedButton {
-                        
-                        var color : NSColor = .red
-                        if button.name == "btn1" {
-                            color = .cyan
-                        } else if button.name == "btn2" {
-                            color = .yellow
+                    for tower in towers {
+                        if let tower = tower as? Tower {
+                            if tower.contains(point) {
+                                shouldAddTower = false
+                                break
+                            }
                         }
-                        
-                        let node = Tower(texture: nil, size: ground.size, damage: 10, range: 10, speed: 10)
-                        node.position = ground.position
-                        node.color = color
-                        towers.add(node)
-                        usableGround.remove(node)
-                        addChild(node)
-                        button.deselect()
+                    }
+                    if shouldAddTower {
+                        addTower(in: ground)
+                        break
                     }
                 }
             }
         }
     }
-
+    
     //Mark - Spawn Delegate
 
     public func addEnemy(enemyNode: Enemy) {
@@ -140,6 +165,16 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate,SKPhysic
                 if let enemy = contact.bodyB.node as? Enemy {
                     castle.loseLife(with: enemy.getDamageValue())
                     spawn.removeEnemy(enemy: enemy)
+                }
+            }
+        } else if contact.bodyA.node?.name == "Projectile" {
+            if let projectile = contact.bodyA.node as? Projectile {
+                if let enemy = contact.bodyB.node as? Enemy {
+                    projectile.removeAllActions()
+                    enemy.loseLife(with: projectile.damage, completion: {
+                        self.spawn.removeEnemy(enemy: enemy)
+                    })
+                    projectile.removeFromParent()
                 }
             }
         }
