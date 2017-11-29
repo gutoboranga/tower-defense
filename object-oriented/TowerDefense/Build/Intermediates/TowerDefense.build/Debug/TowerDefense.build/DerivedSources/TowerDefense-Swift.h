@@ -327,6 +327,15 @@ SWIFT_CLASS("_TtC12TowerDefense11SpiderEnemy")
 
 SWIFT_CLASS("_TtC12TowerDefense5Tower")
 @interface Tower : SKSpriteNode
+- (void)mouseDown:(NSEvent * _Nonnull)event;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC12TowerDefense9TowerMenu")
+@interface TowerMenu : SKSpriteNode
+- (void)mouseDown:(NSEvent * _Nonnull)event;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
 @end

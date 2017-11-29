@@ -32,7 +32,6 @@ class ButtonNode: SKSpriteNode {
     
     func selectButton() {
         self.selected = !self.selected
-        
         if selected {
             self.select()
         } else {

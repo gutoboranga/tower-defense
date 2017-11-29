@@ -9,10 +9,13 @@
 import SpriteKit
 
 protocol TowerDelegate {
-    func addProjectileToScene(projectile : Projectile)
+    func removeTower(tower : Tower)
+    
 }
 
-class Tower: SKSpriteNode {
+class Tower: SKSpriteNode, TowerMenuDelegate {
+    
+    public var towerMenu : TowerMenu
     
     private var orientation : ObjectFaceOrientation
     private var state       : GameStateMachine
@@ -23,8 +26,9 @@ class Tower: SKSpriteNode {
     public var range  : Double
     public var tSpeed : Double
     public var shotRate : Double
+    public var delegate : TowerDelegate!
     
-    init(texture: SKTexture?, size: CGSize, orientation : ObjectFaceOrientation = .up, damage: Double, range: Double, speed: Double, shotRate: Double) {
+    init(texture: SKTexture?, size: CGSize, position: CGPoint, orientation : ObjectFaceOrientation = .up, damage: Double, range: Double, speed: Double, shotRate: Double) {
         self.orientation = orientation
         self.state       = .idle
         self.damage      = damage
@@ -32,29 +36,28 @@ class Tower: SKSpriteNode {
         self.tSpeed      = speed
         self.shotRate    = shotRate
         self.selected    = false
+        self.towerMenu = TowerMenu(size: size)
+        
+        
         super.init(texture: texture, color: .blue, size: size)
         
+        self.position = position
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.zPosition = 5
         self.zRotation = CGFloat(self.orientation.rawValue).degreesToRadians()
+        
+        self.towerMenu.delegate = self
+        self.addChild(towerMenu)
+        
     }
     
     private func stopCombat() {
-        removeAllChildren()
         removeAllActions()
     }
     
     private func enterInCombat() {
-        
-        switch orientation {
-        case .up:
-            let action = SKAction.move(by: CGVector(dx: 0.0, dy: range), duration: tSpeed)
-            fire(action: action)
-            
-        default:
-            let action = SKAction.move(by: CGVector(dx: 0.0, dy: range), duration: tSpeed)
-            fire(action: action)
-        }
+        let action = SKAction.move(by: CGVector(dx: 0.0, dy: range), duration: tSpeed)
+        fire(action: action)
     }
     
     private func fire(action: SKAction) {
@@ -73,6 +76,7 @@ class Tower: SKSpriteNode {
     }
     
     public func remove() {
+        delegate.removeTower(tower: self)
         removeFromParent()
     }
     
@@ -97,6 +101,7 @@ class Tower: SKSpriteNode {
                 self.stopCombat()
             case .playing:
                 self.enterInCombat()
+                self.towerMenu.disable()
             }
         }
     }
@@ -107,6 +112,39 @@ class Tower: SKSpriteNode {
             self.orientation = newOrientation
         }
     }
+    
+    override func mouseDown(with event: NSEvent) {
+        
+        let point = event.location(in: self)
+        if towerMenu.isActive() {
+            if towerMenu.contains(point){
+                
+            } else {
+                towerMenu.disable()
+            }
+        } else {
+            if self.contains(point) {
+                towerMenu.activate()
+            }
+        }
+    }
+    
+    // Mark - Tower Menu Delegate
+    
+    func removeTower() {
+        delegate.removeTower(tower: self)
+        removeFromParent()
+    }
+    
+    func rotate() {
+        rotateRight()
+    }
+    
+    func upgrade() {
+        
+    }
+    
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

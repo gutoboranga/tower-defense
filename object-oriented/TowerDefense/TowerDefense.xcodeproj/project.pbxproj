@@ -20,6 +20,7 @@
 		2AB152341FCE129D0051BB92 /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB152331FCE129D0051BB92 /* Tower.swift */; };
 		2AB152361FCE13650051BB92 /* ObjectFaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB152351FCE13650051BB92 /* ObjectFaceOrientation.swift */; };
 		2AB152381FCE36F40051BB92 /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB152371FCE36F40051BB92 /* Projectile.swift */; };
+		2AB1523A1FCF28200051BB92 /* TowerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB152391FCF28200051BB92 /* TowerMenu.swift */; };
 		4A3706841FBE509700688810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3706831FBE509700688810 /* AppDelegate.swift */; };
 		4A37068E1FBE509700688810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A37068D1FBE509700688810 /* Assets.xcassets */; };
 		4A3706911FBE509700688810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A37068F1FBE509700688810 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		2AB152331FCE129D0051BB92 /* Tower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower.swift; sourceTree = "<group>"; };
 		2AB152351FCE13650051BB92 /* ObjectFaceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFaceOrientation.swift; sourceTree = "<group>"; };
 		2AB152371FCE36F40051BB92 /* Projectile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projectile.swift; sourceTree = "<group>"; };
+		2AB152391FCF28200051BB92 /* TowerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerMenu.swift; sourceTree = "<group>"; };
 		4A3706801FBE509700688810 /* TowerDefense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerDefense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3706831FBE509700688810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A37068D1FBE509700688810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				2AB152351FCE13650051BB92 /* ObjectFaceOrientation.swift */,
 				4AE842AA1FCE5C4B00F97795 /* Orientation.swift */,
 				2AB152371FCE36F40051BB92 /* Projectile.swift */,
+				2AB152391FCF28200051BB92 /* TowerMenu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				2AB152221FCCE9DE0051BB92 /* Spawn.swift in Sources */,
 				2AB1521A1FCCCAFB0051BB92 /* GameScene.swift in Sources */,
 				4AD22FCC1FBE6229009A52A3 /* MenuController.swift in Sources */,
+				2AB1523A1FCF28200051BB92 /* TowerMenu.swift in Sources */,
 				4AFC81711FBE7A0F00DE459C /* GameController.swift in Sources */,
 				4AD22FCF1FBE645E009A52A3 /* MenuScene.swift in Sources */,
 				2AB152381FCE36F40051BB92 /* Projectile.swift in Sources */,

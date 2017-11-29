@@ -14,7 +14,7 @@ enum GameStateMachine {
     case playing
 }
 
-class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysicsContactDelegate{
+class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDelegate, SKPhysicsContactDelegate{
     
     private let xIniPos = 732.0
     private let yIniPos = 406.0
@@ -48,20 +48,36 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysi
     
     private func addTower(in ground: Ground) {
         if let button = hudLayer?.selectedButton {
-            
-            var color : NSColor = .red
-            if button.name == "btn1" {
-                color = .cyan
+            if button.name == "btn0" {
+                let tower = Tower(texture: nil, size: ground.size, position: ground.position, damage: 1.5, range: 300, speed: 0.5, shotRate: 1)
+                tower.color = .cyan
+                tower.delegate = self
+                towers.add(tower)
+                usableGround.remove(tower)
+                addChild(tower)
+                
+            } else if button.name == "btn1" {
+                let tower = Tower(texture: nil, size: ground.size, position: ground.position, damage: 4, range: 150, speed: 1, shotRate: 1)
+                tower.color = .yellow
+                tower.delegate = self
+                towers.add(tower)
+                usableGround.remove(tower)
+                addChild(tower)
             } else if button.name == "btn2" {
-                color = .yellow
+                let tower = Tower(texture: nil, size: ground.size, position: ground.position, damage: 0.3, range: 300, speed: 0.2, shotRate: 1.5)
+                tower.color = .purple
+                tower.delegate = self
+                towers.add(tower)
+                usableGround.remove(tower)
+                addChild(tower)
+            } else if button.name == "btn3" {
+                let tower = Tower(texture: nil, size: ground.size, position: ground.position, damage: 8, range: 50, speed: 1.5, shotRate: 0.5)
+                tower.color = .brown
+                tower.delegate = self
+                towers.add(tower)
+                usableGround.remove(tower)
+                addChild(tower)
             }
-            
-            let tower = Tower(texture: nil, size: ground.size, damage: 1.5, range: 300, speed: 0.5, shotRate: 1)
-            tower.position = ground.position
-            tower.color = color
-            towers.add(tower)
-            usableGround.remove(tower)
-            addChild(tower)
             button.deselect()
         }
     }
@@ -88,26 +104,38 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysi
     }
     
     override func mouseDown(with event: NSEvent) {
-        hudLayer.mouseDown(with: event)
-        
-        let point = event.location(in: self)
-        
-        var shouldAddTower : Bool = true
-        
-        for ground in usableGround {
-            if let ground = ground as? Ground {
-                if ground.contains(point) {
-                    for tower in towers {
-                        if let tower = tower as? Tower {
-                            if tower.contains(point) {
-                                shouldAddTower = false
-                                break
+        if state == .idle {
+            hudLayer.mouseDown(with: event)
+            let point = event.location(in: self)
+            
+            var shouldAddTower : Bool = true
+            
+            for tower in towers {
+                if let tower = tower as? Tower {
+                    if tower.contains(point) {
+                        tower.towerMenu.activate()
+                        tower.towerMenu.mouseDown(with: event)
+                    } else {
+                        tower.towerMenu.disable()
+                    }
+                }
+            }
+            
+            for ground in usableGround {
+                if let ground = ground as? Ground {
+                    if ground.contains(point) {
+                        for tower in towers {
+                            if let tower = tower as? Tower {
+                                if tower.contains(point) {
+                                    shouldAddTower = false
+                                    break
+                                }
                             }
                         }
-                    }
-                    if shouldAddTower {
-                        addTower(in: ground)
-                        break
+                        if shouldAddTower {
+                            addTower(in: ground)
+                            break
+                        }
                     }
                 }
             }
@@ -156,6 +184,13 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysi
     
     public func startRound() {
         setState(newState: .playing)
+    }
+    
+    //Mark - Tower Delegate
+    
+    func removeTower(tower: Tower) {
+        self.towers.remove(tower)
+        self.usableGround.add(tower)
     }
     
     

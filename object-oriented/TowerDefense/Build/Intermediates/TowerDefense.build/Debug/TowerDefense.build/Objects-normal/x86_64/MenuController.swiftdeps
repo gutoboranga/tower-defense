@@ -427,6 +427,8 @@ depends-member:
 - ["s14StringProtocolP", "init"]
 - ["s16TextOutputStreamP", "init"]
 - ["s20TextOutputStreamableP", "init"]
+- !private ["12TowerDefense0A8DelegateP", "init"]
+- !private ["12TowerDefense0A8DelegateP", "scaleMode"]
 - ["s23_BidirectionalIndexableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "ignoresSiblingOrder"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "presentScene"]
@@ -531,6 +533,7 @@ depends-nominal:
 - "s14StringProtocolP"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
+- !private "12TowerDefense0A8DelegateP"
 - "s23_BidirectionalIndexableP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
