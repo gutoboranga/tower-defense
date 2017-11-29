@@ -22,13 +22,15 @@ class Tower: SKSpriteNode {
     public var damage : Double
     public var range  : Double
     public var tSpeed : Double
+    public var shotRate : Double
     
-    init(texture: SKTexture?, size: CGSize, orientation : ObjectFaceOrientation = .up, damage: Double, range: Double, speed: Double) {
+    init(texture: SKTexture?, size: CGSize, orientation : ObjectFaceOrientation = .up, damage: Double, range: Double, speed: Double, shotRate: Double) {
         self.orientation = orientation
         self.state       = .idle
         self.damage      = damage
         self.range       = range
         self.tSpeed      = speed
+        self.shotRate    = shotRate
         self.selected    = false
         super.init(texture: texture, color: .blue, size: size)
         
@@ -60,7 +62,7 @@ class Tower: SKSpriteNode {
         let node = Projectile(damage: damage, size: CGSize(width: 4, height: 4))
         node.position = CGPoint(x: 0, y: 0)
         
-        let wait = SKAction.wait(forDuration: tSpeed/2)
+        let wait = SKAction.wait(forDuration: tSpeed/shotRate)
         run(wait) {
             self.addChild(node)
             node.run(action, completion: {

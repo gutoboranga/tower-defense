@@ -40,6 +40,8 @@ class Enemy: SKSpriteNode {
         let texture = SKTexture(imageNamed: name)
         super.init(texture: texture, color: .clear, size: size)
         
+        self.name = "Enemy"
+        
         self.position = position
 
         self.zPosition = 3

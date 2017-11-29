@@ -22,9 +22,7 @@ depends-top-level:
 depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
 - !private ["SC7CGPointV", "init"]
-- !private ["SC6CGSizeV", "init"]
 - !private ["s7CVarArgP", "CGPoint"]
-- !private ["s7CVarArgP", "CGSize"]
 - !private ["s7CVarArgP", "ColliderType"]
 - !private ["s7CVarArgP", "SKPhysicsBody"]
 - !private ["s7CVarArgP", "affectedByGravity"]
@@ -45,7 +43,6 @@ depends-member:
 - !private ["12TowerDefense12ColliderTypeV", "Castle"]
 - !private ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
-- !private ["s28CustomDebugStringConvertibleP", "CGSize"]
 - !private ["s28CustomDebugStringConvertibleP", "ColliderType"]
 - !private ["s28CustomDebugStringConvertibleP", "SKPhysicsBody"]
 - !private ["s28CustomDebugStringConvertibleP", "affectedByGravity"]
@@ -63,7 +60,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "zPosition"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s29CustomPlaygroundQuickLookableP", "CGPoint"]
-- !private ["s29CustomPlaygroundQuickLookableP", "CGSize"]
 - !private ["s29CustomPlaygroundQuickLookableP", "ColliderType"]
 - !private ["s29CustomPlaygroundQuickLookableP", "SKPhysicsBody"]
 - !private ["s29CustomPlaygroundQuickLookableP", "anchorPoint"]
@@ -76,7 +72,6 @@ depends-member:
 - ["s29CustomPlaygroundQuickLookableP", ""]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "CGPoint"]
-- !private ["s23CustomStringConvertibleP", "CGSize"]
 - !private ["s23CustomStringConvertibleP", "ColliderType"]
 - !private ["s23CustomStringConvertibleP", "SKPhysicsBody"]
 - !private ["s23CustomStringConvertibleP", "affectedByGravity"]
@@ -96,7 +91,6 @@ depends-member:
 - !private ["s9DecodableP", "init"]
 - !private ["s9EncodableP", "init"]
 - !private ["s9EquatableP", "CGPoint"]
-- !private ["s9EquatableP", "CGSize"]
 - !private ["s9EquatableP", "ColliderType"]
 - !private ["s9EquatableP", "SKPhysicsBody"]
 - !private ["s9EquatableP", "affectedByGravity"]
@@ -117,7 +111,6 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s8HashableP", "CGPoint"]
-- !private ["s8HashableP", "CGSize"]
 - !private ["s8HashableP", "ColliderType"]
 - !private ["s8HashableP", "SKPhysicsBody"]
 - !private ["s8HashableP", "affectedByGravity"]
@@ -137,7 +130,6 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "CGPoint"]
-- !private ["So8NSCodingP", "CGSize"]
 - !private ["So8NSCodingP", "ColliderType"]
 - !private ["So8NSCodingP", "SKPhysicsBody"]
 - !private ["So8NSCodingP", "affectedByGravity"]
@@ -156,7 +148,6 @@ depends-member:
 - ["So8NSCodingP", ""]
 - !private ["So7NSColorC", "purple"]
 - !private ["So9NSCopyingP", "CGPoint"]
-- !private ["So9NSCopyingP", "CGSize"]
 - !private ["So9NSCopyingP", "ColliderType"]
 - !private ["So9NSCopyingP", "SKPhysicsBody"]
 - !private ["So9NSCopyingP", "affectedByGravity"]
@@ -196,7 +187,6 @@ depends-member:
 - !private ["So8NSObjectC", "usesPreciseCollisionDetection"]
 - !private ["So8NSObjectC", "zPosition"]
 - !private ["So16NSObjectProtocolP", "CGPoint"]
-- !private ["So16NSObjectProtocolP", "CGSize"]
 - !private ["So16NSObjectProtocolP", "ColliderType"]
 - !private ["So16NSObjectProtocolP", "SKPhysicsBody"]
 - !private ["So16NSObjectProtocolP", "affectedByGravity"]
@@ -234,7 +224,6 @@ depends-member:
 - !private ["So14NSSecureCodingP", "purple"]
 - !private ["So8NSStringC", "init"]
 - !private ["So18NSTouchBarProviderP", "CGPoint"]
-- !private ["So18NSTouchBarProviderP", "CGSize"]
 - !private ["So18NSTouchBarProviderP", "ColliderType"]
 - !private ["So18NSTouchBarProviderP", "SKPhysicsBody"]
 - !private ["So18NSTouchBarProviderP", "anchorPoint"]
@@ -294,7 +283,6 @@ depends-member:
 - !private ["So12SKSpriteNodeC", "zPosition"]
 - ["So12SKSpriteNodeC", ""]
 - !private ["So10SKWarpableP", "CGPoint"]
-- !private ["So10SKWarpableP", "CGSize"]
 - !private ["So10SKWarpableP", "ColliderType"]
 - !private ["So10SKWarpableP", "SKPhysicsBody"]
 - !private ["So10SKWarpableP", "anchorPoint"]
@@ -322,7 +310,6 @@ depends-member:
 - !private ["s10_IndexableP", "init"]
 - !private ["s14_IndexableBaseP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGSize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ColliderType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "SKPhysicsBody"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "affectedByGravity"]
@@ -345,7 +332,6 @@ depends-member:
 depends-nominal:
 - !private "s23BidirectionalCollectionP"
 - !private "SC7CGPointV"
-- !private "SC6CGSizeV"
 - "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "12TowerDefense12ColliderTypeV"

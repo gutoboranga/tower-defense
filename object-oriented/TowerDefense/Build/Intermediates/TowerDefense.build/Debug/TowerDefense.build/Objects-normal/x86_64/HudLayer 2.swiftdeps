@@ -1,0 +1,818 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HudLayerDelegate"
+- "HudLayer"
+provides-nominal:
+- "12TowerDefense16HudLayerDelegateP"
+- "12TowerDefense8HudLayerC"
+provides-member:
+- ["12TowerDefense16HudLayerDelegateP", ""]
+- ["12TowerDefense8HudLayerC", ""]
+provides-dynamic-lookup:
+- "mouseDown"
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- !private "*"
+- !private "+"
+- !private "-"
+- !private "..."
+- !private "=="
+- "Array"
+- "AssignmentPrecedence"
+- "ButtonDelegate"
+- "ButtonNode"
+- !private "CGPoint"
+- "CGSize"
+- "Double"
+- "GameStateMachine"
+- "HudLayer"
+- "HudLayerDelegate"
+- "NSCoder"
+- "NSColor"
+- "NSEvent"
+- "SKLabelNode"
+- "SKSpriteNode"
+- "SKTexture"
+- "StringLiteralType"
+- !private "fatalError"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s19BinaryFloatingPointP", "description"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["12TowerDefense14ButtonDelegateP", "ButtonNode"]
+- !private ["12TowerDefense14ButtonDelegateP", "CGPoint"]
+- !private ["12TowerDefense14ButtonDelegateP", "CGSize"]
+- !private ["12TowerDefense14ButtonDelegateP", "SKLabelNode"]
+- !private ["12TowerDefense14ButtonDelegateP", "addChild"]
+- !private ["12TowerDefense14ButtonDelegateP", "btnNames"]
+- !private ["12TowerDefense14ButtonDelegateP", "buttons"]
+- !private ["12TowerDefense14ButtonDelegateP", "coinsLabel"]
+- !private ["12TowerDefense14ButtonDelegateP", "delegate"]
+- !private ["12TowerDefense14ButtonDelegateP", "fatalError"]
+- !private ["12TowerDefense14ButtonDelegateP", "nodes"]
+- !private ["12TowerDefense14ButtonDelegateP", "playButton"]
+- !private ["12TowerDefense14ButtonDelegateP", "scoreLabel"]
+- !private ["12TowerDefense14ButtonDelegateP", "selectedButton"]
+- ["12TowerDefense14ButtonDelegateP", "setDeselectedButton"]
+- ["12TowerDefense14ButtonDelegateP", "setSelectedButton"]
+- !private ["12TowerDefense14ButtonDelegateP", "state"]
+- !private ["12TowerDefense14ButtonDelegateP", "zPosition"]
+- ["12TowerDefense14ButtonDelegateP", ""]
+- !private ["12TowerDefense10ButtonNodeC", "deinit"]
+- !private ["12TowerDefense10ButtonNodeC", "delegate"]
+- !private ["12TowerDefense10ButtonNodeC", "deselect"]
+- !private ["12TowerDefense10ButtonNodeC", "init"]
+- !private ["12TowerDefense10ButtonNodeC", "isSelected"]
+- !private ["12TowerDefense10ButtonNodeC", "name"]
+- !private ["12TowerDefense10ButtonNodeC", "position"]
+- !private ["SC7CGPointV", "init"]
+- !private ["SC6CGSizeV", "init"]
+- !private ["s7CVarArgP", "ButtonNode"]
+- !private ["s7CVarArgP", "CGPoint"]
+- !private ["s7CVarArgP", "CGSize"]
+- !private ["s7CVarArgP", "SKLabelNode"]
+- !private ["s7CVarArgP", "addChild"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "btnNames"]
+- !private ["s7CVarArgP", "buttons"]
+- !private ["s7CVarArgP", "coinsLabel"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s7CVarArgP", "deselect"]
+- !private ["s7CVarArgP", "fatalError"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isSelected"]
+- !private ["s7CVarArgP", "location"]
+- !private ["s7CVarArgP", "mouseDown"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "nodes"]
+- !private ["s7CVarArgP", "playButton"]
+- !private ["s7CVarArgP", "position"]
+- !private ["s7CVarArgP", "scoreLabel"]
+- !private ["s7CVarArgP", "selectedButton"]
+- ["s7CVarArgP", "setDeselectedButton"]
+- ["s7CVarArgP", "setSelectedButton"]
+- !private ["s7CVarArgP", "state"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "zPosition"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "append"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "description"]
+- ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "ButtonNode"]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "CGSize"]
+- !private ["s28CustomDebugStringConvertibleP", "SKLabelNode"]
+- !private ["s28CustomDebugStringConvertibleP", "addChild"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "btnNames"]
+- !private ["s28CustomDebugStringConvertibleP", "buttons"]
+- !private ["s28CustomDebugStringConvertibleP", "coinsLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "deselect"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isSelected"]
+- !private ["s28CustomDebugStringConvertibleP", "location"]
+- !private ["s28CustomDebugStringConvertibleP", "mouseDown"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "nodes"]
+- !private ["s28CustomDebugStringConvertibleP", "playButton"]
+- !private ["s28CustomDebugStringConvertibleP", "position"]
+- !private ["s28CustomDebugStringConvertibleP", "scoreLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "selectedButton"]
+- ["s28CustomDebugStringConvertibleP", "setDeselectedButton"]
+- ["s28CustomDebugStringConvertibleP", "setSelectedButton"]
+- !private ["s28CustomDebugStringConvertibleP", "state"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "zPosition"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "ButtonNode"]
+- !private ["s29CustomPlaygroundQuickLookableP", "CGPoint"]
+- !private ["s29CustomPlaygroundQuickLookableP", "CGSize"]
+- !private ["s29CustomPlaygroundQuickLookableP", "SKLabelNode"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "addChild"]
+- !private ["s29CustomPlaygroundQuickLookableP", "btnNames"]
+- !private ["s29CustomPlaygroundQuickLookableP", "buttons"]
+- !private ["s29CustomPlaygroundQuickLookableP", "coinsLabel"]
+- !private ["s29CustomPlaygroundQuickLookableP", "delegate"]
+- !private ["s29CustomPlaygroundQuickLookableP", "description"]
+- !private ["s29CustomPlaygroundQuickLookableP", "deselect"]
+- !private ["s29CustomPlaygroundQuickLookableP", "fatalError"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isSelected"]
+- !private ["s29CustomPlaygroundQuickLookableP", "name"]
+- !private ["s29CustomPlaygroundQuickLookableP", "nodes"]
+- !private ["s29CustomPlaygroundQuickLookableP", "playButton"]
+- !private ["s29CustomPlaygroundQuickLookableP", "position"]
+- !private ["s29CustomPlaygroundQuickLookableP", "scoreLabel"]
+- !private ["s29CustomPlaygroundQuickLookableP", "selectedButton"]
+- ["s29CustomPlaygroundQuickLookableP", "setDeselectedButton"]
+- ["s29CustomPlaygroundQuickLookableP", "setSelectedButton"]
+- !private ["s29CustomPlaygroundQuickLookableP", "state"]
+- !private ["s29CustomPlaygroundQuickLookableP", "zPosition"]
+- ["s29CustomPlaygroundQuickLookableP", ""]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "description"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "ButtonNode"]
+- !private ["s23CustomStringConvertibleP", "CGPoint"]
+- !private ["s23CustomStringConvertibleP", "CGSize"]
+- !private ["s23CustomStringConvertibleP", "SKLabelNode"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addChild"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "btnNames"]
+- !private ["s23CustomStringConvertibleP", "buttons"]
+- !private ["s23CustomStringConvertibleP", "coinsLabel"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "deselect"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isSelected"]
+- !private ["s23CustomStringConvertibleP", "location"]
+- !private ["s23CustomStringConvertibleP", "mouseDown"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "nodes"]
+- !private ["s23CustomStringConvertibleP", "playButton"]
+- !private ["s23CustomStringConvertibleP", "position"]
+- !private ["s23CustomStringConvertibleP", "scoreLabel"]
+- !private ["s23CustomStringConvertibleP", "selectedButton"]
+- ["s23CustomStringConvertibleP", "setDeselectedButton"]
+- ["s23CustomStringConvertibleP", "setSelectedButton"]
+- !private ["s23CustomStringConvertibleP", "state"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "zPosition"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "description"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["Sd", "description"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "description"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "ButtonNode"]
+- !private ["s9EquatableP", "CGPoint"]
+- !private ["s9EquatableP", "CGSize"]
+- !private ["s9EquatableP", "SKLabelNode"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addChild"]
+- !private ["s9EquatableP", "btnNames"]
+- !private ["s9EquatableP", "buttons"]
+- !private ["s9EquatableP", "coinsLabel"]
+- !private ["s9EquatableP", "delegate"]
+- !private ["s9EquatableP", "description"]
+- !private ["s9EquatableP", "deselect"]
+- !private ["s9EquatableP", "fatalError"]
+- ["s9EquatableP", "idle"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isSelected"]
+- !private ["s9EquatableP", "location"]
+- !private ["s9EquatableP", "mouseDown"]
+- !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "nodes"]
+- !private ["s9EquatableP", "playButton"]
+- ["s9EquatableP", "playing"]
+- !private ["s9EquatableP", "position"]
+- !private ["s9EquatableP", "scoreLabel"]
+- !private ["s9EquatableP", "selectedButton"]
+- ["s9EquatableP", "setDeselectedButton"]
+- ["s9EquatableP", "setSelectedButton"]
+- !private ["s9EquatableP", "state"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "zPosition"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "description"]
+- !private ["s27ExpressibleByIntegerLiteralP", "description"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s13FloatingPointP", "description"]
+- !private ["12TowerDefense16GameStateMachineO", "deinit"]
+- ["12TowerDefense16GameStateMachineO", "idle"]
+- ["12TowerDefense16GameStateMachineO", "playing"]
+- !private ["s8HashableP", "ButtonNode"]
+- !private ["s8HashableP", "CGPoint"]
+- !private ["s8HashableP", "CGSize"]
+- !private ["s8HashableP", "SKLabelNode"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addChild"]
+- !private ["s8HashableP", "btnNames"]
+- !private ["s8HashableP", "buttons"]
+- !private ["s8HashableP", "coinsLabel"]
+- !private ["s8HashableP", "delegate"]
+- !private ["s8HashableP", "description"]
+- !private ["s8HashableP", "deselect"]
+- !private ["s8HashableP", "fatalError"]
+- ["s8HashableP", "idle"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "isSelected"]
+- !private ["s8HashableP", "location"]
+- !private ["s8HashableP", "mouseDown"]
+- !private ["s8HashableP", "name"]
+- !private ["s8HashableP", "nodes"]
+- !private ["s8HashableP", "playButton"]
+- ["s8HashableP", "playing"]
+- !private ["s8HashableP", "position"]
+- !private ["s8HashableP", "scoreLabel"]
+- !private ["s8HashableP", "selectedButton"]
+- ["s8HashableP", "setDeselectedButton"]
+- ["s8HashableP", "setSelectedButton"]
+- !private ["s8HashableP", "state"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "zPosition"]
+- ["s8HashableP", ""]
+- ["12TowerDefense8HudLayerC", "ButtonNode"]
+- !private ["12TowerDefense8HudLayerC", "CGPoint"]
+- ["12TowerDefense8HudLayerC", "CGSize"]
+- ["12TowerDefense8HudLayerC", "Double"]
+- ["12TowerDefense8HudLayerC", "GameStateMachine"]
+- ["12TowerDefense8HudLayerC", "HudLayerDelegate"]
+- ["12TowerDefense8HudLayerC", "NSCoder"]
+- ["12TowerDefense8HudLayerC", "NSColor"]
+- ["12TowerDefense8HudLayerC", "NSEvent"]
+- ["12TowerDefense8HudLayerC", "SKLabelNode"]
+- ["12TowerDefense8HudLayerC", "SKTexture"]
+- !private ["12TowerDefense8HudLayerC", "addChild"]
+- !private ["12TowerDefense8HudLayerC", "btnNames"]
+- !private ["12TowerDefense8HudLayerC", "buttons"]
+- !private ["12TowerDefense8HudLayerC", "coinsLabel"]
+- ["12TowerDefense8HudLayerC", "deinit"]
+- ["12TowerDefense8HudLayerC", "delegate"]
+- !private ["12TowerDefense8HudLayerC", "fatalError"]
+- ["12TowerDefense8HudLayerC", "init"]
+- ["12TowerDefense8HudLayerC", "mouseDown"]
+- !private ["12TowerDefense8HudLayerC", "nodes"]
+- !private ["12TowerDefense8HudLayerC", "playButton"]
+- !private ["12TowerDefense8HudLayerC", "scoreLabel"]
+- ["12TowerDefense8HudLayerC", "selectedButton"]
+- ["12TowerDefense8HudLayerC", "setCoins"]
+- ["12TowerDefense8HudLayerC", "setDeselectedButton"]
+- ["12TowerDefense8HudLayerC", "setScore"]
+- ["12TowerDefense8HudLayerC", "setSelectedButton"]
+- ["12TowerDefense8HudLayerC", "setState"]
+- !private ["12TowerDefense8HudLayerC", "state"]
+- !private ["12TowerDefense8HudLayerC", "zPosition"]
+- ["12TowerDefense16HudLayerDelegateP", "startRound"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "description"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "ButtonNode"]
+- !private ["So8NSCodingP", "CGPoint"]
+- !private ["So8NSCodingP", "CGSize"]
+- !private ["So8NSCodingP", "SKLabelNode"]
+- !private ["So8NSCodingP", "addChild"]
+- !private ["So8NSCodingP", "btnNames"]
+- !private ["So8NSCodingP", "buttons"]
+- !private ["So8NSCodingP", "coinsLabel"]
+- !private ["So8NSCodingP", "delegate"]
+- !private ["So8NSCodingP", "deselect"]
+- !private ["So8NSCodingP", "fatalError"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isSelected"]
+- !private ["So8NSCodingP", "location"]
+- !private ["So8NSCodingP", "mouseDown"]
+- !private ["So8NSCodingP", "name"]
+- !private ["So8NSCodingP", "nodes"]
+- !private ["So8NSCodingP", "playButton"]
+- !private ["So8NSCodingP", "position"]
+- !private ["So8NSCodingP", "scoreLabel"]
+- !private ["So8NSCodingP", "selectedButton"]
+- ["So8NSCodingP", "setDeselectedButton"]
+- ["So8NSCodingP", "setSelectedButton"]
+- !private ["So8NSCodingP", "state"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "zPosition"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "ButtonNode"]
+- !private ["So9NSCopyingP", "CGPoint"]
+- !private ["So9NSCopyingP", "CGSize"]
+- !private ["So9NSCopyingP", "SKLabelNode"]
+- !private ["So9NSCopyingP", "addChild"]
+- !private ["So9NSCopyingP", "btnNames"]
+- !private ["So9NSCopyingP", "buttons"]
+- !private ["So9NSCopyingP", "coinsLabel"]
+- !private ["So9NSCopyingP", "delegate"]
+- !private ["So9NSCopyingP", "deselect"]
+- !private ["So9NSCopyingP", "fatalError"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isSelected"]
+- !private ["So9NSCopyingP", "location"]
+- !private ["So9NSCopyingP", "mouseDown"]
+- !private ["So9NSCopyingP", "name"]
+- !private ["So9NSCopyingP", "nodes"]
+- !private ["So9NSCopyingP", "playButton"]
+- !private ["So9NSCopyingP", "position"]
+- !private ["So9NSCopyingP", "scoreLabel"]
+- !private ["So9NSCopyingP", "selectedButton"]
+- ["So9NSCopyingP", "setDeselectedButton"]
+- ["So9NSCopyingP", "setSelectedButton"]
+- !private ["So9NSCopyingP", "state"]
+- !private ["So9NSCopyingP", "text"]
+- !private ["So9NSCopyingP", "zPosition"]
+- ["So9NSCopyingP", ""]
+- !private ["So7NSEventC", "location"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "ButtonNode"]
+- !private ["So8NSObjectC", "CGPoint"]
+- ["So8NSObjectC", "CGSize"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "GameStateMachine"]
+- ["So8NSObjectC", "HudLayerDelegate"]
+- ["So8NSObjectC", "NSCoder"]
+- ["So8NSObjectC", "NSColor"]
+- ["So8NSObjectC", "NSEvent"]
+- ["So8NSObjectC", "SKLabelNode"]
+- ["So8NSObjectC", "SKTexture"]
+- !private ["So8NSObjectC", "addChild"]
+- ["So8NSObjectC", "btnNames"]
+- ["So8NSObjectC", "buttons"]
+- ["So8NSObjectC", "coinsLabel"]
+- ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "deselect"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isSelected"]
+- !private ["So8NSObjectC", "location"]
+- ["So8NSObjectC", "mouseDown"]
+- !private ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "nodes"]
+- ["So8NSObjectC", "playButton"]
+- !private ["So8NSObjectC", "position"]
+- ["So8NSObjectC", "scoreLabel"]
+- ["So8NSObjectC", "selectedButton"]
+- ["So8NSObjectC", "setCoins"]
+- ["So8NSObjectC", "setDeselectedButton"]
+- ["So8NSObjectC", "setScore"]
+- ["So8NSObjectC", "setSelectedButton"]
+- ["So8NSObjectC", "setState"]
+- ["So8NSObjectC", "state"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "zPosition"]
+- !private ["So16NSObjectProtocolP", "ButtonNode"]
+- !private ["So16NSObjectProtocolP", "CGPoint"]
+- !private ["So16NSObjectProtocolP", "CGSize"]
+- !private ["So16NSObjectProtocolP", "SKLabelNode"]
+- !private ["So16NSObjectProtocolP", "addChild"]
+- !private ["So16NSObjectProtocolP", "btnNames"]
+- !private ["So16NSObjectProtocolP", "buttons"]
+- !private ["So16NSObjectProtocolP", "coinsLabel"]
+- !private ["So16NSObjectProtocolP", "delegate"]
+- !private ["So16NSObjectProtocolP", "deselect"]
+- !private ["So16NSObjectProtocolP", "fatalError"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isSelected"]
+- !private ["So16NSObjectProtocolP", "location"]
+- !private ["So16NSObjectProtocolP", "mouseDown"]
+- !private ["So16NSObjectProtocolP", "name"]
+- !private ["So16NSObjectProtocolP", "nodes"]
+- !private ["So16NSObjectProtocolP", "playButton"]
+- !private ["So16NSObjectProtocolP", "position"]
+- !private ["So16NSObjectProtocolP", "scoreLabel"]
+- !private ["So16NSObjectProtocolP", "selectedButton"]
+- ["So16NSObjectProtocolP", "setDeselectedButton"]
+- ["So16NSObjectProtocolP", "setSelectedButton"]
+- !private ["So16NSObjectProtocolP", "state"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "zPosition"]
+- ["So16NSObjectProtocolP", ""]
+- ["So19NSPasteboardReadingP", "init"]
+- ["So19NSPasteboardWritingP", "init"]
+- ["So11NSResponderC", "ButtonNode"]
+- !private ["So11NSResponderC", "CGPoint"]
+- ["So11NSResponderC", "CGSize"]
+- ["So11NSResponderC", "Double"]
+- ["So11NSResponderC", "GameStateMachine"]
+- ["So11NSResponderC", "HudLayerDelegate"]
+- ["So11NSResponderC", "NSCoder"]
+- ["So11NSResponderC", "NSColor"]
+- ["So11NSResponderC", "NSEvent"]
+- ["So11NSResponderC", "SKLabelNode"]
+- ["So11NSResponderC", "SKTexture"]
+- !private ["So11NSResponderC", "addChild"]
+- ["So11NSResponderC", "btnNames"]
+- ["So11NSResponderC", "buttons"]
+- ["So11NSResponderC", "coinsLabel"]
+- ["So11NSResponderC", "delegate"]
+- !private ["So11NSResponderC", "deselect"]
+- !private ["So11NSResponderC", "fatalError"]
+- ["So11NSResponderC", "init"]
+- !private ["So11NSResponderC", "isSelected"]
+- ["So11NSResponderC", "mouseDown"]
+- !private ["So11NSResponderC", "name"]
+- !private ["So11NSResponderC", "nodes"]
+- ["So11NSResponderC", "playButton"]
+- !private ["So11NSResponderC", "position"]
+- ["So11NSResponderC", "scoreLabel"]
+- ["So11NSResponderC", "selectedButton"]
+- ["So11NSResponderC", "setCoins"]
+- ["So11NSResponderC", "setDeselectedButton"]
+- ["So11NSResponderC", "setScore"]
+- ["So11NSResponderC", "setSelectedButton"]
+- ["So11NSResponderC", "setState"]
+- ["So11NSResponderC", "state"]
+- !private ["So11NSResponderC", "text"]
+- !private ["So11NSResponderC", "zPosition"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
+- !private ["So18NSTouchBarProviderP", "ButtonNode"]
+- !private ["So18NSTouchBarProviderP", "CGPoint"]
+- !private ["So18NSTouchBarProviderP", "CGSize"]
+- !private ["So18NSTouchBarProviderP", "SKLabelNode"]
+- !private ["So18NSTouchBarProviderP", "addChild"]
+- !private ["So18NSTouchBarProviderP", "btnNames"]
+- !private ["So18NSTouchBarProviderP", "buttons"]
+- !private ["So18NSTouchBarProviderP", "coinsLabel"]
+- !private ["So18NSTouchBarProviderP", "delegate"]
+- !private ["So18NSTouchBarProviderP", "deselect"]
+- !private ["So18NSTouchBarProviderP", "fatalError"]
+- !private ["So18NSTouchBarProviderP", "init"]
+- !private ["So18NSTouchBarProviderP", "isSelected"]
+- !private ["So18NSTouchBarProviderP", "mouseDown"]
+- !private ["So18NSTouchBarProviderP", "name"]
+- !private ["So18NSTouchBarProviderP", "nodes"]
+- !private ["So18NSTouchBarProviderP", "playButton"]
+- !private ["So18NSTouchBarProviderP", "position"]
+- !private ["So18NSTouchBarProviderP", "scoreLabel"]
+- !private ["So18NSTouchBarProviderP", "selectedButton"]
+- ["So18NSTouchBarProviderP", "setDeselectedButton"]
+- ["So18NSTouchBarProviderP", "setSelectedButton"]
+- !private ["So18NSTouchBarProviderP", "state"]
+- !private ["So18NSTouchBarProviderP", "text"]
+- !private ["So18NSTouchBarProviderP", "zPosition"]
+- ["So18NSTouchBarProviderP", ""]
+- !private ["s7NumericP", "description"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["So11SKLabelNodeC", "init"]
+- !private ["So11SKLabelNodeC", "position"]
+- !private ["So11SKLabelNodeC", "text"]
+- ["So6SKNodeC", "ButtonNode"]
+- !private ["So6SKNodeC", "CGPoint"]
+- ["So6SKNodeC", "CGSize"]
+- ["So6SKNodeC", "Double"]
+- ["So6SKNodeC", "GameStateMachine"]
+- ["So6SKNodeC", "HudLayerDelegate"]
+- ["So6SKNodeC", "NSCoder"]
+- ["So6SKNodeC", "NSColor"]
+- ["So6SKNodeC", "NSEvent"]
+- ["So6SKNodeC", "SKLabelNode"]
+- ["So6SKNodeC", "SKTexture"]
+- !private ["So6SKNodeC", "addChild"]
+- ["So6SKNodeC", "btnNames"]
+- ["So6SKNodeC", "buttons"]
+- ["So6SKNodeC", "coinsLabel"]
+- ["So6SKNodeC", "delegate"]
+- !private ["So6SKNodeC", "deselect"]
+- !private ["So6SKNodeC", "fatalError"]
+- ["So6SKNodeC", "init"]
+- !private ["So6SKNodeC", "isSelected"]
+- ["So6SKNodeC", "mouseDown"]
+- !private ["So6SKNodeC", "name"]
+- !private ["So6SKNodeC", "nodes"]
+- ["So6SKNodeC", "playButton"]
+- !private ["So6SKNodeC", "position"]
+- ["So6SKNodeC", "scoreLabel"]
+- ["So6SKNodeC", "selectedButton"]
+- ["So6SKNodeC", "setCoins"]
+- ["So6SKNodeC", "setDeselectedButton"]
+- ["So6SKNodeC", "setScore"]
+- ["So6SKNodeC", "setSelectedButton"]
+- ["So6SKNodeC", "setState"]
+- ["So6SKNodeC", "state"]
+- !private ["So6SKNodeC", "text"]
+- !private ["So6SKNodeC", "zPosition"]
+- ["So12SKSpriteNodeC", "ButtonNode"]
+- !private ["So12SKSpriteNodeC", "CGPoint"]
+- ["So12SKSpriteNodeC", "CGSize"]
+- ["So12SKSpriteNodeC", "Double"]
+- ["So12SKSpriteNodeC", "GameStateMachine"]
+- ["So12SKSpriteNodeC", "HudLayerDelegate"]
+- ["So12SKSpriteNodeC", "NSCoder"]
+- ["So12SKSpriteNodeC", "NSColor"]
+- ["So12SKSpriteNodeC", "NSEvent"]
+- ["So12SKSpriteNodeC", "SKLabelNode"]
+- ["So12SKSpriteNodeC", "SKTexture"]
+- !private ["So12SKSpriteNodeC", "addChild"]
+- ["So12SKSpriteNodeC", "btnNames"]
+- ["So12SKSpriteNodeC", "buttons"]
+- ["So12SKSpriteNodeC", "coinsLabel"]
+- ["So12SKSpriteNodeC", "delegate"]
+- !private ["So12SKSpriteNodeC", "deselect"]
+- !private ["So12SKSpriteNodeC", "fatalError"]
+- ["So12SKSpriteNodeC", "init"]
+- !private ["So12SKSpriteNodeC", "isSelected"]
+- ["So12SKSpriteNodeC", "mouseDown"]
+- !private ["So12SKSpriteNodeC", "name"]
+- !private ["So12SKSpriteNodeC", "nodes"]
+- ["So12SKSpriteNodeC", "playButton"]
+- !private ["So12SKSpriteNodeC", "position"]
+- ["So12SKSpriteNodeC", "scoreLabel"]
+- ["So12SKSpriteNodeC", "selectedButton"]
+- ["So12SKSpriteNodeC", "setCoins"]
+- ["So12SKSpriteNodeC", "setDeselectedButton"]
+- ["So12SKSpriteNodeC", "setScore"]
+- ["So12SKSpriteNodeC", "setSelectedButton"]
+- ["So12SKSpriteNodeC", "setState"]
+- ["So12SKSpriteNodeC", "state"]
+- !private ["So12SKSpriteNodeC", "zPosition"]
+- ["So12SKSpriteNodeC", ""]
+- !private ["So10SKWarpableP", "ButtonNode"]
+- !private ["So10SKWarpableP", "CGPoint"]
+- !private ["So10SKWarpableP", "CGSize"]
+- !private ["So10SKWarpableP", "SKLabelNode"]
+- !private ["So10SKWarpableP", "addChild"]
+- !private ["So10SKWarpableP", "btnNames"]
+- !private ["So10SKWarpableP", "buttons"]
+- !private ["So10SKWarpableP", "coinsLabel"]
+- !private ["So10SKWarpableP", "delegate"]
+- !private ["So10SKWarpableP", "deselect"]
+- !private ["So10SKWarpableP", "fatalError"]
+- !private ["So10SKWarpableP", "init"]
+- !private ["So10SKWarpableP", "isSelected"]
+- !private ["So10SKWarpableP", "name"]
+- !private ["So10SKWarpableP", "nodes"]
+- !private ["So10SKWarpableP", "playButton"]
+- !private ["So10SKWarpableP", "position"]
+- !private ["So10SKWarpableP", "scoreLabel"]
+- !private ["So10SKWarpableP", "selectedButton"]
+- ["So10SKWarpableP", "setDeselectedButton"]
+- ["So10SKWarpableP", "setSelectedButton"]
+- !private ["So10SKWarpableP", "state"]
+- !private ["So10SKWarpableP", "zPosition"]
+- ["So10SKWarpableP", ""]
+- !private ["s8SequenceP", "append"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedNumericP", "description"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "description"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "subscript"]
+- !private ["s15_CVarArgAlignedP", "description"]
+- !private ["s22_CVarArgPassedAsDoubleP", "description"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "description"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "description"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "append"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ButtonNode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SKLabelNode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addChild"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "btnNames"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "buttons"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "coinsLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "deselect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isSelected"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "location"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mouseDown"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nodes"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "playButton"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "position"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scoreLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectedButton"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "setDeselectedButton"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "setSelectedButton"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "state"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "zPosition"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "append"]
+- !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "description"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- !private ["s22_RandomAccessIndexableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "subscript"]
+- !private ["s11_StrideableP", "description"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- !private "Sb"
+- "12TowerDefense14ButtonDelegateP"
+- !private "12TowerDefense10ButtonNodeC"
+- !private "SC7CGPointV"
+- !private "SC6CGSizeV"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- !private "Sd"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s13FloatingPointP"
+- "12TowerDefense16GameStateMachineO"
+- "s8HashableP"
+- "12TowerDefense8HudLayerC"
+- "12TowerDefense16HudLayerDelegateP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So7NSEventC"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So19NSPasteboardReadingP"
+- "So19NSPasteboardWritingP"
+- "So11NSResponderC"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- "So18NSTouchBarProviderP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- !private "So11SKLabelNodeC"
+- "So6SKNodeC"
+- "So12SKSpriteNodeC"
+- "So10SKWarpableP"
+- "s8SequenceP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- !private "s11_StrideableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ModelIO.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/ModelIO.framework/Headers/ModelIO.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GLKit.framework/Headers/GLKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SpriteKit.framework/Headers/SpriteKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "f665c3e5b8176fa90ecb8f47c5c17d34"

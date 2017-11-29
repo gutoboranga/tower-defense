@@ -56,7 +56,7 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysi
                 color = .yellow
             }
             
-            let tower = Tower(texture: nil, size: ground.size, damage: 8, range: 700, speed: 1)
+            let tower = Tower(texture: nil, size: ground.size, damage: 1.5, range: 300, speed: 0.5, shotRate: 1)
             tower.position = ground.position
             tower.color = color
             towers.add(tower)
@@ -160,6 +160,7 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysi
     
     
     func didBegin(_ contact: SKPhysicsContact) {
+        
         if contact.bodyA.node?.name == "Castle"  {
             if let castle = contact.bodyA.node as? Castle {
                 if let enemy = contact.bodyB.node as? Enemy {
@@ -175,6 +176,22 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysi
                         self.spawn.removeEnemy(enemy: enemy)
                     })
                     projectile.removeFromParent()
+                }
+            }
+        } else if contact.bodyA.node?.name == "Enemy" {
+            if let enemy = contact.bodyA.node as? Enemy {
+                if let projectile = contact.bodyB.node as? Projectile {
+                    
+                    projectile.removeAllActions()
+                    enemy.loseLife(with: projectile.damage, completion: {
+                        self.spawn.removeEnemy(enemy: enemy)
+                    })
+                    projectile.removeFromParent()
+                }
+                
+                if let castle = contact.bodyB.node as? Castle {
+                    castle.loseLife(with: enemy.getDamageValue())
+                    spawn.removeEnemy(enemy: enemy)
                 }
             }
         }

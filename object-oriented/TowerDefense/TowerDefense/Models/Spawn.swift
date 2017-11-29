@@ -15,7 +15,7 @@ protocol SpawnDelegate {
 
 class Spawn: SKSpriteNode {
     
-    private let enemiesDelay = 2.0
+    private let enemiesDelay = 1.0
     private let enemiesLvl = [[3,2,4,3], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]
     private var currentLevel    = -1
     private var enemiesToSpawn = 0
