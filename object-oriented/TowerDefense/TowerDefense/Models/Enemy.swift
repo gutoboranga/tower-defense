@@ -26,8 +26,9 @@ class Enemy: SKSpriteNode {
                                             [0.0,-8.0],
                                             [2.0,0.0]]
     
-    private let eSpeed  : Double = 0.05
+    private let eSpeed  : Double = 0.1
     private var lifeBar : LifeBar
+    private var orientation = Orientation(direction: .right)
     
     init(name : String, position: CGPoint, life: Double) {
         
@@ -40,7 +41,7 @@ class Enemy: SKSpriteNode {
         
         self.position = position
         self.zPosition = 4
-        self.anchorPoint = CGPoint(x: 0, y: 0)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
         self.addChild(lifeBar)
         
@@ -51,7 +52,6 @@ class Enemy: SKSpriteNode {
         self.physicsBody?.collisionBitMask = ColliderType.Castle
         self.physicsBody?.categoryBitMask = ColliderType.Enemy
         self.physicsBody?.contactTestBitMask = ColliderType.Castle
-        
     }
     
     func move() {
@@ -67,13 +67,19 @@ class Enemy: SKSpriteNode {
     
     func move(_ newDir : [[CGFloat]]) {
         if let firstMove = newDir.first {
-            let time : Double = eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
-            let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
-            run(action) {
-                var dir = newDir
-                dir.removeFirst()
-                self.move(dir)
-            }
+            let rotateAction = self.orientation.getAction(move: firstMove)
+            
+            self.run(rotateAction, completion: {
+                self.orientation.updateDirection(move: firstMove)
+                
+                let time : Double = self.eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
+                let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
+                self.run(action) {
+                    var dir = newDir
+                    dir.removeFirst()
+                    self.move(dir)
+                }
+            })
         }
     }
     
@@ -86,7 +92,6 @@ class Enemy: SKSpriteNode {
     }
     
     public func getDamageValue() -> Double {
-        print("damage")
         preconditionFailure("This method must be overridden")
     }
 }
@@ -165,5 +170,24 @@ class AstronautEnemy : Enemy {
         self.run(SKAction.repeatForever(walkAction), withKey: "walkingAstronaut")
         
         super.move()
+    }
+}
+
+class RoverEnemy : Enemy {
+    
+    init(position: CGPoint, life: Double) {
+        super.init(name: self.getName(), position: position, life: life)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func getName() -> String {
+        return "rover"
+    }
+    
+    override func getDamageValue() -> Double {
+        return 0.1
     }
 }

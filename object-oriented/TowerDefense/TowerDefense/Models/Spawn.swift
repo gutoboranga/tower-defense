@@ -15,7 +15,7 @@ protocol SpawnDelegate {
 
 class Spawn: SKSpriteNode {
     
-    private let enemiesLvl = [[1,2,3,2], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]
+    private let enemiesLvl = [[3,2,4,3], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]
     private var atualLevel    = -1
     private var enemiesAlive : NSMutableArray = NSMutableArray()
     private var state : GameStateMachine
@@ -65,6 +65,10 @@ class Spawn: SKSpriteNode {
                 self.enemiesAlive.add(enemy)
             case 3:
                 let enemy = AstronautEnemy(position: self.position, life: 10)
+                self.delegate.addEnemy(enemyNode: enemy)
+                self.enemiesAlive.add(enemy)
+            case 4:
+                let enemy = RoverEnemy(position: self.position, life: 10)
                 self.delegate.addEnemy(enemyNode: enemy)
                 self.enemiesAlive.add(enemy)
             

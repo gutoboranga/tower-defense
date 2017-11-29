@@ -28,6 +28,7 @@
 		4AD22FCC1FBE6229009A52A3 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FCB1FBE6229009A52A3 /* MenuController.swift */; };
 		4AD22FCF1FBE645E009A52A3 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FCE1FBE645E009A52A3 /* MenuScene.swift */; };
 		4AD22FD11FBE647D009A52A3 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4AD22FD01FBE647D009A52A3 /* MenuScene.sks */; };
+		4AE842AB1FCE5C4B00F97795 /* Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE842AA1FCE5C4B00F97795 /* Orientation.swift */; };
 		4AFC81711FBE7A0F00DE459C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC81701FBE7A0F00DE459C /* GameController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		4AD22FCB1FBE6229009A52A3 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		4AD22FCE1FBE645E009A52A3 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		4AD22FD01FBE647D009A52A3 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		4AE842AA1FCE5C4B00F97795 /* Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orientation.swift; sourceTree = "<group>"; };
 		4AFC81701FBE7A0F00DE459C /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 				2AB152311FCDD8020051BB92 /* ButtonNode.swift */,
 				2AB152331FCE129D0051BB92 /* Tower.swift */,
 				2AB152351FCE13650051BB92 /* ObjectFaceOrientation.swift */,
+				4AE842AA1FCE5C4B00F97795 /* Orientation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				4AD22FCF1FBE645E009A52A3 /* MenuScene.swift in Sources */,
 				2AB152281FCD00AE0051BB92 /* LifeBar.swift in Sources */,
 				4A3706841FBE509700688810 /* AppDelegate.swift in Sources */,
+				4AE842AB1FCE5C4B00F97795 /* Orientation.swift in Sources */,
 				2AB152201FCCE0480051BB92 /* MapLoader.swift in Sources */,
 				2AB152361FCE13650051BB92 /* ObjectFaceOrientation.swift in Sources */,
 				2AB152301FCDD1E40051BB92 /* HudLayer.swift in Sources */,
