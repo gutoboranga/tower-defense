@@ -60,7 +60,7 @@ class Tower: SKSpriteNode {
         let node = Projectile(damage: damage, size: CGSize(width: 4, height: 4))
         node.position = CGPoint(x: 0, y: 0)
         
-        let wait = SKAction.wait(forDuration: tSpeed/5)
+        let wait = SKAction.wait(forDuration: tSpeed/2)
         run(wait) {
             self.addChild(node)
             node.run(action, completion: {

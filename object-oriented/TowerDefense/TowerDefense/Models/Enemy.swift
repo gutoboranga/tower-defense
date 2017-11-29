@@ -50,6 +50,7 @@ class Enemy: SKSpriteNode {
         self.physicsBody = SKPhysicsBody(rectangleOf: size, center: CGPoint(x: 0, y: 0))
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = true
+        self.physicsBody?.usesPreciseCollisionDetection = true
         
         self.physicsBody?.collisionBitMask = 0
         self.physicsBody?.categoryBitMask = ColliderType.Enemy
@@ -66,7 +67,6 @@ class Enemy: SKSpriteNode {
         let firstMove = directions.first!
         let time : Double = eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
         let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
-        //let action = SKAction.moveBy(x: 32 * firstMove[0], y: 32 * firstMove[1], duration: abs(time))
         run(action) {
             var dir = self.directions
             dir.removeFirst()
@@ -121,7 +121,7 @@ class FrogEnemy : Enemy {
     }
     
     override func getDamageValue() -> Double {
-        return 0.02
+        return 0.5
     }
 }
 
@@ -141,7 +141,7 @@ class SpiderEnemy : Enemy {
     }
     
     override func getDamageValue() -> Double {
-        return 0.03
+        return 1
     }
 }
 
@@ -166,7 +166,7 @@ class AstronautEnemy : Enemy {
     }
     
     override func getDamageValue() -> Double {
-        return 0.03
+        return 0.7
     }
     
     override func move() {
@@ -197,6 +197,6 @@ class RoverEnemy : Enemy {
     }
     
     override func getDamageValue() -> Double {
-        return 0.1
+        return 0.09
     }
 }

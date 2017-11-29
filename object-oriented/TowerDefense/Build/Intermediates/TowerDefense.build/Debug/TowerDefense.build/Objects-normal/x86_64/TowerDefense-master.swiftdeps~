@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0.2 (swiftlang-900.0.69.2 clang-900.0.38)"
 options: "04f043afc94c22e53ccaa96161a98c04"
-build_time: [1511974988, 659518000]
+build_time: [1511974882, 141826000]
 inputs:
   "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/Spawn.swift": [1511970005, 0]
   "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/GameScenes/GameScene.swift": [1511973228, 0]
@@ -14,7 +14,7 @@ inputs:
   "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/MapLoader.swift": [1511888453, 0]
   "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/ObjectFaceOrientation.swift": [1511907761, 0]
   "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/HudLayer.swift": [1511909813, 0]
-  "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/Enemy.swift": [1511974988, 0]
+  "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/Enemy.swift": [1511974875, 0]
   "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/Castle.swift": [1511972829, 0]
   "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/CollyderType.swift": [1511886599, 0]
   "/Users/rodrigofranzoi/Documents/UFRGS/2017/MLP/tower-defense/object-oriented/TowerDefense/TowerDefense/Models/Tower.swift": [1511973800, 0]

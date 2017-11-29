@@ -9,13 +9,14 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "&&"
 - !private "*"
+- !private "+"
 - !private "-"
 - !private "-="
 - !private "/"
 - !private "<="
 - !private ">"
 - "AssignmentPrecedence"
-- !private "CGFloat"
+- "CGFloat"
 - !private "CGPoint"
 - "CGSize"
 - "Double"
@@ -32,7 +33,6 @@ depends-member:
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["12CoreGraphics7CGFloatV", "init"]
 - !private ["SC7CGPointV", "init"]
-- !private ["SC6CGSizeV", "height"]
 - !private ["SC6CGSizeV", "init"]
 - !private ["SC6CGSizeV", "width"]
 - !private ["s7CVarArgP", "CGFloat"]
@@ -74,7 +74,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "color"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
-- !private ["s28CustomDebugStringConvertibleP", "height"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "life"]
 - !private ["s28CustomDebugStringConvertibleP", "lifeBar"]
@@ -99,7 +98,6 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "atualLife"]
 - !private ["s29CustomPlaygroundQuickLookableP", "color"]
 - !private ["s29CustomPlaygroundQuickLookableP", "fatalError"]
-- !private ["s29CustomPlaygroundQuickLookableP", "height"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "life"]
 - !private ["s29CustomPlaygroundQuickLookableP", "lifeBar"]
@@ -110,7 +108,6 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "zPosition"]
 - ["s29CustomPlaygroundQuickLookableP", ""]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
-- !private ["s17CustomReflectableP", "height"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "width"]
 - !private ["s23CustomStringConvertibleP", "CGFloat"]
@@ -139,12 +136,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "zPosition"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "height"]
 - !private ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "width"]
 - !private ["Sd", "init"]
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "height"]
 - !private ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "width"]
 - !private ["s9EquatableP", "CGFloat"]
@@ -161,7 +156,6 @@ depends-member:
 - !private ["s9EquatableP", "color"]
 - !private ["s9EquatableP", "fatalError"]
 - !private ["s9EquatableP", "green"]
-- !private ["s9EquatableP", "height"]
 - !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "life"]
 - !private ["s9EquatableP", "lifeBar"]
@@ -206,7 +200,7 @@ depends-member:
 - !private ["s8HashableP", "yellow"]
 - !private ["s8HashableP", "zPosition"]
 - ["s8HashableP", ""]
-- !private ["12TowerDefense7LifeBarC", "CGFloat"]
+- ["12TowerDefense7LifeBarC", "CGFloat"]
 - !private ["12TowerDefense7LifeBarC", "CGPoint"]
 - ["12TowerDefense7LifeBarC", "CGSize"]
 - ["12TowerDefense7LifeBarC", "Double"]
@@ -284,7 +278,7 @@ depends-member:
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So16NSMutableCopyingP", "init"]
-- !private ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "CGFloat"]
 - !private ["So8NSObjectC", "CGPoint"]
 - ["So8NSObjectC", "CGSize"]
 - ["So8NSObjectC", "Double"]
@@ -344,7 +338,7 @@ depends-member:
 - !private ["So19NSPasteboardWritingP", "init"]
 - !private ["So19NSPasteboardWritingP", "red"]
 - !private ["So19NSPasteboardWritingP", "yellow"]
-- !private ["So11NSResponderC", "CGFloat"]
+- ["So11NSResponderC", "CGFloat"]
 - !private ["So11NSResponderC", "CGPoint"]
 - ["So11NSResponderC", "CGSize"]
 - ["So11NSResponderC", "Double"]
@@ -393,7 +387,7 @@ depends-member:
 - !private ["s7NumericP", "init"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
 - !private ["So8SKActionC", "resize"]
-- !private ["So6SKNodeC", "CGFloat"]
+- ["So6SKNodeC", "CGFloat"]
 - !private ["So6SKNodeC", "CGPoint"]
 - ["So6SKNodeC", "CGSize"]
 - ["So6SKNodeC", "Double"]
@@ -414,7 +408,7 @@ depends-member:
 - !private ["So6SKNodeC", "position"]
 - !private ["So6SKNodeC", "run"]
 - !private ["So6SKNodeC", "zPosition"]
-- !private ["So12SKSpriteNodeC", "CGFloat"]
+- ["So12SKSpriteNodeC", "CGFloat"]
 - !private ["So12SKSpriteNodeC", "CGPoint"]
 - ["So12SKSpriteNodeC", "CGSize"]
 - ["So12SKSpriteNodeC", "Double"]
@@ -506,7 +500,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "zPosition"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
-- !private ["s21_ObjectiveCBridgeableP", "height"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
@@ -629,4 +622,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "13ae2a50ef9a1c4b5dde54da18fd7d92"
+interface-hash: "bae04eb165f19a17376fcc86a8246df2"
