@@ -66,7 +66,7 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate,SKPhysic
         let point = event.location(in: self)
         for ground in usableGround {
             if let ground = ground as? Ground {
-                if ground.contains(point) && {
+                if ground.contains(point) {
                     if let button = hudLayer?.selectedButton {
                         
                         var color : NSColor = .red
@@ -138,7 +138,7 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate,SKPhysic
         if contact.bodyA.node?.name == "Castle"  {
             if let castle = contact.bodyA.node as? Castle {
                 if let enemy = contact.bodyB.node as? Enemy {
-                    castle.loseLife(with: enemy.eDamage)
+                    castle.loseLife(with: enemy.getDamageValue())
                     spawn.removeEnemy(enemy: enemy)
                 }
             }

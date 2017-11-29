@@ -29,8 +29,6 @@ class Enemy: SKSpriteNode {
     private let eSpeed  : Double = 0.05
     private var lifeBar : LifeBar
     
-    public let eDamage : Double = 0.02
-    
     init(name : String, position: CGPoint, life: Double) {
         
         let size = CGSize(width: 32, height: 32)
@@ -83,4 +81,52 @@ class Enemy: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func getName() -> String {
+        preconditionFailure("This method must be overridden")
+    }
+    
+    public func getDamageValue() -> Double {
+        print("damage")
+        preconditionFailure("This method must be overridden")
+    }
+}
+
+
+class FrogEnemy : Enemy {
+    
+    init(position: CGPoint, life: Double) {
+        super.init(name: self.getName(), position: position, life: life)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func getName() -> String {
+        return "frog"
+    }
+    
+    override func getDamageValue() -> Double {
+        return 0.02
+    }
+}
+
+
+class SpiderEnemy : Enemy {
+    
+    init(position: CGPoint, life: Double) {
+        super.init(name: self.getName(), position: position, life: life)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func getName() -> String {
+        return "spider"
+    }
+    
+    override func getDamageValue() -> Double {
+        return 0.03
+    }
 }
