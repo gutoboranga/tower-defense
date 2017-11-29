@@ -163,7 +163,7 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, SKPhysi
         if contact.bodyA.node?.name == "Castle"  {
             if let castle = contact.bodyA.node as? Castle {
                 if let enemy = contact.bodyB.node as? Enemy {
-                    castle.loseLife(with: enemy.eDamage)
+                    castle.loseLife(with: enemy.getDamageValue())
                     spawn.removeEnemy(enemy: enemy)
                 }
             }

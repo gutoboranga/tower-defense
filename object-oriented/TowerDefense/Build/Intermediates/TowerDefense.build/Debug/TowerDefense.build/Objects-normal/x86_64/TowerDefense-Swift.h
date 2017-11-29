@@ -222,6 +222,12 @@ SWIFT_CLASS("_TtC12TowerDefense5Enemy")
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
 @end
 
+
+SWIFT_CLASS("_TtC12TowerDefense9FrogEnemy")
+@interface FrogEnemy : Enemy
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSBundle;
 
 SWIFT_CLASS("_TtC12TowerDefense14GameController")
@@ -297,6 +303,12 @@ SWIFT_CLASS("_TtC12TowerDefense5Spawn")
 @interface Spawn : SKSpriteNode
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC12TowerDefense11SpiderEnemy")
+@interface SpiderEnemy : Enemy
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
