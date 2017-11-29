@@ -15,8 +15,10 @@ protocol SpawnDelegate {
 
 class Spawn: SKSpriteNode {
     
-    private let enemiesLvl = [[1,1,1,1], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]    
-    private var atualLevel    = -1
+    private let enemiesDelay = 2.0
+    private let enemiesLvl   = [[1,1,1,1], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]
+    private var atualLevel   = -1
+    
     private var enemiesAlive : NSMutableArray = NSMutableArray()
     private var state : GameStateMachine
     
@@ -63,7 +65,7 @@ class Spawn: SKSpriteNode {
                 print("error")
             }
             
-            let action = SKAction.wait(forDuration: 0.3)
+            let action = SKAction.wait(forDuration: enemiesDelay)
             run(action, completion: {
                 var newEnemies = enemies
                 newEnemies.removeFirst()

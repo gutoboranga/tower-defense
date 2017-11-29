@@ -8,6 +8,10 @@
 
 import SpriteKit
 
+protocol TowerDelegate {
+    func addProjectileToScene(projectile : Projectile)
+}
+
 class Tower: SKSpriteNode {
     
     private var orientation : ObjectFaceOrientation
@@ -16,10 +20,10 @@ class Tower: SKSpriteNode {
     private var selected : Bool
     
     public var damage : Double
-    public var range  : CGFloat
+    public var range  : Double
     public var tSpeed : Double
     
-    init(texture: SKTexture?, size: CGSize, orientation : ObjectFaceOrientation = .up, damage: Double, range: CGFloat, speed: Double) {
+    init(texture: SKTexture?, size: CGSize, orientation : ObjectFaceOrientation = .up, damage: Double, range: Double, speed: Double) {
         self.orientation = orientation
         self.state       = .idle
         self.damage      = damage
@@ -31,6 +35,40 @@ class Tower: SKSpriteNode {
         self.anchorPoint = CGPoint(x: 0, y: 0)
         self.zPosition = 5
         self.zRotation = CGFloat(self.orientation.rawValue).degreesToRadians()
+    }
+    
+    private func stopCombat() {
+        removeAllChildren()
+        removeAllActions()
+    }
+    
+    private func enterInCombat() {
+        
+        switch orientation {
+        case .up:
+            let action = SKAction.move(by: CGVector(dx: 0.0, dy: range), duration: tSpeed)
+            fire(action: action)
+            
+        default:
+            let action = SKAction.move(by: CGVector(dx: 0.0, dy: range), duration: tSpeed)
+            fire(action: action)
+        }
+    }
+    
+    private func fire(action: SKAction) {
+        
+        let node = Projectile(damage: damage, size: CGSize(width: 4, height: 4))
+        //node.position = CGPoint(x: position.x + size.width/2, y: position.y + size.height/2)
+        node.position = CGPoint(x: size.width/2, y: size.height/2)
+        
+        let wait = SKAction.wait(forDuration: tSpeed/5)
+        run(wait) {
+            self.addChild(node)
+            node.run(action, completion: {
+                node.removeFromParent()
+            })
+            self.fire(action: action)
+        }
     }
     
     public func remove() {
@@ -55,9 +93,9 @@ class Tower: SKSpriteNode {
             self.state = newState
             switch newState {
             case .idle:
-                break
+                self.stopCombat()
             case .playing:
-                break
+                self.enterInCombat()
             }
         }
     }

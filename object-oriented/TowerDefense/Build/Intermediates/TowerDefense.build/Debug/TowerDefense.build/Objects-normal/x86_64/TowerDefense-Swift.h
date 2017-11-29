@@ -286,6 +286,13 @@ SWIFT_CLASS("_TtC12TowerDefense9MenuScene")
 @end
 
 
+SWIFT_CLASS("_TtC12TowerDefense10Projectile")
+@interface Projectile : SKSpriteNode
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTexture:(SKTexture * _Nullable)texture color:(NSColor * _Nonnull)color size:(CGSize)size SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC12TowerDefense5Spawn")
 @interface Spawn : SKSpriteNode
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

@@ -22,7 +22,6 @@ depends-top-level:
 - "FloatLiteralType"
 - "GameStateMachine"
 - "Int"
-- "IntegerLiteralType"
 - "NSCoder"
 - "NSMutableArray"
 - !private "SKAction"
@@ -60,6 +59,7 @@ depends-member:
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "description"]
 - !private ["s7CVarArgP", "enemiesAlive"]
+- !private ["s7CVarArgP", "enemiesDelay"]
 - !private ["s7CVarArgP", "enemiesLvl"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "first"]
@@ -98,6 +98,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "enemiesAlive"]
+- !private ["s28CustomDebugStringConvertibleP", "enemiesDelay"]
 - !private ["s28CustomDebugStringConvertibleP", "enemiesLvl"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "first"]
@@ -128,6 +129,7 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "delegate"]
 - !private ["s29CustomPlaygroundQuickLookableP", "description"]
 - !private ["s29CustomPlaygroundQuickLookableP", "enemiesAlive"]
+- !private ["s29CustomPlaygroundQuickLookableP", "enemiesDelay"]
 - !private ["s29CustomPlaygroundQuickLookableP", "enemiesLvl"]
 - !private ["s29CustomPlaygroundQuickLookableP", "fatalError"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
@@ -165,6 +167,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "description"]
 - !private ["s23CustomStringConvertibleP", "enemiesAlive"]
+- !private ["s23CustomStringConvertibleP", "enemiesDelay"]
 - !private ["s23CustomStringConvertibleP", "enemiesLvl"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "first"]
@@ -215,6 +218,7 @@ depends-member:
 - !private ["s9EquatableP", "delegate"]
 - !private ["s9EquatableP", "description"]
 - !private ["s9EquatableP", "enemiesAlive"]
+- !private ["s9EquatableP", "enemiesDelay"]
 - !private ["s9EquatableP", "enemiesLvl"]
 - !private ["s9EquatableP", "fatalError"]
 - ["s9EquatableP", "idle"]
@@ -263,6 +267,7 @@ depends-member:
 - !private ["s8HashableP", "delegate"]
 - !private ["s8HashableP", "description"]
 - !private ["s8HashableP", "enemiesAlive"]
+- !private ["s8HashableP", "enemiesDelay"]
 - !private ["s8HashableP", "enemiesLvl"]
 - !private ["s8HashableP", "fatalError"]
 - ["s8HashableP", "idle"]
@@ -307,6 +312,7 @@ depends-member:
 - !private ["So8NSCodingP", "count"]
 - !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "enemiesAlive"]
+- !private ["So8NSCodingP", "enemiesDelay"]
 - !private ["So8NSCodingP", "enemiesLvl"]
 - !private ["So8NSCodingP", "fatalError"]
 - ["So8NSCodingP", "init"]
@@ -336,6 +342,7 @@ depends-member:
 - !private ["So9NSCopyingP", "count"]
 - !private ["So9NSCopyingP", "delegate"]
 - !private ["So9NSCopyingP", "enemiesAlive"]
+- !private ["So9NSCopyingP", "enemiesDelay"]
 - !private ["So9NSCopyingP", "enemiesLvl"]
 - !private ["So9NSCopyingP", "fatalError"]
 - ["So9NSCopyingP", "init"]
@@ -383,6 +390,7 @@ depends-member:
 - !private ["So8NSObjectC", "count"]
 - ["So8NSObjectC", "delegate"]
 - ["So8NSObjectC", "enemiesAlive"]
+- ["So8NSObjectC", "enemiesDelay"]
 - ["So8NSObjectC", "enemiesLvl"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "init"]
@@ -412,6 +420,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "count"]
 - !private ["So16NSObjectProtocolP", "delegate"]
 - !private ["So16NSObjectProtocolP", "enemiesAlive"]
+- !private ["So16NSObjectProtocolP", "enemiesDelay"]
 - !private ["So16NSObjectProtocolP", "enemiesLvl"]
 - !private ["So16NSObjectProtocolP", "fatalError"]
 - ["So16NSObjectProtocolP", "init"]
@@ -446,6 +455,7 @@ depends-member:
 - ["So11NSResponderC", "atualLevel"]
 - ["So11NSResponderC", "delegate"]
 - ["So11NSResponderC", "enemiesAlive"]
+- ["So11NSResponderC", "enemiesDelay"]
 - ["So11NSResponderC", "enemiesLvl"]
 - !private ["So11NSResponderC", "fatalError"]
 - ["So11NSResponderC", "init"]
@@ -476,6 +486,7 @@ depends-member:
 - !private ["So18NSTouchBarProviderP", "atualLevel"]
 - !private ["So18NSTouchBarProviderP", "delegate"]
 - !private ["So18NSTouchBarProviderP", "enemiesAlive"]
+- !private ["So18NSTouchBarProviderP", "enemiesDelay"]
 - !private ["So18NSTouchBarProviderP", "enemiesLvl"]
 - !private ["So18NSTouchBarProviderP", "fatalError"]
 - !private ["So18NSTouchBarProviderP", "init"]
@@ -515,6 +526,7 @@ depends-member:
 - ["So6SKNodeC", "atualLevel"]
 - ["So6SKNodeC", "delegate"]
 - ["So6SKNodeC", "enemiesAlive"]
+- ["So6SKNodeC", "enemiesDelay"]
 - ["So6SKNodeC", "enemiesLvl"]
 - !private ["So6SKNodeC", "fatalError"]
 - ["So6SKNodeC", "init"]
@@ -544,6 +556,7 @@ depends-member:
 - ["So12SKSpriteNodeC", "atualLevel"]
 - ["So12SKSpriteNodeC", "delegate"]
 - ["So12SKSpriteNodeC", "enemiesAlive"]
+- ["So12SKSpriteNodeC", "enemiesDelay"]
 - ["So12SKSpriteNodeC", "enemiesLvl"]
 - !private ["So12SKSpriteNodeC", "fatalError"]
 - ["So12SKSpriteNodeC", "init"]
@@ -570,6 +583,7 @@ depends-member:
 - !private ["So10SKWarpableP", "atualLevel"]
 - !private ["So10SKWarpableP", "delegate"]
 - !private ["So10SKWarpableP", "enemiesAlive"]
+- !private ["So10SKWarpableP", "enemiesDelay"]
 - !private ["So10SKWarpableP", "enemiesLvl"]
 - !private ["So10SKWarpableP", "fatalError"]
 - !private ["So10SKWarpableP", "init"]
@@ -608,6 +622,7 @@ depends-member:
 - ["12TowerDefense5SpawnC", "deinit"]
 - ["12TowerDefense5SpawnC", "delegate"]
 - !private ["12TowerDefense5SpawnC", "enemiesAlive"]
+- !private ["12TowerDefense5SpawnC", "enemiesDelay"]
 - !private ["12TowerDefense5SpawnC", "enemiesLvl"]
 - !private ["12TowerDefense5SpawnC", "fatalError"]
 - ["12TowerDefense5SpawnC", "init"]
@@ -676,6 +691,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "enemiesAlive"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "enemiesDelay"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "enemiesLvl"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
@@ -842,4 +858,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "9bf5c4605e5c2861876d3d7e3595165c"
+interface-hash: "2eb4a69b4a63a74f169996dbac07985e"

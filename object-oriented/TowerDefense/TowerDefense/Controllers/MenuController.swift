@@ -64,6 +64,7 @@ class MenuController: NSViewController, MenuDelegate {
             
             view.showsFPS = true
             view.showsNodeCount = true
+            view.showsPhysics = true
                 
         }
     }
