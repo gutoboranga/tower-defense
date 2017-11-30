@@ -42,7 +42,7 @@ class Enemy: SKSpriteNode {
         
         self.physicsBody?.collisionBitMask = 0
         self.physicsBody?.categoryBitMask = ColliderType.Enemy
-        self.physicsBody?.contactTestBitMask = ColliderType.Castle
+        self.physicsBody?.contactTestBitMask = ColliderType.Obstacle
     }
     
     public func loseLife(with damage:Double, completion: () -> ()) {

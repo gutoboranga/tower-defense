@@ -49,41 +49,31 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
         self.hudLayer.setCoins(newCoins: self.coins)
   
         self.setState(newState: .idle)
-        //self.coins += coinsPerLevel[self.spawn.getCurrentLevel()]
-        //self.hudLayer.setCoins(newCoins:  self.coins)
     }
     
     private func addTower(in ground: Ground) {
-        if coins >= 50 {
-            if let button = hudLayer?.selectedButton {
-                if button.name == "btn0" {
-                    let tower = SpeedTower(size: ground.size, position: ground.position)
-                    tower.delegate = self
-                    towers.add(tower)
-                    usableGround.remove(tower)
-                    addChild(tower)
-                    
-                } else if button.name == "btn1" {
-                    let tower = DamageTower(size: ground.size, position: ground.position)
-                    tower.delegate = self
-                    towers.add(tower)
-                    usableGround.remove(tower)
-                    addChild(tower)
-                } else if button.name == "btn2" {
-                    let tower = RangeTower(size: ground.size, position: ground.position)
-                    tower.delegate = self
-                    towers.add(tower)
-                    usableGround.remove(tower)
-                    addChild(tower)
-                } else if button.name == "btn3" {
-                    let tower = DoubleShotTower(size: ground.size, position: ground.position)
-                    tower.delegate = self
-                    towers.add(tower)
-                    usableGround.remove(tower)
-                    addChild(tower)
-                }
-                self.coins -= 50
-                self.hudLayer.setCoins(newCoins: self.coins)
+        
+        if let button = hudLayer?.selectedButton {
+            var tower : Tower!
+            
+            if button.name == "btn0" {
+                tower = SpeedTower(size: ground.size, position: ground.position)
+            } else if button.name == "btn1" {
+                tower = DamageTower(size: ground.size, position: ground.position)
+            } else if button.name == "btn2" {
+                tower = RangeTower(size: ground.size, position: ground.position)
+            } else if button.name == "btn3" {
+                tower = DoubleShotTower(size: ground.size, position: ground.position)
+            }
+            
+            tower.delegate = self
+            
+             if coins >= tower.getPrice() {
+                self.towers.add(tower)
+                self.usableGround.remove(tower)
+                self.addChild(tower)
+                self.setCoins(addValue: -tower.getPrice())
+                
                 button.deselect()
             }
         }
@@ -103,9 +93,7 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
             
             switch newState {
             case .idle:
-                self.coins += coinsPerLevel[self.spawn.getCurrentLevel()]
-                self.hudLayer.setCoins(newCoins:  self.coins)
-
+                setCoins(addValue: coinsPerLevel[self.spawn.getCurrentLevel()])
             case .playing:
                 break
             }
@@ -149,6 +137,16 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
                 }
             }
         }
+    }
+    
+    private func setScore(addValue value:Int) {
+        self.score += value
+        self.hudLayer.setScore(newScore: self.score)
+    }
+    
+    private func setCoins(addValue value:Int) {
+        self.coins += value
+        self.hudLayer.setCoins(newCoins: self.coins)
     }
     
     //Mark - Spawn Delegate
@@ -197,12 +195,19 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
     
     //Mark - Tower Delegate
     
+    func upgradeTower(tower: Tower) {
+        if tower.getLevel() < 3 {
+            if coins >= tower.getUpgratePrice() {
+                setCoins(addValue: -tower.getUpgratePrice())
+                tower.upgrateTower()
+            }
+        }
+    }
+    
     func removeTower(tower: Tower) {
         self.towers.remove(tower)
         self.usableGround.add(tower)
-        
-        self.coins += 50
-        self.hudLayer.setCoins(newCoins:  self.coins)
+        self.setCoins(addValue: tower.getPrice())
     }
     
     
@@ -212,7 +217,7 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
             if let castle = contact.bodyA.node as? Castle {
                 if let enemy = contact.bodyB.node as? Enemy {
                     castle.loseLife(with: enemy.getDamageValue(), completion: {
-                        //EndGame
+                        self.gameOver()
                     })
                     spawn.removeEnemy(enemy: enemy)
                 }
@@ -240,7 +245,7 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
                 
                 if let castle = contact.bodyB.node as? Castle {
                     castle.loseLife(with: enemy.getDamageValue(), completion: {
-                        //EndGame
+                        self.gameOver()
                     })
                     spawn.removeEnemy(enemy: enemy)
                 }
@@ -248,9 +253,12 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
         }
     }
     
+    func gameOver () {
+        //IMPLEMENTAR GAME OVER
+    }
+    
     func removeEnemyFromGame(enemy: Enemy) {
         self.spawn.removeEnemy(enemy: enemy)
-        self.score += enemy.getScoreValue()
-        self.hudLayer.setScore(newScore: self.score)
+        self.setScore(addValue: enemy.getScoreValue())
     }
 }

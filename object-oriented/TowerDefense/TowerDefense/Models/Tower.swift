@@ -10,12 +10,12 @@ import SpriteKit
 
 protocol TowerDelegate {
     func removeTower(tower : Tower)
-    
+    func upgradeTower(tower: Tower)
 }
 
 class Tower: StandardBlock, TowerMenuDelegate {
     
-    public let updatePrices = [50, 100, 150]
+    public let upgratePrices = [50, 100, 150]
     
     public var towerMenu : TowerMenu
     private var state    : GameStateMachine
@@ -31,7 +31,7 @@ class Tower: StandardBlock, TowerMenuDelegate {
     
     init(texture: SKTexture?, size: CGSize, position: CGPoint, orientation : ObjectFaceOrientation = .up, damage: Double, range: Double, speed: Double, shotRate: Double) {
 
-        self.level     = 1
+        self.level     = 0
         self.state     = .idle
         self.damage    = damage
         self.range     = range
@@ -54,6 +54,10 @@ class Tower: StandardBlock, TowerMenuDelegate {
     
     private func stopCombat() {
         removeAllActions()
+    }
+    
+    public func getPrice() -> Int {
+        return 50
     }
     
     public func enterInCombat() {
@@ -114,8 +118,24 @@ class Tower: StandardBlock, TowerMenuDelegate {
         return SKAction.move(by: CGVector(dx: 0.0, dy: range), duration: tSpeed)
     }
     
-    public func getUpdatePrice() -> Int{
-        return updatePrices[level-1]
+    public func getUpgratePrice() -> Int{
+        return upgratePrices[level]
+    }
+    
+    public func upgrateTower() {
+        if level < 3 {
+            self.level += 1
+            self.towerMenu.upgradeLevel()
+            self.upgrateAtributes()
+        }
+    }
+    
+    public func upgrateAtributes() {
+        
+    }
+    
+    public func getLevel() -> Int{
+        return self.level
     }
     
     // Mark - Tower Menu Delegate
@@ -130,7 +150,7 @@ class Tower: StandardBlock, TowerMenuDelegate {
     }
     
     func upgrade() {
-        
+        delegate.upgradeTower(tower: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -141,12 +161,16 @@ class Tower: StandardBlock, TowerMenuDelegate {
 class SpeedTower : Tower {
     
     init( size: CGSize, position: CGPoint) {
-        super.init(texture: nil, size: size, position: position, damage: 0.3, range: 300, speed: 0.5, shotRate: 6)
+        super.init(texture: nil, size: size, position: position, damage: 0.3, range: 300, speed: 0.7, shotRate: 6)
         self.color = .red
     }
     
     override func getProjectile() -> Projectile{
         return Projectile(damage: damage, size: CGSize(width: 4, height: 4))
+    }
+    
+    override func upgrateAtributes() {
+        self.tSpeed *= 1.0 - (0.2 * Double(getLevel()))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -157,12 +181,16 @@ class SpeedTower : Tower {
 class DamageTower : Tower {
     
     init( size: CGSize, position: CGPoint) {
-        super.init(texture: nil, size: size, position: position, damage: 5, range: 150, speed: 1, shotRate: 2)
+        super.init(texture: nil, size: size, position: position, damage: 5, range: 150, speed: 2, shotRate: 2)
         self.color = .blue
     }
     
     override func getProjectile() -> Projectile{
         return Projectile(damage: damage, size: CGSize(width: 10, height: 10))
+    }
+    
+    override func upgrateAtributes() {
+        self.damage *= 1.0 + (0.2 * Double(getLevel()))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -173,15 +201,18 @@ class DamageTower : Tower {
 class RangeTower : Tower {
     
     init( size: CGSize, position: CGPoint) {
-        super.init(texture: nil, size: size, position: position, damage: 1.5, range: 800, speed: 1, shotRate: 4)
+        super.init(texture: nil, size: size, position: position, damage: 1.5, range: 600, speed: 1.3, shotRate: 4)
         self.color = .purple
     }
     
     override func getProjectile() -> Projectile{
         return Projectile(damage: damage, size: CGSize(width: 10, height: 10))
-        
     }
     
+    override func upgrateAtributes() {
+        self.range *= 1.0 + (0.2 * Double(getLevel()))
+    }
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -190,7 +221,7 @@ class RangeTower : Tower {
 class DoubleShotTower : Tower {
     
     init( size: CGSize, position: CGPoint) {
-        super.init(texture: nil, size: size, position: position, damage: 1, range: 400, speed: 0.8, shotRate: 2)
+        super.init(texture: nil, size: size, position: position, damage: 1, range: 250, speed: 1, shotRate: 2)
         self.color = .orange
     }
     
@@ -199,8 +230,21 @@ class DoubleShotTower : Tower {
     }
     
     override func enterInCombat() {
-        fire(action: SKAction.move(by: CGVector(dx: 0.0, dy: -range), duration: tSpeed))
-        fire(action: getProjectileAction())
+        switch getLevel() {
+        case 3:
+            fire(action: SKAction.move(by: CGVector(dx: -range, dy: 0.0), duration: tSpeed))
+            fallthrough
+        case 2:
+            fire(action: SKAction.move(by: CGVector(dx: range, dy: 0.0), duration: tSpeed))
+            fallthrough
+        case 1:
+            fire(action: SKAction.move(by: CGVector(dx: 0.0, dy: -range), duration: tSpeed))
+            fallthrough
+        case 0:
+            fire(action: getProjectileAction())
+        default:
+            break
+        }
     }
     
     

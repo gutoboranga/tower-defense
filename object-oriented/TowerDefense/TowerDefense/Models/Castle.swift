@@ -30,7 +30,7 @@ class Castle: StandardBlock {
         self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: size.width - 1, height: size.height - 1), center: CGPoint(x: 0, y: 0))
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = false
-        self.physicsBody?.categoryBitMask = ColliderType.Castle
+        self.physicsBody?.categoryBitMask = ColliderType.Obstacle
         
     }
     

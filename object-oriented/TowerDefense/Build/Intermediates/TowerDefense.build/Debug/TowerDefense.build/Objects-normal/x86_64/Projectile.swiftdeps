@@ -40,7 +40,7 @@ depends-member:
 - !private ["s7CVarArgP", "zPosition"]
 - ["s7CVarArgP", ""]
 - !private ["s10CollectionP", "init"]
-- !private ["12TowerDefense12ColliderTypeV", "Castle"]
+- !private ["12TowerDefense12ColliderTypeV", "Obstacle"]
 - !private ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
 - !private ["s28CustomDebugStringConvertibleP", "ColliderType"]

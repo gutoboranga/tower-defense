@@ -12,8 +12,8 @@ depends-top-level:
 - "IntegerLiteralType"
 - "UInt32"
 depends-member:
-- ["12TowerDefense12ColliderTypeV", "Castle"]
 - ["12TowerDefense12ColliderTypeV", "Enemy"]
+- ["12TowerDefense12ColliderTypeV", "Obstacle"]
 - ["12TowerDefense12ColliderTypeV", "UInt32"]
 - ["12TowerDefense12ColliderTypeV", "init"]
 depends-nominal:
@@ -58,4 +58,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "d113ebbb9864c7e86f95679714b46059"
+interface-hash: "457c79605422befc1cba5d45d294cff2"

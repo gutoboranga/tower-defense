@@ -27,7 +27,7 @@ class Projectile: StandardBlock {
         self.physicsBody?.usesPreciseCollisionDetection = true
         self.physicsBody?.isDynamic = true
         
-        self.physicsBody?.categoryBitMask = ColliderType.Castle
+        self.physicsBody?.categoryBitMask = ColliderType.Obstacle
         self.physicsBody?.collisionBitMask = 0
     }
     

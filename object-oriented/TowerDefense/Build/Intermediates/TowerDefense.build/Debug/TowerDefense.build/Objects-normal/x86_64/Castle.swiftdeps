@@ -71,7 +71,7 @@ depends-member:
 - !private ["12TowerDefense6CastleC", "position"]
 - !private ["12TowerDefense6CastleC", "zPosition"]
 - !private ["s10CollectionP", "init"]
-- !private ["12TowerDefense12ColliderTypeV", "Castle"]
+- !private ["12TowerDefense12ColliderTypeV", "Obstacle"]
 - !private ["s10ComparableP", "description"]
 - !private ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "CGPoint"]

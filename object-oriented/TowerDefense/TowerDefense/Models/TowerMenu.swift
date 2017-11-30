@@ -25,7 +25,7 @@ class TowerMenu: StandardBlock, ButtonDelegate {
     public var delegate : TowerMenuDelegate!
     
     init(size: CGSize) {
-        self.level = 1
+        self.level = 0
         self.active = false
         super.init(texture: nil, color: .clear, size: size)
         
@@ -46,7 +46,7 @@ class TowerMenu: StandardBlock, ButtonDelegate {
                 button.delegate = self
                 button.position = CGPoint(x: -size.width/2 - button.size.width/2 - 5, y: -(CGFloat(index - 1) * 32.0))
                 self.buttons.append(button)
-                if !(level == 3 && index == 3) {
+                if !(level == 3 && index == 2) {
                     addChild(button)
                 }
             }
@@ -80,7 +80,6 @@ class TowerMenu: StandardBlock, ButtonDelegate {
             delegate.rotate()
             rotateLeft()
         } else if buttonNode.name == "Upgrade" {
-            level += 1
             delegate.upgrade()
         }
         
@@ -92,6 +91,14 @@ class TowerMenu: StandardBlock, ButtonDelegate {
     
     func setDeselectedButton(buttonNode: ButtonNode) {
         
+    }
+    
+    public func upgradeLevel() {
+        self.level += 1
+        
+        if level >= 3 {
+            self.buttons.last?.removeFromParent()
+        }
     }
     
     public func isActive() -> Bool {
