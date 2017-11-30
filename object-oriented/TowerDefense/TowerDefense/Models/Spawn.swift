@@ -16,7 +16,7 @@ protocol SpawnDelegate {
 class Spawn: SKSpriteNode {
     
     private let enemiesDelay = 1.0
-    private let enemiesLvl = [[3,2,4,3], [1,1,1,1], [1,1,1,1,1,1,1,1,1,1], [1]]
+    private var enemiesLvl : [[Int]]
     private var currentLevel    = -1
     private var enemiesToSpawn = 0
     
@@ -25,11 +25,14 @@ class Spawn: SKSpriteNode {
     
     public var delegate : SpawnDelegate!
     
-    init(position: CGPoint, code: Int, size: CGSize) {
+    init(position: CGPoint, code: Int, size: CGSize, enemiesLvl: [[Int]]) {
+        
         self.state = .idle
+        self.enemiesLvl = enemiesLvl
         
         let txt = SKTexture(imageNamed: code.description)
         super.init(texture: txt, color: .clear, size: size)
+        
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.name = "Spawn"
         self.position = position
@@ -63,19 +66,19 @@ class Spawn: SKSpriteNode {
         if let enemy = enemies.first {
             switch enemy {
             case 1:
-                let enemy = FrogEnemy(position: self.position, life: 10)
+                let enemy = FrogEnemy(position: self.position, life: 10, directions: mapDirections)
                 self.delegate.addEnemy(enemyNode: enemy)
                 self.enemiesAlive.add(enemy)
             case 2:
-                let enemy = SpiderEnemy(position: self.position, life: 10)
+                let enemy = SpiderEnemy(position: self.position, life: 10, directions: mapDirections)
                 self.delegate.addEnemy(enemyNode: enemy)
                 self.enemiesAlive.add(enemy)
             case 3:
-                let enemy = AstronautEnemy(position: self.position, life: 10)
+                let enemy = AstronautEnemy(position: self.position, life: 10, directions: mapDirections)
                 self.delegate.addEnemy(enemyNode: enemy)
                 self.enemiesAlive.add(enemy)
             case 4:
-                let enemy = RoverEnemy(position: self.position, life: 10)
+                let enemy = RoverEnemy(position: self.position, life: 10, directions: mapDirections)
                 self.delegate.addEnemy(enemyNode: enemy)
                 self.enemiesAlive.add(enemy)
             
@@ -104,6 +107,9 @@ class Spawn: SKSpriteNode {
         }
     }
     
+    public func getCurrentLevel() -> Int {
+        return currentLevel + 1
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

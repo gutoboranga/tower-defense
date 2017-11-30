@@ -1,12 +1,12 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "MapDeglegate"
+- "MapDelegate"
 - "MapLoader"
 provides-nominal:
-- "12TowerDefense12MapDeglegateP"
+- "12TowerDefense11MapDelegateP"
 - "12TowerDefense9MapLoaderC"
 provides-member:
-- ["12TowerDefense12MapDeglegateP", ""]
+- ["12TowerDefense11MapDelegateP", ""]
 - ["12TowerDefense9MapLoaderC", ""]
 provides-dynamic-lookup:
 depends-top-level:
@@ -18,7 +18,7 @@ depends-top-level:
 - "FloatLiteralType"
 - "Int"
 - !private "JSONSerialization"
-- "MapDeglegate"
+- "MapDelegate"
 - "MapLoader"
 - "String"
 - "StringLiteralType"
@@ -97,15 +97,15 @@ depends-member:
 - !private ["So17JSONSerializationC", "ReadingOptions"]
 - !private ["So17JSONSerializationC", "jsonObject"]
 - ["s25LosslessStringConvertibleP", "init"]
-- ["12TowerDefense12MapDeglegateP", "CGSize"]
-- ["12TowerDefense12MapDeglegateP", "Int"]
-- ["12TowerDefense12MapDeglegateP", "nodeForMatrix"]
+- ["12TowerDefense11MapDelegateP", "CGSize"]
+- ["12TowerDefense11MapDelegateP", "Int"]
+- ["12TowerDefense11MapDelegateP", "nodeForMatrix"]
 - !private ["12TowerDefense9MapLoaderC", "Bundle"]
 - !private ["12TowerDefense9MapLoaderC", "CGSize"]
 - !private ["12TowerDefense9MapLoaderC", "Data"]
 - !private ["12TowerDefense9MapLoaderC", "Int"]
 - !private ["12TowerDefense9MapLoaderC", "JSONSerialization"]
-- ["12TowerDefense9MapLoaderC", "MapDeglegate"]
+- ["12TowerDefense9MapLoaderC", "MapDelegate"]
 - ["12TowerDefense9MapLoaderC", "String"]
 - !private ["12TowerDefense9MapLoaderC", "URL"]
 - ["12TowerDefense9MapLoaderC", "deinit"]
@@ -226,7 +226,7 @@ depends-nominal:
 - "s8HashableP"
 - !private "So17JSONSerializationC"
 - "s25LosslessStringConvertibleP"
-- "12TowerDefense12MapDeglegateP"
+- "12TowerDefense11MapDelegateP"
 - "12TowerDefense9MapLoaderC"
 - "s10MirrorPathP"
 - !private "s17MutableCollectionP"
@@ -314,4 +314,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "3b7b0c18ceb7afd7a4525bf0ada9d3c9"
+interface-hash: "de6eaf19f25932f01e0cb151ed41cd4a"

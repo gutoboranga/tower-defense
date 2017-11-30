@@ -21,7 +21,6 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "*"
 - !private "+"
-- "Array"
 - "AssignmentPrecedence"
 - "AstronautEnemy"
 - !private "BooleanLiteralType"
@@ -33,6 +32,7 @@ depends-top-level:
 - "Double"
 - "Enemy"
 - "FrogEnemy"
+- "Int"
 - "LifeBar"
 - "NSCoder"
 - "Orientation"
@@ -53,8 +53,10 @@ depends-member:
 - ["Sa", "init"]
 - !private ["Sa", "removeFirst"]
 - !private ["Sa", "subscript"]
+- ["12TowerDefense14AstronautEnemyC", "CGFloat"]
 - ["12TowerDefense14AstronautEnemyC", "CGPoint"]
 - ["12TowerDefense14AstronautEnemyC", "Double"]
+- ["12TowerDefense14AstronautEnemyC", "Int"]
 - ["12TowerDefense14AstronautEnemyC", "NSCoder"]
 - !private ["12TowerDefense14AstronautEnemyC", "SKAction"]
 - ["12TowerDefense14AstronautEnemyC", "SKTexture"]
@@ -64,6 +66,7 @@ depends-member:
 - !private ["12TowerDefense14AstronautEnemyC", "fatalError"]
 - ["12TowerDefense14AstronautEnemyC", "getDamageValue"]
 - ["12TowerDefense14AstronautEnemyC", "getName"]
+- ["12TowerDefense14AstronautEnemyC", "getScoreValue"]
 - ["12TowerDefense14AstronautEnemyC", "init"]
 - ["12TowerDefense14AstronautEnemyC", "move"]
 - !private ["12TowerDefense14AstronautEnemyC", "run"]
@@ -270,6 +273,7 @@ depends-member:
 - !private ["12TowerDefense5EnemyC", "CGVector"]
 - !private ["12TowerDefense5EnemyC", "ColliderType"]
 - ["12TowerDefense5EnemyC", "Double"]
+- ["12TowerDefense5EnemyC", "Int"]
 - ["12TowerDefense5EnemyC", "LifeBar"]
 - ["12TowerDefense5EnemyC", "NSCoder"]
 - ["12TowerDefense5EnemyC", "Orientation"]
@@ -287,6 +291,7 @@ depends-member:
 - !private ["12TowerDefense5EnemyC", "fatalError"]
 - ["12TowerDefense5EnemyC", "getDamageValue"]
 - ["12TowerDefense5EnemyC", "getName"]
+- ["12TowerDefense5EnemyC", "getScoreValue"]
 - ["12TowerDefense5EnemyC", "init"]
 - !private ["12TowerDefense5EnemyC", "lifeBar"]
 - ["12TowerDefense5EnemyC", "loseLife"]
@@ -351,14 +356,17 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s13FloatingPointP", "init"]
+- ["12TowerDefense9FrogEnemyC", "CGFloat"]
 - ["12TowerDefense9FrogEnemyC", "CGPoint"]
 - ["12TowerDefense9FrogEnemyC", "Double"]
+- ["12TowerDefense9FrogEnemyC", "Int"]
 - ["12TowerDefense9FrogEnemyC", "NSCoder"]
 - ["12TowerDefense9FrogEnemyC", "String"]
 - ["12TowerDefense9FrogEnemyC", "deinit"]
 - !private ["12TowerDefense9FrogEnemyC", "fatalError"]
 - ["12TowerDefense9FrogEnemyC", "getDamageValue"]
 - ["12TowerDefense9FrogEnemyC", "getName"]
+- ["12TowerDefense9FrogEnemyC", "getScoreValue"]
 - ["12TowerDefense9FrogEnemyC", "init"]
 - !private ["s8HashableP", "CGPoint"]
 - !private ["s8HashableP", "CGSize"]
@@ -501,6 +509,7 @@ depends-member:
 - !private ["So8NSObjectC", "CGVector"]
 - !private ["So8NSObjectC", "ColliderType"]
 - ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "LifeBar"]
 - ["So8NSObjectC", "NSCoder"]
 - ["So8NSObjectC", "Orientation"]
@@ -523,6 +532,7 @@ depends-member:
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "getDamageValue"]
 - ["So8NSObjectC", "getName"]
+- ["So8NSObjectC", "getScoreValue"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isDynamic"]
 - ["So8NSObjectC", "lifeBar"]
@@ -587,6 +597,7 @@ depends-member:
 - !private ["So11NSResponderC", "CGVector"]
 - !private ["So11NSResponderC", "ColliderType"]
 - ["So11NSResponderC", "Double"]
+- ["So11NSResponderC", "Int"]
 - ["So11NSResponderC", "LifeBar"]
 - ["So11NSResponderC", "NSCoder"]
 - ["So11NSResponderC", "Orientation"]
@@ -603,6 +614,7 @@ depends-member:
 - !private ["So11NSResponderC", "fatalError"]
 - ["So11NSResponderC", "getDamageValue"]
 - ["So11NSResponderC", "getName"]
+- ["So11NSResponderC", "getScoreValue"]
 - ["So11NSResponderC", "init"]
 - ["So11NSResponderC", "lifeBar"]
 - ["So11NSResponderC", "loseLife"]
@@ -662,14 +674,17 @@ depends-member:
 - ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s26RangeReplaceableCollectionP", "removeFirst"]
 - !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["12TowerDefense10RoverEnemyC", "CGFloat"]
 - ["12TowerDefense10RoverEnemyC", "CGPoint"]
 - ["12TowerDefense10RoverEnemyC", "Double"]
+- ["12TowerDefense10RoverEnemyC", "Int"]
 - ["12TowerDefense10RoverEnemyC", "NSCoder"]
 - ["12TowerDefense10RoverEnemyC", "String"]
 - ["12TowerDefense10RoverEnemyC", "deinit"]
 - !private ["12TowerDefense10RoverEnemyC", "fatalError"]
 - ["12TowerDefense10RoverEnemyC", "getDamageValue"]
 - ["12TowerDefense10RoverEnemyC", "getName"]
+- ["12TowerDefense10RoverEnemyC", "getScoreValue"]
 - ["12TowerDefense10RoverEnemyC", "init"]
 - !private ["So8SKActionC", "animate"]
 - !private ["So8SKActionC", "move"]
@@ -680,6 +695,7 @@ depends-member:
 - !private ["So6SKNodeC", "CGVector"]
 - !private ["So6SKNodeC", "ColliderType"]
 - ["So6SKNodeC", "Double"]
+- ["So6SKNodeC", "Int"]
 - ["So6SKNodeC", "LifeBar"]
 - ["So6SKNodeC", "NSCoder"]
 - ["So6SKNodeC", "Orientation"]
@@ -696,6 +712,7 @@ depends-member:
 - !private ["So6SKNodeC", "fatalError"]
 - ["So6SKNodeC", "getDamageValue"]
 - ["So6SKNodeC", "getName"]
+- ["So6SKNodeC", "getScoreValue"]
 - ["So6SKNodeC", "init"]
 - ["So6SKNodeC", "lifeBar"]
 - ["So6SKNodeC", "loseLife"]
@@ -720,6 +737,7 @@ depends-member:
 - !private ["So12SKSpriteNodeC", "CGVector"]
 - !private ["So12SKSpriteNodeC", "ColliderType"]
 - ["So12SKSpriteNodeC", "Double"]
+- ["So12SKSpriteNodeC", "Int"]
 - ["So12SKSpriteNodeC", "LifeBar"]
 - ["So12SKSpriteNodeC", "NSCoder"]
 - ["So12SKSpriteNodeC", "Orientation"]
@@ -736,6 +754,7 @@ depends-member:
 - !private ["So12SKSpriteNodeC", "fatalError"]
 - ["So12SKSpriteNodeC", "getDamageValue"]
 - ["So12SKSpriteNodeC", "getName"]
+- ["So12SKSpriteNodeC", "getScoreValue"]
 - ["So12SKSpriteNodeC", "init"]
 - ["So12SKSpriteNodeC", "lifeBar"]
 - ["So12SKSpriteNodeC", "loseLife"]
@@ -786,15 +805,19 @@ depends-member:
 - !private ["s8SequenceP", "removeFirst"]
 - !private ["s8SequenceP", "subscript"]
 - !private ["s13SignedNumericP", "init"]
+- ["12TowerDefense11SpiderEnemyC", "CGFloat"]
 - ["12TowerDefense11SpiderEnemyC", "CGPoint"]
 - ["12TowerDefense11SpiderEnemyC", "Double"]
+- ["12TowerDefense11SpiderEnemyC", "Int"]
 - ["12TowerDefense11SpiderEnemyC", "NSCoder"]
 - ["12TowerDefense11SpiderEnemyC", "String"]
 - ["12TowerDefense11SpiderEnemyC", "deinit"]
 - !private ["12TowerDefense11SpiderEnemyC", "fatalError"]
 - ["12TowerDefense11SpiderEnemyC", "getDamageValue"]
 - ["12TowerDefense11SpiderEnemyC", "getName"]
+- ["12TowerDefense11SpiderEnemyC", "getScoreValue"]
 - ["12TowerDefense11SpiderEnemyC", "init"]
+- !private ["12TowerDefense13StandardBlockC", "loseLife"]
 - !private ["s12StaticStringV", "init"]
 - !private ["s10StrideableP", "init"]
 - !private ["SS", "init"]
@@ -962,6 +985,7 @@ depends-nominal:
 - "s8SequenceP"
 - !private "s13SignedNumericP"
 - "12TowerDefense11SpiderEnemyC"
+- !private "12TowerDefense13StandardBlockC"
 - !private "s12StaticStringV"
 - !private "s10StrideableP"
 - !private "SS"
@@ -1031,4 +1055,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "d8de2040831895bb9d726f83909a6732"
+interface-hash: "14bb2c39203175d048a8b508240f359f"

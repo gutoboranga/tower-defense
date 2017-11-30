@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A479C9A1FCF5CC200CB7A8E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A479C991FCF5CC200CB7A8E /* Settings.swift */; };
+		2A479C9C1FCF725200CB7A8E /* StandardBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A479C9B1FCF725200CB7A8E /* StandardBlock.swift */; };
 		2AB1521A1FCCCAFB0051BB92 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB152191FCCCAFB0051BB92 /* GameScene.swift */; };
 		2AB1521E1FCCD6860051BB92 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1521D1FCCD6860051BB92 /* Ground.swift */; };
 		2AB152201FCCE0480051BB92 /* MapLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1521F1FCCE0480051BB92 /* MapLoader.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A479C991FCF5CC200CB7A8E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		2A479C9B1FCF725200CB7A8E /* StandardBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBlock.swift; sourceTree = "<group>"; };
 		2AB152191FCCCAFB0051BB92 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		2AB1521D1FCCD6860051BB92 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		2AB1521F1FCCE0480051BB92 /* MapLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLoader.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 		4AD22FBB1FBE5137009A52A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2A479C991FCF5CC200CB7A8E /* Settings.swift */,
 				4AD22FC61FBE5E21009A52A3 /* Enemy.swift */,
 				2AB1521D1FCCD6860051BB92 /* Ground.swift */,
 				2AB1521F1FCCE0480051BB92 /* MapLoader.swift */,
@@ -182,6 +187,7 @@
 				4AE842AA1FCE5C4B00F97795 /* Orientation.swift */,
 				2AB152371FCE36F40051BB92 /* Projectile.swift */,
 				2AB152391FCF28200051BB92 /* TowerMenu.swift */,
+				2A479C9B1FCF725200CB7A8E /* StandardBlock.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,11 +355,13 @@
 				2AB152381FCE36F40051BB92 /* Projectile.swift in Sources */,
 				2AB152281FCD00AE0051BB92 /* LifeBar.swift in Sources */,
 				4A3706841FBE509700688810 /* AppDelegate.swift in Sources */,
+				2A479C9C1FCF725200CB7A8E /* StandardBlock.swift in Sources */,
 				4AE842AB1FCE5C4B00F97795 /* Orientation.swift in Sources */,
 				2AB152201FCCE0480051BB92 /* MapLoader.swift in Sources */,
 				2AB152361FCE13650051BB92 /* ObjectFaceOrientation.swift in Sources */,
 				2AB152301FCDD1E40051BB92 /* HudLayer.swift in Sources */,
 				4AD22FC71FBE5E21009A52A3 /* Enemy.swift in Sources */,
+				2A479C9A1FCF5CC200CB7A8E /* Settings.swift in Sources */,
 				2AB1522C1FCD0DE30051BB92 /* Castle.swift in Sources */,
 				2AB1522E1FCDC53D0051BB92 /* CollyderType.swift in Sources */,
 				2AB152341FCE129D0051BB92 /* Tower.swift in Sources */,

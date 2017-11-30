@@ -17,13 +17,12 @@ depends-top-level:
 - !private "BooleanLiteralType"
 - "ButtonDelegate"
 - "ButtonNode"
-- !private "CGPoint"
 - "CGSize"
 - "NSCoder"
 - "NSEvent"
 - !private "SKAction"
-- "SKSpriteNode"
 - "SKTexture"
+- "StandardBlock"
 - !private "StringLiteralType"
 - !private "fatalError"
 depends-member:
@@ -34,13 +33,11 @@ depends-member:
 - ["12TowerDefense14ButtonDelegateP", "setSelectedButton"]
 - ["12TowerDefense10ButtonNodeC", "Bool"]
 - ["12TowerDefense10ButtonNodeC", "ButtonDelegate"]
-- !private ["12TowerDefense10ButtonNodeC", "CGPoint"]
 - ["12TowerDefense10ButtonNodeC", "CGSize"]
 - ["12TowerDefense10ButtonNodeC", "NSCoder"]
 - ["12TowerDefense10ButtonNodeC", "NSEvent"]
 - !private ["12TowerDefense10ButtonNodeC", "SKAction"]
 - ["12TowerDefense10ButtonNodeC", "SKTexture"]
-- !private ["12TowerDefense10ButtonNodeC", "anchorPoint"]
 - !private ["12TowerDefense10ButtonNodeC", "color"]
 - ["12TowerDefense10ButtonNodeC", "deinit"]
 - ["12TowerDefense10ButtonNodeC", "delegate"]
@@ -53,10 +50,7 @@ depends-member:
 - !private ["12TowerDefense10ButtonNodeC", "select"]
 - ["12TowerDefense10ButtonNodeC", "selectButton"]
 - !private ["12TowerDefense10ButtonNodeC", "selected"]
-- !private ["SC7CGPointV", "init"]
-- !private ["s7CVarArgP", "CGPoint"]
 - !private ["s7CVarArgP", "SKAction"]
-- !private ["s7CVarArgP", "anchorPoint"]
 - !private ["s7CVarArgP", "color"]
 - !private ["s7CVarArgP", "cyan"]
 - !private ["s7CVarArgP", "delegate"]
@@ -72,9 +66,7 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
 - !private ["s28CustomDebugStringConvertibleP", "SKAction"]
-- !private ["s28CustomDebugStringConvertibleP", "anchorPoint"]
 - !private ["s28CustomDebugStringConvertibleP", "color"]
 - !private ["s28CustomDebugStringConvertibleP", "cyan"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
@@ -88,10 +80,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "selected"]
 - !private ["s28CustomDebugStringConvertibleP", "yellow"]
 - ["s28CustomDebugStringConvertibleP", ""]
-- !private ["s29CustomPlaygroundQuickLookableP", "CGPoint"]
 - !private ["s29CustomPlaygroundQuickLookableP", "SKAction"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "anchorPoint"]
 - !private ["s29CustomPlaygroundQuickLookableP", "color"]
 - !private ["s29CustomPlaygroundQuickLookableP", "delegate"]
 - !private ["s29CustomPlaygroundQuickLookableP", "deselect"]
@@ -104,10 +94,8 @@ depends-member:
 - ["s29CustomPlaygroundQuickLookableP", ""]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s23CustomStringConvertibleP", "CGPoint"]
 - !private ["s23CustomStringConvertibleP", "SKAction"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s23CustomStringConvertibleP", "anchorPoint"]
 - !private ["s23CustomStringConvertibleP", "color"]
 - !private ["s23CustomStringConvertibleP", "cyan"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
@@ -125,10 +113,8 @@ depends-member:
 - !private ["s9DecodableP", "init"]
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "init"]
-- !private ["s9EquatableP", "CGPoint"]
 - !private ["s9EquatableP", "SKAction"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "anchorPoint"]
 - !private ["s9EquatableP", "color"]
 - !private ["s9EquatableP", "cyan"]
 - !private ["s9EquatableP", "delegate"]
@@ -146,10 +132,8 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "CGPoint"]
 - !private ["s8HashableP", "SKAction"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "anchorPoint"]
 - !private ["s8HashableP", "color"]
 - !private ["s8HashableP", "cyan"]
 - !private ["s8HashableP", "delegate"]
@@ -166,9 +150,7 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["So8NSCodingP", "CGPoint"]
 - !private ["So8NSCodingP", "SKAction"]
-- !private ["So8NSCodingP", "anchorPoint"]
 - !private ["So8NSCodingP", "color"]
 - !private ["So8NSCodingP", "cyan"]
 - !private ["So8NSCodingP", "delegate"]
@@ -184,9 +166,7 @@ depends-member:
 - ["So8NSCodingP", ""]
 - !private ["So7NSColorC", "cyan"]
 - !private ["So7NSColorC", "yellow"]
-- !private ["So9NSCopyingP", "CGPoint"]
 - !private ["So9NSCopyingP", "SKAction"]
-- !private ["So9NSCopyingP", "anchorPoint"]
 - !private ["So9NSCopyingP", "color"]
 - !private ["So9NSCopyingP", "cyan"]
 - !private ["So9NSCopyingP", "delegate"]
@@ -205,13 +185,11 @@ depends-member:
 - !private ["So16NSMutableCopyingP", "init"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "ButtonDelegate"]
-- !private ["So8NSObjectC", "CGPoint"]
 - ["So8NSObjectC", "CGSize"]
 - ["So8NSObjectC", "NSCoder"]
 - ["So8NSObjectC", "NSEvent"]
 - !private ["So8NSObjectC", "SKAction"]
 - ["So8NSObjectC", "SKTexture"]
-- !private ["So8NSObjectC", "anchorPoint"]
 - !private ["So8NSObjectC", "color"]
 - !private ["So8NSObjectC", "cyan"]
 - ["So8NSObjectC", "delegate"]
@@ -226,9 +204,7 @@ depends-member:
 - ["So8NSObjectC", "selectButton"]
 - ["So8NSObjectC", "selected"]
 - !private ["So8NSObjectC", "yellow"]
-- !private ["So16NSObjectProtocolP", "CGPoint"]
 - !private ["So16NSObjectProtocolP", "SKAction"]
-- !private ["So16NSObjectProtocolP", "anchorPoint"]
 - !private ["So16NSObjectProtocolP", "color"]
 - !private ["So16NSObjectProtocolP", "cyan"]
 - !private ["So16NSObjectProtocolP", "delegate"]
@@ -250,13 +226,11 @@ depends-member:
 - !private ["So19NSPasteboardWritingP", "yellow"]
 - ["So11NSResponderC", "Bool"]
 - ["So11NSResponderC", "ButtonDelegate"]
-- !private ["So11NSResponderC", "CGPoint"]
 - ["So11NSResponderC", "CGSize"]
 - ["So11NSResponderC", "NSCoder"]
 - ["So11NSResponderC", "NSEvent"]
 - !private ["So11NSResponderC", "SKAction"]
 - ["So11NSResponderC", "SKTexture"]
-- !private ["So11NSResponderC", "anchorPoint"]
 - !private ["So11NSResponderC", "color"]
 - ["So11NSResponderC", "delegate"]
 - ["So11NSResponderC", "deselect"]
@@ -272,9 +246,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "yellow"]
 - !private ["So8NSStringC", "init"]
-- !private ["So18NSTouchBarProviderP", "CGPoint"]
 - !private ["So18NSTouchBarProviderP", "SKAction"]
-- !private ["So18NSTouchBarProviderP", "anchorPoint"]
 - !private ["So18NSTouchBarProviderP", "color"]
 - !private ["So18NSTouchBarProviderP", "delegate"]
 - !private ["So18NSTouchBarProviderP", "deselect"]
@@ -289,13 +261,11 @@ depends-member:
 - !private ["So8SKActionC", "scale"]
 - ["So6SKNodeC", "Bool"]
 - ["So6SKNodeC", "ButtonDelegate"]
-- !private ["So6SKNodeC", "CGPoint"]
 - ["So6SKNodeC", "CGSize"]
 - ["So6SKNodeC", "NSCoder"]
 - ["So6SKNodeC", "NSEvent"]
 - !private ["So6SKNodeC", "SKAction"]
 - ["So6SKNodeC", "SKTexture"]
-- !private ["So6SKNodeC", "anchorPoint"]
 - !private ["So6SKNodeC", "color"]
 - ["So6SKNodeC", "delegate"]
 - ["So6SKNodeC", "deselect"]
@@ -309,13 +279,11 @@ depends-member:
 - ["So6SKNodeC", "selected"]
 - ["So12SKSpriteNodeC", "Bool"]
 - ["So12SKSpriteNodeC", "ButtonDelegate"]
-- !private ["So12SKSpriteNodeC", "CGPoint"]
 - ["So12SKSpriteNodeC", "CGSize"]
 - ["So12SKSpriteNodeC", "NSCoder"]
 - ["So12SKSpriteNodeC", "NSEvent"]
 - !private ["So12SKSpriteNodeC", "SKAction"]
 - ["So12SKSpriteNodeC", "SKTexture"]
-- !private ["So12SKSpriteNodeC", "anchorPoint"]
 - !private ["So12SKSpriteNodeC", "color"]
 - ["So12SKSpriteNodeC", "delegate"]
 - ["So12SKSpriteNodeC", "deselect"]
@@ -327,10 +295,7 @@ depends-member:
 - ["So12SKSpriteNodeC", "select"]
 - ["So12SKSpriteNodeC", "selectButton"]
 - ["So12SKSpriteNodeC", "selected"]
-- ["So12SKSpriteNodeC", ""]
-- !private ["So10SKWarpableP", "CGPoint"]
 - !private ["So10SKWarpableP", "SKAction"]
-- !private ["So10SKWarpableP", "anchorPoint"]
 - !private ["So10SKWarpableP", "color"]
 - !private ["So10SKWarpableP", "delegate"]
 - !private ["So10SKWarpableP", "deselect"]
@@ -342,6 +307,25 @@ depends-member:
 - !private ["So10SKWarpableP", "selected"]
 - ["So10SKWarpableP", ""]
 - !private ["s8SequenceP", "init"]
+- ["12TowerDefense13StandardBlockC", "Bool"]
+- ["12TowerDefense13StandardBlockC", "ButtonDelegate"]
+- ["12TowerDefense13StandardBlockC", "CGSize"]
+- ["12TowerDefense13StandardBlockC", "NSCoder"]
+- ["12TowerDefense13StandardBlockC", "NSEvent"]
+- !private ["12TowerDefense13StandardBlockC", "SKAction"]
+- ["12TowerDefense13StandardBlockC", "SKTexture"]
+- !private ["12TowerDefense13StandardBlockC", "color"]
+- ["12TowerDefense13StandardBlockC", "delegate"]
+- ["12TowerDefense13StandardBlockC", "deselect"]
+- !private ["12TowerDefense13StandardBlockC", "fatalError"]
+- ["12TowerDefense13StandardBlockC", "init"]
+- ["12TowerDefense13StandardBlockC", "isSelected"]
+- ["12TowerDefense13StandardBlockC", "mouseDown"]
+- !private ["12TowerDefense13StandardBlockC", "run"]
+- ["12TowerDefense13StandardBlockC", "select"]
+- ["12TowerDefense13StandardBlockC", "selectButton"]
+- ["12TowerDefense13StandardBlockC", "selected"]
+- ["12TowerDefense13StandardBlockC", ""]
 - !private ["s12StaticStringV", "init"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
@@ -359,9 +343,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "init"]
 - !private ["s14_IndexableBaseP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "SKAction"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "anchorPoint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "color"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cyan"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
@@ -384,7 +366,6 @@ depends-nominal:
 - !private "Sb"
 - "12TowerDefense14ButtonDelegateP"
 - "12TowerDefense10ButtonNodeC"
-- !private "SC7CGPointV"
 - "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
@@ -422,6 +403,7 @@ depends-nominal:
 - "So12SKSpriteNodeC"
 - "So10SKWarpableP"
 - !private "s8SequenceP"
+- "12TowerDefense13StandardBlockC"
 - !private "s12StaticStringV"
 - !private "SS"
 - !private "s14StringProtocolP"
@@ -482,4 +464,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "23fe3a657f21c0a954ddcb8d3464f68d"
+interface-hash: "e5c75bca6b18b29e8e3c24944a575c58"

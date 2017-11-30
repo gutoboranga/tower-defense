@@ -9,13 +9,13 @@
 import Foundation
 import SpriteKit
 
-protocol MapDeglegate {
+protocol MapDelegate {
     func nodeForMatrix(mapHeight: Int, mapWidth: Int, index: Int, objCode: Int, spriteSize: CGSize)
 }
 
 class MapLoader {
     
-    var delegate : MapDeglegate?
+    var delegate : MapDelegate?
     
     let spriteHeight  = 32.0
     let spriteWidth = 32.0

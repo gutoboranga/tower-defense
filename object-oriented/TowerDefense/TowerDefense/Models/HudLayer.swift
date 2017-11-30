@@ -14,7 +14,6 @@ protocol HudLayerDelegate {
 
 class HudLayer: SKSpriteNode, ButtonDelegate{
     
-    
     private let btnNames = ["btn0", "btn1", "btn2", "btn3"]
     
     private var buttons    : [ButtonNode] = []
@@ -36,7 +35,7 @@ class HudLayer: SKSpriteNode, ButtonDelegate{
         self.scoreLabel.position = CGPoint(x: 300, y: 906)
         
         self.coinsLabel = SKLabelNode(text: "Coins: 0")
-        self.coinsLabel.position = CGPoint(x: 450, y: 906)
+        self.coinsLabel.position = CGPoint(x: 600, y: 906)
         
         self.playButton = ButtonNode(texture: nil, size: CGSize(width: 128, height: 64))
         self.playButton.position = CGPoint(x: 88, y: 906)
@@ -91,12 +90,12 @@ class HudLayer: SKSpriteNode, ButtonDelegate{
     }
     
     
-    public func setScore(newScore: Double) {
+    public func setScore(newScore: Int) {
         self.scoreLabel.text = "Score: " + newScore.description
     }
     
     
-    public func setCoins(newCoins: Double) {
+    public func setCoins(newCoins: Int) {
         self.coinsLabel.text = "Coins: " + newCoins.description
     }
     

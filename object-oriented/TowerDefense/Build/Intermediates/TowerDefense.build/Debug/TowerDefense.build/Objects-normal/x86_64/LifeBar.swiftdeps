@@ -24,6 +24,7 @@ depends-top-level:
 - "NSCoder"
 - !private "SKAction"
 - "SKSpriteNode"
+- "StandardBlock"
 - !private "StringLiteralType"
 - "Void"
 - !private "fatalError"
@@ -209,7 +210,6 @@ depends-member:
 - ["12TowerDefense7LifeBarC", "SKSpriteNode"]
 - ["12TowerDefense7LifeBarC", "Void"]
 - !private ["12TowerDefense7LifeBarC", "addChild"]
-- !private ["12TowerDefense7LifeBarC", "anchorPoint"]
 - !private ["12TowerDefense7LifeBarC", "atualLife"]
 - ["12TowerDefense7LifeBarC", "deinit"]
 - !private ["12TowerDefense7LifeBarC", "fatalError"]
@@ -429,7 +429,6 @@ depends-member:
 - !private ["So12SKSpriteNodeC", "position"]
 - !private ["So12SKSpriteNodeC", "run"]
 - !private ["So12SKSpriteNodeC", "zPosition"]
-- ["So12SKSpriteNodeC", ""]
 - !private ["So10SKWarpableP", "CGFloat"]
 - !private ["So10SKWarpableP", "CGPoint"]
 - !private ["So10SKWarpableP", "CGSize"]
@@ -451,6 +450,25 @@ depends-member:
 - ["So10SKWarpableP", ""]
 - !private ["s8SequenceP", "init"]
 - !private ["s13SignedNumericP", "init"]
+- ["12TowerDefense13StandardBlockC", "CGFloat"]
+- !private ["12TowerDefense13StandardBlockC", "CGPoint"]
+- ["12TowerDefense13StandardBlockC", "CGSize"]
+- ["12TowerDefense13StandardBlockC", "Double"]
+- ["12TowerDefense13StandardBlockC", "NSCoder"]
+- !private ["12TowerDefense13StandardBlockC", "SKAction"]
+- ["12TowerDefense13StandardBlockC", "SKSpriteNode"]
+- ["12TowerDefense13StandardBlockC", "Void"]
+- !private ["12TowerDefense13StandardBlockC", "addChild"]
+- ["12TowerDefense13StandardBlockC", "atualLife"]
+- !private ["12TowerDefense13StandardBlockC", "fatalError"]
+- ["12TowerDefense13StandardBlockC", "init"]
+- ["12TowerDefense13StandardBlockC", "life"]
+- ["12TowerDefense13StandardBlockC", "lifeBar"]
+- ["12TowerDefense13StandardBlockC", "lifeBarSize"]
+- ["12TowerDefense13StandardBlockC", "loseLife"]
+- !private ["12TowerDefense13StandardBlockC", "position"]
+- !private ["12TowerDefense13StandardBlockC", "zPosition"]
+- ["12TowerDefense13StandardBlockC", ""]
 - !private ["s12StaticStringV", "init"]
 - !private ["s10StrideableP", "init"]
 - !private ["SS", "init"]
@@ -556,6 +574,7 @@ depends-nominal:
 - "So10SKWarpableP"
 - !private "s8SequenceP"
 - !private "s13SignedNumericP"
+- "12TowerDefense13StandardBlockC"
 - !private "s12StaticStringV"
 - !private "s10StrideableP"
 - !private "SS"
@@ -622,4 +641,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "bae04eb165f19a17376fcc86a8246df2"
+interface-hash: "42c2ff907b249af7f4a9ca445ec3ec35"

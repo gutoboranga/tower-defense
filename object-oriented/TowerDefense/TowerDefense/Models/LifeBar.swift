@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class LifeBar: SKSpriteNode {
+class LifeBar: StandardBlock {
     
     private var life      : Double
     private var atualLife : Double
@@ -32,7 +32,6 @@ class LifeBar: SKSpriteNode {
         super.init(texture: nil, color: .black, size: newSize)
 
         self.position = CGPoint(x: 0.0, y: -width/2 + 1)
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.zPosition   = 5
 
         self.addChild(lifeBar)

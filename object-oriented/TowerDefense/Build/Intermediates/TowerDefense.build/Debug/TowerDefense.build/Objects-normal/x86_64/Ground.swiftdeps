@@ -13,8 +13,8 @@ depends-top-level:
 - "Ground"
 - "Int"
 - "NSCoder"
-- "SKSpriteNode"
 - !private "SKTexture"
+- "StandardBlock"
 - !private "String"
 - !private "StringLiteralType"
 - !private "fatalError"
@@ -23,10 +23,7 @@ depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
 - !private ["s13BinaryIntegerP", "description"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["SC7CGPointV", "init"]
-- !private ["s7CVarArgP", "CGPoint"]
 - !private ["s7CVarArgP", "SKTexture"]
-- !private ["s7CVarArgP", "anchorPoint"]
 - !private ["s7CVarArgP", "clear"]
 - !private ["s7CVarArgP", "description"]
 - !private ["s7CVarArgP", "fatalError"]
@@ -39,9 +36,7 @@ depends-member:
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "description"]
 - !private ["s10ComparableP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
 - !private ["s28CustomDebugStringConvertibleP", "SKTexture"]
-- !private ["s28CustomDebugStringConvertibleP", "anchorPoint"]
 - !private ["s28CustomDebugStringConvertibleP", "clear"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "getNodeName"]
@@ -50,10 +45,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "position"]
 - !private ["s28CustomDebugStringConvertibleP", "zPosition"]
 - ["s28CustomDebugStringConvertibleP", ""]
-- !private ["s29CustomPlaygroundQuickLookableP", "CGPoint"]
 - !private ["s29CustomPlaygroundQuickLookableP", "SKTexture"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "anchorPoint"]
 - !private ["s29CustomPlaygroundQuickLookableP", "description"]
 - !private ["s29CustomPlaygroundQuickLookableP", "fatalError"]
 - !private ["s29CustomPlaygroundQuickLookableP", "getNodeName"]
@@ -65,10 +58,8 @@ depends-member:
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "description"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s23CustomStringConvertibleP", "CGPoint"]
 - !private ["s23CustomStringConvertibleP", "SKTexture"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s23CustomStringConvertibleP", "anchorPoint"]
 - !private ["s23CustomStringConvertibleP", "clear"]
 - !private ["s23CustomStringConvertibleP", "description"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
@@ -84,10 +75,8 @@ depends-member:
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "description"]
 - !private ["s9EncodableP", "init"]
-- !private ["s9EquatableP", "CGPoint"]
 - !private ["s9EquatableP", "SKTexture"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "anchorPoint"]
 - !private ["s9EquatableP", "clear"]
 - !private ["s9EquatableP", "description"]
 - !private ["s9EquatableP", "fatalError"]
@@ -109,7 +98,6 @@ depends-member:
 - ["12TowerDefense6GroundC", "NSCoder"]
 - !private ["12TowerDefense6GroundC", "SKTexture"]
 - !private ["12TowerDefense6GroundC", "String"]
-- !private ["12TowerDefense6GroundC", "anchorPoint"]
 - ["12TowerDefense6GroundC", "deinit"]
 - !private ["12TowerDefense6GroundC", "fatalError"]
 - !private ["12TowerDefense6GroundC", "getNodeName"]
@@ -117,10 +105,8 @@ depends-member:
 - !private ["12TowerDefense6GroundC", "name"]
 - !private ["12TowerDefense6GroundC", "position"]
 - !private ["12TowerDefense6GroundC", "zPosition"]
-- !private ["s8HashableP", "CGPoint"]
 - !private ["s8HashableP", "SKTexture"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "anchorPoint"]
 - !private ["s8HashableP", "clear"]
 - !private ["s8HashableP", "description"]
 - !private ["s8HashableP", "fatalError"]
@@ -136,9 +122,7 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "description"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["So8NSCodingP", "CGPoint"]
 - !private ["So8NSCodingP", "SKTexture"]
-- !private ["So8NSCodingP", "anchorPoint"]
 - !private ["So8NSCodingP", "clear"]
 - !private ["So8NSCodingP", "fatalError"]
 - !private ["So8NSCodingP", "getNodeName"]
@@ -148,9 +132,7 @@ depends-member:
 - !private ["So8NSCodingP", "zPosition"]
 - ["So8NSCodingP", ""]
 - !private ["So7NSColorC", "clear"]
-- !private ["So9NSCopyingP", "CGPoint"]
 - !private ["So9NSCopyingP", "SKTexture"]
-- !private ["So9NSCopyingP", "anchorPoint"]
 - !private ["So9NSCopyingP", "clear"]
 - !private ["So9NSCopyingP", "fatalError"]
 - !private ["So9NSCopyingP", "getNodeName"]
@@ -168,7 +150,6 @@ depends-member:
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "SKTexture"]
 - !private ["So8NSObjectC", "String"]
-- !private ["So8NSObjectC", "anchorPoint"]
 - !private ["So8NSObjectC", "clear"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "getNodeName"]
@@ -176,9 +157,7 @@ depends-member:
 - !private ["So8NSObjectC", "name"]
 - !private ["So8NSObjectC", "position"]
 - !private ["So8NSObjectC", "zPosition"]
-- !private ["So16NSObjectProtocolP", "CGPoint"]
 - !private ["So16NSObjectProtocolP", "SKTexture"]
-- !private ["So16NSObjectProtocolP", "anchorPoint"]
 - !private ["So16NSObjectProtocolP", "clear"]
 - !private ["So16NSObjectProtocolP", "fatalError"]
 - !private ["So16NSObjectProtocolP", "getNodeName"]
@@ -197,7 +176,6 @@ depends-member:
 - ["So11NSResponderC", "NSCoder"]
 - !private ["So11NSResponderC", "SKTexture"]
 - !private ["So11NSResponderC", "String"]
-- !private ["So11NSResponderC", "anchorPoint"]
 - !private ["So11NSResponderC", "fatalError"]
 - ["So11NSResponderC", "getNodeName"]
 - ["So11NSResponderC", "init"]
@@ -207,9 +185,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "clear"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So8NSStringC", "init"]
-- !private ["So18NSTouchBarProviderP", "CGPoint"]
 - !private ["So18NSTouchBarProviderP", "SKTexture"]
-- !private ["So18NSTouchBarProviderP", "anchorPoint"]
 - !private ["So18NSTouchBarProviderP", "fatalError"]
 - !private ["So18NSTouchBarProviderP", "getNodeName"]
 - !private ["So18NSTouchBarProviderP", "init"]
@@ -225,7 +201,6 @@ depends-member:
 - ["So6SKNodeC", "NSCoder"]
 - !private ["So6SKNodeC", "SKTexture"]
 - !private ["So6SKNodeC", "String"]
-- !private ["So6SKNodeC", "anchorPoint"]
 - !private ["So6SKNodeC", "fatalError"]
 - ["So6SKNodeC", "getNodeName"]
 - ["So6SKNodeC", "init"]
@@ -238,18 +213,14 @@ depends-member:
 - ["So12SKSpriteNodeC", "NSCoder"]
 - !private ["So12SKSpriteNodeC", "SKTexture"]
 - !private ["So12SKSpriteNodeC", "String"]
-- !private ["So12SKSpriteNodeC", "anchorPoint"]
 - !private ["So12SKSpriteNodeC", "fatalError"]
 - ["So12SKSpriteNodeC", "getNodeName"]
 - ["So12SKSpriteNodeC", "init"]
 - !private ["So12SKSpriteNodeC", "name"]
 - !private ["So12SKSpriteNodeC", "position"]
 - !private ["So12SKSpriteNodeC", "zPosition"]
-- ["So12SKSpriteNodeC", ""]
 - !private ["So9SKTextureC", "init"]
-- !private ["So10SKWarpableP", "CGPoint"]
 - !private ["So10SKWarpableP", "SKTexture"]
-- !private ["So10SKWarpableP", "anchorPoint"]
 - !private ["So10SKWarpableP", "fatalError"]
 - !private ["So10SKWarpableP", "getNodeName"]
 - !private ["So10SKWarpableP", "init"]
@@ -260,6 +231,19 @@ depends-member:
 - !private ["s8SequenceP", "init"]
 - !private ["s13SignedIntegerP", "description"]
 - !private ["s13SignedNumericP", "description"]
+- ["12TowerDefense13StandardBlockC", "CGPoint"]
+- ["12TowerDefense13StandardBlockC", "CGSize"]
+- ["12TowerDefense13StandardBlockC", "Int"]
+- ["12TowerDefense13StandardBlockC", "NSCoder"]
+- !private ["12TowerDefense13StandardBlockC", "SKTexture"]
+- !private ["12TowerDefense13StandardBlockC", "String"]
+- !private ["12TowerDefense13StandardBlockC", "fatalError"]
+- ["12TowerDefense13StandardBlockC", "getNodeName"]
+- ["12TowerDefense13StandardBlockC", "init"]
+- !private ["12TowerDefense13StandardBlockC", "name"]
+- !private ["12TowerDefense13StandardBlockC", "position"]
+- !private ["12TowerDefense13StandardBlockC", "zPosition"]
+- ["12TowerDefense13StandardBlockC", ""]
 - !private ["s12StaticStringV", "init"]
 - !private ["s10StrideableP", "description"]
 - !private ["SS", "init"]
@@ -279,9 +263,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "init"]
 - !private ["s14_IndexableBaseP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "SKTexture"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "anchorPoint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "clear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "getNodeName"]
@@ -300,7 +282,6 @@ depends-nominal:
 - !private "s23BidirectionalCollectionP"
 - !private "s13BinaryIntegerP"
 - !private "Sb"
-- !private "SC7CGPointV"
 - "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
@@ -345,6 +326,7 @@ depends-nominal:
 - !private "s8SequenceP"
 - !private "s13SignedIntegerP"
 - !private "s13SignedNumericP"
+- "12TowerDefense13StandardBlockC"
 - !private "s12StaticStringV"
 - !private "s10StrideableP"
 - !private "SS"
@@ -409,4 +391,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GameplayKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "9e7f14b9ea2355755b8aa8207e636407"
+interface-hash: "dc1d41e9968a118add45917e9cb40754"

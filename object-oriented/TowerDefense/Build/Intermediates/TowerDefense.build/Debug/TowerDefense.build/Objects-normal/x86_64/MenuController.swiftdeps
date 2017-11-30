@@ -152,8 +152,8 @@ depends-member:
 - !private ["12TowerDefense16HudLayerDelegateP", "init"]
 - !private ["12TowerDefense16HudLayerDelegateP", "scaleMode"]
 - ["s25LosslessStringConvertibleP", "init"]
-- !private ["12TowerDefense12MapDeglegateP", "init"]
-- !private ["12TowerDefense12MapDeglegateP", "scaleMode"]
+- !private ["12TowerDefense11MapDelegateP", "init"]
+- !private ["12TowerDefense11MapDelegateP", "scaleMode"]
 - !private ["12TowerDefense14MenuControllerC", "GKScene"]
 - !private ["12TowerDefense14MenuControllerC", "GameScene"]
 - !private ["12TowerDefense14MenuControllerC", "MenuScene"]
@@ -489,7 +489,7 @@ depends-nominal:
 - "s8HashableP"
 - !private "12TowerDefense16HudLayerDelegateP"
 - "s25LosslessStringConvertibleP"
-- !private "12TowerDefense12MapDeglegateP"
+- !private "12TowerDefense11MapDelegateP"
 - "12TowerDefense14MenuControllerC"
 - "12TowerDefense12MenuDelegateP"
 - !private "12TowerDefense9MenuSceneC"

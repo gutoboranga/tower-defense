@@ -8,16 +8,15 @@
 
 import SpriteKit
 
-class Ground: SKSpriteNode {
+class Ground: StandardBlock {
 
     init(position: CGPoint, code: Int, size: CGSize) {
         let txt = SKTexture(imageNamed: code.description)
         super.init(texture: txt, color: .clear, size: size)
 
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.name = getNodeName(with: code)
         self.position = position
-        self.zPosition = 2
+        self.zPosition = 1
     }
     
     required init?(coder aDecoder: NSCoder) {

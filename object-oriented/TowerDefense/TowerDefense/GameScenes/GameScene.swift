@@ -14,7 +14,7 @@ enum GameStateMachine {
     case playing
 }
 
-class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDelegate, SKPhysicsContactDelegate{
+class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDelegate, SKPhysicsContactDelegate{
     
     private let xIniPos = 732.0
     private let yIniPos = 406.0
@@ -28,13 +28,14 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDe
     private var usableGround : NSMutableArray = NSMutableArray()
     private var towers       : NSMutableArray = NSMutableArray()
     
+    private var score : Int = 0
+    private var coins : Int = 0
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
         self.scene?.position = CGPoint(x: 0, y: 0)
         self.physicsWorld.contactDelegate = self
-        
-        self.state = .idle
         
         self.mapLoader = MapLoader()
         self.mapLoader.delegate = self
@@ -43,42 +44,48 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDe
         self.hudLayer = HudLayer(texture: nil, color: .clear, size: size)
         self.hudLayer.delegate = self
         addChild(hudLayer)
+        
+        self.hudLayer.setScore(newScore: self.score)
+        self.hudLayer.setCoins(newCoins: self.coins)
   
+        self.setState(newState: .idle)
+        //self.coins += coinsPerLevel[self.spawn.getCurrentLevel()]
+        //self.hudLayer.setCoins(newCoins:  self.coins)
     }
     
     private func addTower(in ground: Ground) {
-        if let button = hudLayer?.selectedButton {
-            if button.name == "btn0" {
-                let tower = Tower(texture: nil, size: ground.size, position: ground.position, damage: 1.5, range: 300, speed: 0.5, shotRate: 1)
-                tower.color = .cyan
-                tower.delegate = self
-                towers.add(tower)
-                usableGround.remove(tower)
-                addChild(tower)
-                
-            } else if button.name == "btn1" {
-                let tower = Tower(texture: nil, size: ground.size, position: ground.position, damage: 4, range: 150, speed: 1, shotRate: 1)
-                tower.color = .yellow
-                tower.delegate = self
-                towers.add(tower)
-                usableGround.remove(tower)
-                addChild(tower)
-            } else if button.name == "btn2" {
-                let tower = Tower(texture: nil, size: ground.size, position: ground.position, damage: 0.3, range: 300, speed: 0.2, shotRate: 1.5)
-                tower.color = .purple
-                tower.delegate = self
-                towers.add(tower)
-                usableGround.remove(tower)
-                addChild(tower)
-            } else if button.name == "btn3" {
-                let tower = Tower(texture: nil, size: ground.size, position: ground.position, damage: 8, range: 50, speed: 1.5, shotRate: 0.5)
-                tower.color = .brown
-                tower.delegate = self
-                towers.add(tower)
-                usableGround.remove(tower)
-                addChild(tower)
+        if coins >= 50 {
+            if let button = hudLayer?.selectedButton {
+                if button.name == "btn0" {
+                    let tower = SpeedTower(size: ground.size, position: ground.position)
+                    tower.delegate = self
+                    towers.add(tower)
+                    usableGround.remove(tower)
+                    addChild(tower)
+                    
+                } else if button.name == "btn1" {
+                    let tower = DamageTower(size: ground.size, position: ground.position)
+                    tower.delegate = self
+                    towers.add(tower)
+                    usableGround.remove(tower)
+                    addChild(tower)
+                } else if button.name == "btn2" {
+                    let tower = RangeTower(size: ground.size, position: ground.position)
+                    tower.delegate = self
+                    towers.add(tower)
+                    usableGround.remove(tower)
+                    addChild(tower)
+                } else if button.name == "btn3" {
+                    let tower = DoubleShotTower(size: ground.size, position: ground.position)
+                    tower.delegate = self
+                    towers.add(tower)
+                    usableGround.remove(tower)
+                    addChild(tower)
+                }
+                self.coins -= 50
+                self.hudLayer.setCoins(newCoins: self.coins)
+                button.deselect()
             }
-            button.deselect()
         }
     }
 
@@ -96,7 +103,9 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDe
             
             switch newState {
             case .idle:
-                break
+                self.coins += coinsPerLevel[self.spawn.getCurrentLevel()]
+                self.hudLayer.setCoins(newCoins:  self.coins)
+
             case .playing:
                 break
             }
@@ -170,12 +179,12 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDe
                 }
                 
             } else if objCode == 3 {
-                spawn = Spawn(position: position, code: objCode, size: spriteSize)
-                spawn.delegate = self
-                addChild(spawn)
+                self.spawn = Spawn(position: position, code: objCode, size: spriteSize, enemiesLvl: enemiesPerLvl)
+                self.spawn.delegate = self
+                addChild(self.spawn)
             } else if objCode == 4 {
-                castle = Castle(position: position, code: objCode, size: spriteSize)
-                addChild(castle)
+                self.castle = Castle(position: position, code: objCode, size: spriteSize)
+                addChild(self.castle)
             }
         }
     }
@@ -191,6 +200,9 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDe
     func removeTower(tower: Tower) {
         self.towers.remove(tower)
         self.usableGround.add(tower)
+        
+        self.coins += 50
+        self.hudLayer.setCoins(newCoins:  self.coins)
     }
     
     
@@ -199,7 +211,9 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDe
         if contact.bodyA.node?.name == "Castle"  {
             if let castle = contact.bodyA.node as? Castle {
                 if let enemy = contact.bodyB.node as? Enemy {
-                    castle.loseLife(with: enemy.getDamageValue())
+                    castle.loseLife(with: enemy.getDamageValue(), completion: {
+                        //EndGame
+                    })
                     spawn.removeEnemy(enemy: enemy)
                 }
             }
@@ -208,7 +222,7 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDe
                 if let enemy = contact.bodyB.node as? Enemy {
                     projectile.removeAllActions()
                     enemy.loseLife(with: projectile.damage, completion: {
-                        self.spawn.removeEnemy(enemy: enemy)
+                        self.removeEnemyFromGame(enemy: enemy)
                     })
                     projectile.removeFromParent()
                 }
@@ -219,18 +233,24 @@ class GameScene: SKScene, MapDeglegate, HudLayerDelegate, SpawnDelegate, TowerDe
                     
                     projectile.removeAllActions()
                     enemy.loseLife(with: projectile.damage, completion: {
-                        self.spawn.removeEnemy(enemy: enemy)
+                        self.removeEnemyFromGame(enemy: enemy)
                     })
                     projectile.removeFromParent()
                 }
                 
                 if let castle = contact.bodyB.node as? Castle {
-                    castle.loseLife(with: enemy.getDamageValue())
+                    castle.loseLife(with: enemy.getDamageValue(), completion: {
+                        //EndGame
+                    })
                     spawn.removeEnemy(enemy: enemy)
                 }
             }
         }
     }
+    
+    func removeEnemyFromGame(enemy: Enemy) {
+        self.spawn.removeEnemy(enemy: enemy)
+        self.score += enemy.getScoreValue()
+        self.hudLayer.setScore(newScore: self.score)
+    }
 }
-
-

@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class Projectile: SKSpriteNode {
+class Projectile: StandardBlock {
 
     public var damage : Double
     
@@ -17,9 +17,8 @@ class Projectile: SKSpriteNode {
         self.damage = damage
         
         super.init(texture: nil, color: .purple, size: size)
-        
+        self.position = CGPoint(x: 0, y: 0)
         self.zPosition = 4
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
         self.name = "Projectile"
         

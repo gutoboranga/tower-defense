@@ -9,7 +9,7 @@
 import SpriteKit
 
 
-class Castle: SKSpriteNode {
+class Castle: StandardBlock {
 
     private var lifeBar : LifeBar
     
@@ -19,8 +19,7 @@ class Castle: SKSpriteNode {
         
         let txt = SKTexture(imageNamed: code.description)
         super.init(texture: txt, color: .clear, size: size)
-        
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+
         self.name = "Castle"
         self.position = position
         self.zPosition = 3
@@ -35,9 +34,9 @@ class Castle: SKSpriteNode {
         
     }
     
-    func loseLife(with damage:Double) {
+    func loseLife(with damage:Double, completion: () ->()) {
         lifeBar.loseLife(with: damage) {
-            removeFromParent()
+            completion()
         }
     }
     

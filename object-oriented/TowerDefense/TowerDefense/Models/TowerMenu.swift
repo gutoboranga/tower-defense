@@ -14,22 +14,23 @@ protocol TowerMenuDelegate {
     func upgrade()
 }
 
-class TowerMenu: SKSpriteNode, ButtonDelegate {
+class TowerMenu: StandardBlock, ButtonDelegate {
     
     let btnNames = ["Remove", "Rotate", "Upgrade"]
     
     private var buttons : [ButtonNode] = []
-    private var orientation : ObjectFaceOrientation
     private var active : Bool
+    private var level  : Int
+    
     public var delegate : TowerMenuDelegate!
     
     init(size: CGSize) {
-        
+        self.level = 1
         self.active = false
-        self.orientation = .up
         super.init(texture: nil, color: .clear, size: size)
+        
+        self.orientation = .up
         self.zPosition = 4
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.activate()
     }
     
@@ -45,7 +46,9 @@ class TowerMenu: SKSpriteNode, ButtonDelegate {
                 button.delegate = self
                 button.position = CGPoint(x: -size.width/2 - button.size.width/2 - 5, y: -(CGFloat(index - 1) * 32.0))
                 self.buttons.append(button)
-                addChild(button)
+                if !(level == 3 && index == 3) {
+                    addChild(button)
+                }
             }
         }
     }
@@ -77,6 +80,7 @@ class TowerMenu: SKSpriteNode, ButtonDelegate {
             delegate.rotate()
             rotateLeft()
         } else if buttonNode.name == "Upgrade" {
+            level += 1
             delegate.upgrade()
         }
         
@@ -92,26 +96,6 @@ class TowerMenu: SKSpriteNode, ButtonDelegate {
     
     public func isActive() -> Bool {
         return active
-    }
-    
-    private func rotateLeft() {
-        switch self.orientation {
-        case .up:
-            self.setOrientation(to: .left)
-        case .right:
-            self.setOrientation(to: .up)
-        case .down:
-            self.setOrientation(to: .right)
-        case .left:
-            self.setOrientation(to: .down)
-        }
-    }
-    
-    public func setOrientation(to newOrientation:ObjectFaceOrientation) {
-        if self.orientation != newOrientation {
-            self.zRotation = CGFloat(newOrientation.rawValue).degreesToRadians()
-            self.orientation = newOrientation
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {

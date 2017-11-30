@@ -13,17 +13,14 @@ protocol ButtonDelegate {
     func setDeselectedButton(buttonNode: ButtonNode)
 }
 
-class ButtonNode: SKSpriteNode {
+class ButtonNode: StandardBlock {
 
     private var selected : Bool
     public var delegate : ButtonDelegate!
     
     init(texture: SKTexture?, size: CGSize) {
-        
         self.selected = false
-        
         super.init(texture: texture, color: .cyan, size: size)
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
     }
     
     override func mouseDown(with event: NSEvent) {

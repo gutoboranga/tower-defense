@@ -10,33 +10,19 @@ import SpriteKit
 
 class Enemy: SKSpriteNode {
     
-    private let directions : [[CGFloat]] = [[2.0,0.0],
-                                            [0.0,-12.0],
-                                            [3.0,0.0],
-                                            [0.0,13.0],
-                                            [7.0,0.0],
-                                            [0.0,-4.0],
-                                            [-5.0,0.0],
-                                            [0.0,-9.0],
-                                            [3.0,0.0],
-                                            [0.0,5.0],
-                                            [4.0,0.0],
-                                            [0.0,5.0],
-                                            [3.0,0.0],
-                                            [0.0,-8.0],
-                                            [2.0,0.0]]
-    
+    private let directions : [[CGFloat]]
     private let eSpeed  : Double = 0.1
     private var lifeBar : LifeBar
 
     private var orientation = Orientation(direction: .right)
     
-    init(name : String, position: CGPoint, life: Double) {
+    init(name : String, position: CGPoint, life: Double, directions: [[CGFloat]]) {
         
         let size = CGSize(width: 32, height: 32)
         
         self.lifeBar = LifeBar(size: size, lifeNumber: life)
-  
+        self.directions = directions
+        
         let texture = SKTexture(imageNamed: name)
         super.init(texture: texture, color: .clear, size: size)
         
@@ -44,7 +30,7 @@ class Enemy: SKSpriteNode {
         
         self.position = position
 
-        self.zPosition = 3
+        self.zPosition = 2
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
         self.addChild(lifeBar)
@@ -105,13 +91,18 @@ class Enemy: SKSpriteNode {
     public func getDamageValue() -> Double {
         preconditionFailure("This method must be overridden")
     }
+    
+    public func getScoreValue() -> Int {
+        preconditionFailure("This method must be overridden")
+    }
+    
 }
 
 
 class FrogEnemy : Enemy {
     
-    init(position: CGPoint, life: Double) {
-        super.init(name: self.getName(), position: position, life: life)
+    init(position: CGPoint, life: Double, directions: [[CGFloat]]) {
+        super.init(name: self.getName(), position: position, life: life, directions: directions)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -125,13 +116,16 @@ class FrogEnemy : Enemy {
     override func getDamageValue() -> Double {
         return 0.5
     }
+    override func getScoreValue() -> Int {
+        return 100
+    }
 }
 
 
 class SpiderEnemy : Enemy {
     
-    init(position: CGPoint, life: Double) {
-        super.init(name: self.getName(), position: position, life: life)
+    init(position: CGPoint, life: Double = 12, directions: [[CGFloat]]) {
+        super.init(name: self.getName(), position: position, life: life, directions: directions)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -145,14 +139,19 @@ class SpiderEnemy : Enemy {
     override func getDamageValue() -> Double {
         return 1
     }
+    
+    override func getScoreValue() -> Int {
+        return 150
+    }
+    
 }
 
 class AstronautEnemy : Enemy {
     
     var animationFrames = [SKTexture]()
     
-    init(position: CGPoint, life: Double) {
-        super.init(name: self.getName() + String(0), position: position, life: life)
+    init(position: CGPoint, life: Double = 18, directions: [[CGFloat]]) {
+        super.init(name: self.getName() + String(0), position: position, life: life,  directions: directions)
         
         // cria os frames pra animar
         self.animationFrames.append(SKTexture(imageNamed: self.getName() + String(0)))
@@ -182,12 +181,17 @@ class AstronautEnemy : Enemy {
         
         super.move()
     }
+    
+    override func getScoreValue() -> Int {
+        return 70
+    }
+    
 }
 
 class RoverEnemy : Enemy {
     
-    init(position: CGPoint, life: Double) {
-        super.init(name: self.getName(), position: position, life: life)
+    init(position: CGPoint, life: Double = 20, directions: [[CGFloat]]) {
+        super.init(name: self.getName(), position: position, life: life, directions: directions)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -201,4 +205,9 @@ class RoverEnemy : Enemy {
     override func getDamageValue() -> Double {
         return 0.09
     }
+    
+    override func getScoreValue() -> Int {
+        return 50
+    }
+    
 }
