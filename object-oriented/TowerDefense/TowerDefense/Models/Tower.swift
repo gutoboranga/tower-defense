@@ -207,7 +207,7 @@ class DamageTower : Tower {
     }
     
     override func getName() -> String {
-        return "damageTower"
+        return "pyramid"
     }
 }
 
@@ -231,7 +231,7 @@ class RangeTower : Tower {
     }
     
     override func getName() -> String {
-        return "rangeTower"
+        return "alienBrain"
     }
 }
 
