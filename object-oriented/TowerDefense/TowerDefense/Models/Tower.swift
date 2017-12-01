@@ -40,7 +40,7 @@ class Tower: StandardBlock, TowerMenuDelegate {
         self.selected  = false
         self.towerMenu = TowerMenu(size: size)
         
-        super.init(texture: texture, color: .blue, size: size)
+        super.init(texture: SKTexture(imageNamed: self.getName()), color: .blue, size: size)
         
         self.orientation = orientation
         self.position = position
@@ -54,6 +54,10 @@ class Tower: StandardBlock, TowerMenuDelegate {
     
     private func stopCombat() {
         removeAllActions()
+    }
+    
+    func getName() -> String {
+        preconditionFailure("This method must be overridden")
     }
     
     public func getPrice() -> Int {
@@ -158,6 +162,7 @@ class Tower: StandardBlock, TowerMenuDelegate {
     }
 }
 
+
 class SpeedTower : Tower {
     
     init( size: CGSize, position: CGPoint) {
@@ -175,6 +180,10 @@ class SpeedTower : Tower {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func getName() -> String {
+        return "marsShip"
     }
 }
 
@@ -196,6 +205,10 @@ class DamageTower : Tower {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func getName() -> String {
+        return "damageTower"
+    }
 }
 
 class RangeTower : Tower {
@@ -215,6 +228,10 @@ class RangeTower : Tower {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func getName() -> String {
+        return "rangeTower"
     }
 }
 
@@ -247,6 +264,9 @@ class DoubleShotTower : Tower {
         }
     }
     
+    override func getName() -> String {
+        return "doubleShot"
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

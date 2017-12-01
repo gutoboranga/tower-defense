@@ -39,7 +39,7 @@ class TowerMenu: StandardBlock, ButtonDelegate {
             self.active = true
             
             for index in 0...2 {
-                let button = ButtonNode(texture: nil, size: CGSize(width: 28, height: 28))
+                let button = ButtonNode(texture: SKTexture(imageNamed: btnNames[index] + "_icon"), size: CGSize(width: 28, height: 28))
                 button.zPosition = 10
                 button.anchorPoint = CGPoint(x: 0.5, y: 0.5)
                 button.name = btnNames[index]

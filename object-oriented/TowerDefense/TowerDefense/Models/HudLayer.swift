@@ -19,29 +19,23 @@ class HudLayer: SKSpriteNode, ButtonDelegate{
     private var buttons    : [ButtonNode] = []
     private var playButton : ButtonNode
     
-    private var state      : GameStateMachine
+    private var state      : GameStateMachine = .idle
     
-    private var scoreLabel : SKLabelNode
-    private var coinsLabel : SKLabelNode
+    private var scoreLabel : SKLabelNode = SKLabelNode()
+    private var coinsLabel : SKLabelNode = SKLabelNode()
     
     public var selectedButton : ButtonNode?
     public var delegate       : HudLayerDelegate!
 
     override init(texture: SKTexture?, color: NSColor, size: CGSize) {
-        
-        self.state = .idle
-        
-        self.scoreLabel = SKLabelNode(text: "Score: 0")
-        self.scoreLabel.position = CGPoint(x: 300, y: 906)
-        
-        self.coinsLabel = SKLabelNode(text: "Coins: 0")
-        self.coinsLabel.position = CGPoint(x: 600, y: 906)
-        
         self.playButton = ButtonNode(texture: nil, size: CGSize(width: 128, height: 64))
         self.playButton.position = CGPoint(x: 88, y: 906)
         self.playButton.name = "Play"
         
         super.init(texture: texture, color: color, size: size)
+        
+        self.scoreLabel = createSKLabel(text: "Score: 0", position: CGPoint(x: 300, y: 906), fontName: "CourierNewPSMT", fontSize: 24.0)
+        self.coinsLabel = createSKLabel(text: "Coins: 0", position: CGPoint(x: 600, y: 906), fontName: "CourierNewPSMT", fontSize: 24.0)
         
         self.zPosition = 10
         self.playButton.delegate = self
@@ -58,6 +52,16 @@ class HudLayer: SKSpriteNode, ButtonDelegate{
         addChild(playButton)
         addChild(coinsLabel)
         addChild(scoreLabel)
+    }
+    
+    func createSKLabel(text: String, position: CGPoint, fontName: String, fontSize: CGFloat) -> SKLabelNode {
+        let label = SKLabelNode(text: text)
+        
+        label.position = position
+        label.fontName = fontName
+        label.fontSize = fontSize
+        
+        return label
     }
     
     override func mouseDown(with event: NSEvent) {
