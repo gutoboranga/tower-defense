@@ -30,6 +30,7 @@
 		4A3706A81FBE509800688810 /* TowerDefenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3706A71FBE509800688810 /* TowerDefenseUITests.swift */; };
 		4A4CDE231FD0ED93003BE3C1 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CDE221FD0ED93003BE3C1 /* EndScene.swift */; };
 		4A4CDE251FD0EDD3003BE3C1 /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CDE241FD0EDD3003BE3C1 /* EndScene.sks */; };
+		4A68640F1FD10FF100D456A7 /* EndOfGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68640E1FD10FF100D456A7 /* EndOfGame.swift */; };
 		4AD22FC71FBE5E21009A52A3 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FC61FBE5E21009A52A3 /* Enemy.swift */; };
 		4AD22FCC1FBE6229009A52A3 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FCB1FBE6229009A52A3 /* SceneController.swift */; };
 		4AD22FCF1FBE645E009A52A3 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FCE1FBE645E009A52A3 /* MenuScene.swift */; };
@@ -84,6 +85,7 @@
 		4A3706A91FBE509800688810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A4CDE221FD0ED93003BE3C1 /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 		4A4CDE241FD0EDD3003BE3C1 /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
+		4A68640E1FD10FF100D456A7 /* EndOfGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfGame.swift; sourceTree = "<group>"; };
 		4AD22FC61FBE5E21009A52A3 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		4AD22FCB1FBE6229009A52A3 /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 		4AD22FCE1FBE645E009A52A3 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				2AB152371FCE36F40051BB92 /* Projectile.swift */,
 				2AB152391FCF28200051BB92 /* TowerMenu.swift */,
 				2A479C9B1FCF725200CB7A8E /* StandardBlock.swift */,
+				4A68640E1FD10FF100D456A7 /* EndOfGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A68640F1FD10FF100D456A7 /* EndOfGame.swift in Sources */,
 				2AB152221FCCE9DE0051BB92 /* Spawn.swift in Sources */,
 				2AB1521A1FCCCAFB0051BB92 /* GameScene.swift in Sources */,
 				4AD22FCC1FBE6229009A52A3 /* SceneController.swift in Sources */,

@@ -48,22 +48,16 @@ class SceneController: NSViewController, MenuDelegate, EndDelegate, GameDelegate
     }
     
     func newGame() {
-        print("New game")
-        
         let gameScene = GameScene(size: self.skView.scene!.size)
         gameScene.gameDelegate = self
         self.present(scene: gameScene)
     }
     
     func quit() {
-        // TODO: Aqui deve fechar tudo
-        print("Quit")
         exit(0)
     }
     
     func mainMenu() {
-        print("Main menu")
-        
         if let menuScene = createScene(name: "MenuScene") as! MenuScene? {
             menuScene.menuDelegate = self
             self.present(scene: menuScene)
@@ -71,19 +65,12 @@ class SceneController: NSViewController, MenuDelegate, EndDelegate, GameDelegate
     }
     
     func endOfGame(won: Bool, score: Int) {
-        print("End of game")
-        
-        var title : String = "Game over!"
-        var description : String = "Mars was invaded :-("
-        if won {
-            title = "You win!"
-            description = "You saved mars ;-D"
-        }
+        let result = EndOfGame(didWin: won)
         
         if let endScene = createScene(name: "EndScene") as! EndScene? {
             endScene.setDelegate(delegate: self)
-            endScene.setTitle(title: title)
-            endScene.setDescription(description: description)
+            endScene.setTitle(title: result.title)
+            endScene.setDescription(description: result.description)
             endScene.setScore(score: score)
             
             self.present(scene: endScene)
