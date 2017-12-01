@@ -93,7 +93,13 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
             
             switch newState {
             case .idle:
-                setCoins(addValue: coinsPerLevel[self.spawn.getCurrentLevel()])
+                
+                if self.spawn.getCurrentLevel() == coinsPerLevel.count {
+                    self.winGame()
+                } else {
+                    self.setCoins(addValue: coinsPerLevel[self.spawn.getCurrentLevel()])
+                }
+                
             case .playing:
                 break
             }
@@ -253,8 +259,14 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
         }
     }
     
-    func gameOver () {
-        print("game over")
+    func gameOver() {
+        //IMPLEMENTAR GAME OVER
+        print("GAME OVER")
+    }
+    
+    func winGame() {
+        //IMPLEMENTAR
+        print("WIN")
     }
     
     func removeEnemyFromGame(enemy: Enemy) {
