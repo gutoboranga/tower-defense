@@ -113,7 +113,7 @@ class Enemy: StandardBlock {
 class FrogEnemy : Enemy {
     
     init(position: CGPoint, life: Double, directions: [[CGFloat]]) {
-        super.init(name: self.getName(), position: position, life: life, directions: directions)
+        super.init(name: self.getName(), position: position, life: 15, directions: directions)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -135,8 +135,8 @@ class FrogEnemy : Enemy {
 
 class SpiderEnemy : Enemy {
     
-    init(position: CGPoint, life: Double = 12, directions: [[CGFloat]]) {
-        super.init(name: self.getName(), position: position, life: life, directions: directions)
+    init(position: CGPoint, life: Double, directions: [[CGFloat]]) {
+        super.init(name: self.getName(), position: position, life: 30, directions: directions)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -161,8 +161,8 @@ class AstronautEnemy : Enemy {
     
     var animationFrames = [SKTexture]()
     
-    init(position: CGPoint, life: Double = 18, directions: [[CGFloat]]) {
-        super.init(name: self.getName() + String(0), position: position, life: life,  directions: directions)
+    init(position: CGPoint, life: Double, directions: [[CGFloat]]) {
+        super.init(name: self.getName() + String(0), position: position, life: 25,  directions: directions)
         
         // cria os frames pra animar
         self.animationFrames.append(SKTexture(imageNamed: self.getName() + String(0)))
@@ -196,13 +196,12 @@ class AstronautEnemy : Enemy {
     override func getScoreValue() -> Int {
         return 70
     }
-    
 }
 
 class RoverEnemy : Enemy {
     
-    init(position: CGPoint, life: Double = 20, directions: [[CGFloat]]) {
-        super.init(name: self.getName(), position: position, life: life, directions: directions)
+    init(position: CGPoint, life: Double, directions: [[CGFloat]]) {
+        super.init(name: self.getName(), position: position, life: 50, directions: directions)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -218,7 +217,7 @@ class RoverEnemy : Enemy {
     }
     
     override func getScoreValue() -> Int {
-        return 50
+        return 210
     }
     
 }

@@ -26,8 +26,6 @@
 		4A3706841FBE509700688810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3706831FBE509700688810 /* AppDelegate.swift */; };
 		4A37068E1FBE509700688810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A37068D1FBE509700688810 /* Assets.xcassets */; };
 		4A3706911FBE509700688810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A37068F1FBE509700688810 /* Main.storyboard */; };
-		4A37069D1FBE509700688810 /* TowerDefenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37069C1FBE509700688810 /* TowerDefenseTests.swift */; };
-		4A3706A81FBE509800688810 /* TowerDefenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3706A71FBE509800688810 /* TowerDefenseUITests.swift */; };
 		4A4CDE231FD0ED93003BE3C1 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CDE221FD0ED93003BE3C1 /* EndScene.swift */; };
 		4A4CDE251FD0EDD3003BE3C1 /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CDE241FD0EDD3003BE3C1 /* EndScene.sks */; };
 		4A68640F1FD10FF100D456A7 /* EndOfGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68640E1FD10FF100D456A7 /* EndOfGame.swift */; };
@@ -78,11 +76,7 @@
 		4A3706921FBE509700688810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A3706931FBE509700688810 /* TowerDefense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TowerDefense.entitlements; sourceTree = "<group>"; };
 		4A3706981FBE509700688810 /* TowerDefenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TowerDefenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A37069C1FBE509700688810 /* TowerDefenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerDefenseTests.swift; sourceTree = "<group>"; };
-		4A37069E1FBE509700688810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A3706A31FBE509700688810 /* TowerDefenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TowerDefenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A3706A71FBE509800688810 /* TowerDefenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerDefenseUITests.swift; sourceTree = "<group>"; };
-		4A3706A91FBE509800688810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A4CDE221FD0ED93003BE3C1 /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 		4A4CDE241FD0EDD3003BE3C1 /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
 		4A68640E1FD10FF100D456A7 /* EndOfGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfGame.swift; sourceTree = "<group>"; };
@@ -121,8 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				4A3706821FBE509700688810 /* TowerDefense */,
-				4A37069B1FBE509700688810 /* TowerDefenseTests */,
-				4A3706A61FBE509800688810 /* TowerDefenseUITests */,
 				4A3706811FBE509700688810 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,24 +143,6 @@
 				4A3706931FBE509700688810 /* TowerDefense.entitlements */,
 			);
 			path = TowerDefense;
-			sourceTree = "<group>";
-		};
-		4A37069B1FBE509700688810 /* TowerDefenseTests */ = {
-			isa = PBXGroup;
-			children = (
-				4A37069C1FBE509700688810 /* TowerDefenseTests.swift */,
-				4A37069E1FBE509700688810 /* Info.plist */,
-			);
-			path = TowerDefenseTests;
-			sourceTree = "<group>";
-		};
-		4A3706A61FBE509800688810 /* TowerDefenseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4A3706A71FBE509800688810 /* TowerDefenseUITests.swift */,
-				4A3706A91FBE509800688810 /* Info.plist */,
-			);
-			path = TowerDefenseUITests;
 			sourceTree = "<group>";
 		};
 		4AD22FBB1FBE5137009A52A3 /* Models */ = {
@@ -378,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A37069D1FBE509700688810 /* TowerDefenseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +359,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3706A81FBE509800688810 /* TowerDefenseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
