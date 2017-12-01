@@ -702,10 +702,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Menu Controller-->
+        <!--Scene Controller-->
         <scene sceneID="lvO-Oo-2Dt">
             <objects>
-                <viewController id="6Az-Om-ZgK" customClass="MenuController" customModule="TowerDefense" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Az-Om-ZgK" customClass="SceneController" customModule="TowerDefense" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="o1V-pW-7sq" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -716,7 +716,7 @@
                 </viewController>
                 <customObject id="diC-Za-Jmy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656" y="967"/>
+            <point key="canvasLocation" x="75" y="929"/>
         </scene>
     </scenes>
 </document>

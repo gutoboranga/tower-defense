@@ -254,7 +254,7 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
     }
     
     func gameOver () {
-        //IMPLEMENTAR GAME OVER
+        print("game over")
     }
     
     func removeEnemyFromGame(enemy: Enemy) {

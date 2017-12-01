@@ -29,11 +29,9 @@
 		4A37069D1FBE509700688810 /* TowerDefenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37069C1FBE509700688810 /* TowerDefenseTests.swift */; };
 		4A3706A81FBE509800688810 /* TowerDefenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3706A71FBE509800688810 /* TowerDefenseUITests.swift */; };
 		4AD22FC71FBE5E21009A52A3 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FC61FBE5E21009A52A3 /* Enemy.swift */; };
-		4AD22FCC1FBE6229009A52A3 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FCB1FBE6229009A52A3 /* MenuController.swift */; };
+		4AD22FCC1FBE6229009A52A3 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FCB1FBE6229009A52A3 /* SceneController.swift */; };
 		4AD22FCF1FBE645E009A52A3 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD22FCE1FBE645E009A52A3 /* MenuScene.swift */; };
 		4AD22FD11FBE647D009A52A3 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4AD22FD01FBE647D009A52A3 /* MenuScene.sks */; };
-		4AE842AB1FCE5C4B00F97795 /* Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE842AA1FCE5C4B00F97795 /* Orientation.swift */; };
-		4AFC81711FBE7A0F00DE459C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC81701FBE7A0F00DE459C /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,11 +81,9 @@
 		4A3706A71FBE509800688810 /* TowerDefenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerDefenseUITests.swift; sourceTree = "<group>"; };
 		4A3706A91FBE509800688810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AD22FC61FBE5E21009A52A3 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
-		4AD22FCB1FBE6229009A52A3 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		4AD22FCB1FBE6229009A52A3 /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 		4AD22FCE1FBE645E009A52A3 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		4AD22FD01FBE647D009A52A3 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
-		4AE842AA1FCE5C4B00F97795 /* Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orientation.swift; sourceTree = "<group>"; };
-		4AFC81701FBE7A0F00DE459C /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +180,6 @@
 				2AB152311FCDD8020051BB92 /* ButtonNode.swift */,
 				2AB152331FCE129D0051BB92 /* Tower.swift */,
 				2AB152351FCE13650051BB92 /* ObjectFaceOrientation.swift */,
-				4AE842AA1FCE5C4B00F97795 /* Orientation.swift */,
 				2AB152371FCE36F40051BB92 /* Projectile.swift */,
 				2AB152391FCF28200051BB92 /* TowerMenu.swift */,
 				2A479C9B1FCF725200CB7A8E /* StandardBlock.swift */,
@@ -195,8 +190,7 @@
 		4AD22FCA1FBE620B009A52A3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4AD22FCB1FBE6229009A52A3 /* MenuController.swift */,
-				4AFC81701FBE7A0F00DE459C /* GameController.swift */,
+				4AD22FCB1FBE6229009A52A3 /* SceneController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -348,15 +342,13 @@
 			files = (
 				2AB152221FCCE9DE0051BB92 /* Spawn.swift in Sources */,
 				2AB1521A1FCCCAFB0051BB92 /* GameScene.swift in Sources */,
-				4AD22FCC1FBE6229009A52A3 /* MenuController.swift in Sources */,
+				4AD22FCC1FBE6229009A52A3 /* SceneController.swift in Sources */,
 				2AB1523A1FCF28200051BB92 /* TowerMenu.swift in Sources */,
-				4AFC81711FBE7A0F00DE459C /* GameController.swift in Sources */,
 				4AD22FCF1FBE645E009A52A3 /* MenuScene.swift in Sources */,
 				2AB152381FCE36F40051BB92 /* Projectile.swift in Sources */,
 				2AB152281FCD00AE0051BB92 /* LifeBar.swift in Sources */,
 				4A3706841FBE509700688810 /* AppDelegate.swift in Sources */,
 				2A479C9C1FCF725200CB7A8E /* StandardBlock.swift in Sources */,
-				4AE842AB1FCE5C4B00F97795 /* Orientation.swift in Sources */,
 				2AB152201FCCE0480051BB92 /* MapLoader.swift in Sources */,
 				2AB152361FCE13650051BB92 /* ObjectFaceOrientation.swift in Sources */,
 				2AB152301FCDD1E40051BB92 /* HudLayer.swift in Sources */,

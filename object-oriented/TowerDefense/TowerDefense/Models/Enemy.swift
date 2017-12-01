@@ -14,7 +14,7 @@ class Enemy: SKSpriteNode {
     private let eSpeed  : Double = 0.1
     private var lifeBar : LifeBar
 
-    private var orientation = Orientation(direction: .right)
+    private var orientation : ObjectFaceOrientation = .right
     
     init(name : String, position: CGPoint, life: Double, directions: [[CGFloat]]) {
         
@@ -64,10 +64,10 @@ class Enemy: SKSpriteNode {
     
     private func move(_ newDir : [[CGFloat]]) {
         if let firstMove = newDir.first {
-            let rotateAction = self.orientation.getAction(move: firstMove)
+            let rotateAction = self.createRotateAction(move: firstMove)
             
             self.run(rotateAction, completion: {
-                self.orientation.updateDirection(move: firstMove)
+                self.orientation = ObjectFaceOrientation(move: firstMove)
                 
                 let time : Double = self.eSpeed * 2.0 * Double(firstMove[0] + firstMove[1])
                 let action = SKAction.move(by: CGVector(dx: 32 * firstMove[0], dy:  32 * firstMove[1]), duration: abs(time))
@@ -78,6 +78,13 @@ class Enemy: SKSpriteNode {
                 }
             })
         }
+    }
+    
+    private func createRotateAction(move : [CGFloat]) -> SKAction {
+        let newOrientation = ObjectFaceOrientation(move: move)
+        let angle : CGFloat = self.orientation.getRotationAngle(newOrientation: newOrientation)
+        
+        return SKAction.rotate(byAngle: angle, duration: 0.1)
     }
     
     required init?(coder aDecoder: NSCoder) {
