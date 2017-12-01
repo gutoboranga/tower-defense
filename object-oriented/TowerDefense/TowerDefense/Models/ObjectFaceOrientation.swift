@@ -42,6 +42,19 @@ enum ObjectFaceOrientation : Float {
         }
     }
     
+    var nextCounterClockwise: ObjectFaceOrientation {
+        switch self {
+        case .up:
+            return .left
+        case .right:
+            return .up
+        case .down:
+            return .right
+        case .left:
+            return .down
+        }
+    }
+    
     func getRotationAngle(newOrientation : ObjectFaceOrientation) -> CGFloat {
         if newOrientation == self.nextClockwise {
             return -(CGFloat.pi / 2)

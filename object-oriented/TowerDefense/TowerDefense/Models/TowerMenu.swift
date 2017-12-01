@@ -77,6 +77,7 @@ class TowerMenu: StandardBlock, ButtonDelegate {
     func setSelectedButton(buttonNode: ButtonNode) {
         
         if buttonNode.name == "Remove" {
+            self.removeFromParent()
             delegate.removeTower()
         } else if buttonNode.name == "Rotate" {
             delegate.rotate()

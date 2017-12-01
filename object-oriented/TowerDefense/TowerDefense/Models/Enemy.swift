@@ -8,30 +8,34 @@
 
 import SpriteKit
 
-class Enemy: SKSpriteNode {
+class Enemy: StandardBlock {
     
     private let directions : [[CGFloat]]
     private let eSpeed  : Double = 0.1
     private var lifeBar : LifeBar
 
-    private var orientation : ObjectFaceOrientation = .right
+    init() {
+        self.directions = [[CGFloat]]()
+        self.lifeBar = LifeBar(size: CGSize(), lifeNumber: Double())
+        
+        super.init(texture: nil, color: .clear, size: CGSize(width: 32, height: 32))
+    }
     
     init(name : String, position: CGPoint, life: Double, directions: [[CGFloat]]) {
-        
         let size = CGSize(width: 32, height: 32)
-        
-        self.lifeBar = LifeBar(size: size, lifeNumber: life)
-        self.directions = directions
-        
         let texture = SKTexture(imageNamed: name)
+        
+        self.directions = directions
+        self.lifeBar = LifeBar(size: size, lifeNumber: life)
+        
         super.init(texture: texture, color: .clear, size: size)
         
         self.name = "Enemy"
-        
         self.position = position
-
         self.zPosition = 2
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        
+        self.orientation = .right
 
         self.addChild(lifeBar)
         
@@ -87,11 +91,12 @@ class Enemy: SKSpriteNode {
         return SKAction.rotate(byAngle: angle, duration: 0.1)
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func getName() -> String {
+    public func getName() -> String {
         preconditionFailure("This method must be overridden")
     }
     
@@ -102,7 +107,6 @@ class Enemy: SKSpriteNode {
     public func getScoreValue() -> Int {
         preconditionFailure("This method must be overridden")
     }
-    
 }
 
 
@@ -210,7 +214,7 @@ class RoverEnemy : Enemy {
     }
     
     override func getDamageValue() -> Double {
-        return 0.09
+        return 2.0
     }
     
     override func getScoreValue() -> Int {

@@ -52,6 +52,10 @@ class Tower: StandardBlock, TowerMenuDelegate {
         self.addChild(towerMenu)
     }
     
+    deinit {
+        print("deinit")
+    }
+    
     private func stopCombat() {
         removeAllActions()
     }
@@ -78,11 +82,6 @@ class Tower: StandardBlock, TowerMenuDelegate {
             })
             self.fire(action: action)
         }
-    }
-    
-    public func remove() {
-        delegate.removeTower(tower: self)
-        removeFromParent()
     }
     
     public func setState(newState: GameStateMachine) {
@@ -145,8 +144,9 @@ class Tower: StandardBlock, TowerMenuDelegate {
     // Mark - Tower Menu Delegate
     
     func removeTower() {
+        self.removeAllActions()
+        self.removeFromParent()
         delegate.removeTower(tower: self)
-        removeFromParent()
     }
     
     func rotate() {

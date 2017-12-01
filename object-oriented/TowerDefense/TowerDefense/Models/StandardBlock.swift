@@ -10,7 +10,6 @@ import SpriteKit
 
 class StandardBlock: SKSpriteNode {
     
-    
     public var orientation : ObjectFaceOrientation
     
     override init(texture: SKTexture?, color: NSColor, size: CGSize) {
@@ -24,29 +23,11 @@ class StandardBlock: SKSpriteNode {
     }
     
     public func rotateLeft() {
-        switch self.orientation {
-        case .up:
-            self.setOrientation(to: .left)
-        case .right:
-            self.setOrientation(to: .up)
-        case .down:
-            self.setOrientation(to: .right)
-        case .left:
-            self.setOrientation(to: .down)
-        }
+        self.setOrientation(to: self.orientation.nextCounterClockwise)
     }
     
     public func rotateRight() {
-        switch self.orientation {
-        case .up:
-            self.setOrientation(to: .right)
-        case .right:
-            self.setOrientation(to: .down)
-        case .down:
-            self.setOrientation(to: .left)
-        case .left:
-            self.setOrientation(to: .up)
-        }
+        self.setOrientation(to: self.orientation.nextClockwise)
     }
     
     private func setOrientation(to newOrientation:ObjectFaceOrientation) {
