@@ -183,7 +183,7 @@ class SpeedTower : Tower {
     }
     
     override func getName() -> String {
-        return "marsShip"
+        return "speed"
     }
 }
 
@@ -207,7 +207,7 @@ class DamageTower : Tower {
     }
     
     override func getName() -> String {
-        return "pyramid"
+        return "damage"
     }
 }
 
@@ -231,7 +231,7 @@ class RangeTower : Tower {
     }
     
     override func getName() -> String {
-        return "alienBrain"
+        return "range"
     }
 }
 

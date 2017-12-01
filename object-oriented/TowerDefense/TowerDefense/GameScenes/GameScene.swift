@@ -62,13 +62,13 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
         if let button = hudLayer?.selectedButton {
             var tower : Tower!
             
-            if button.name == "btn0" {
+            if button.name == "speed" {
                 tower = SpeedTower(size: ground.size, position: ground.position)
-            } else if button.name == "btn1" {
+            } else if button.name == "damage" {
                 tower = DamageTower(size: ground.size, position: ground.position)
-            } else if button.name == "btn2" {
+            } else if button.name == "range" {
                 tower = RangeTower(size: ground.size, position: ground.position)
-            } else if button.name == "btn3" {
+            } else if button.name == "doubleShot" {
                 tower = DoubleShotTower(size: ground.size, position: ground.position)
             }
             

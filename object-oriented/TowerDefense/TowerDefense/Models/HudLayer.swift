@@ -14,7 +14,7 @@ protocol HudLayerDelegate {
 
 class HudLayer: SKSpriteNode, ButtonDelegate{
     
-    private let btnNames = ["btn0", "btn1", "btn2", "btn3"]
+    private let btnNames = ["speed", "damage", "range", "doubleShot"]
     
     private var buttons    : [ButtonNode] = []
     private var playButton : ButtonNode
@@ -28,7 +28,7 @@ class HudLayer: SKSpriteNode, ButtonDelegate{
     public var delegate       : HudLayerDelegate!
 
     override init(texture: SKTexture?, color: NSColor, size: CGSize) {
-        self.playButton = ButtonNode(texture: nil, size: CGSize(width: 128, height: 64))
+        self.playButton = ButtonNode(texture: SKTexture(imageNamed: "play_icon"), size: CGSize(width: 128, height: 64))
         self.playButton.position = CGPoint(x: 88, y: 906)
         self.playButton.name = "Play"
         
@@ -41,8 +41,9 @@ class HudLayer: SKSpriteNode, ButtonDelegate{
         self.playButton.delegate = self
         
         for index in 0...3 {
-            let button = ButtonNode(texture: nil, size: CGSize(width: 64, height: 64))
+            let button = ButtonNode(texture: SKTexture(imageNamed: btnNames[index] + "_2x"), size: CGSize(width: 64, height: 64))
             button.name = btnNames[index]
+            button.color = NSColor.white
             button.delegate = self
             button.position = CGPoint(x: 46, y: 828 - (index * 64) - (30 * index))
             self.buttons.append(button)
