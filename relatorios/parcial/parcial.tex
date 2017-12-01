@@ -149,19 +149,24 @@ Escolhemos para implementar o problema do jogo Tower Defense.
 
 Tower Defense é um subgênero de jogos de estratégia, onde o jogador deve defender seu território (que varia de acordo com a temática do jogo) contra o ataque de inimigos, podendo utilizar um montante inicial para adquirir elementos do jogo que o ajudem na defesa.
 
-Nossa implementação encontra-se no seguinte repositório no github: https://github.com/gutoboranga/tower-defense
+Nosso código-fonte (além de zipado junto com este relatório) encontra-se no seguinte repositório:
+\texttt{\\\tab https://github.com/gutoboranga/tower-defense}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{PARADIGMA} \label{intro}
 
-Para a primeira etapa optamos por implementar o jogo usando Orientação a Objetos devido a conhecimento prévio de ambos integrantes do grupo.
+Para a primeira etapa do trabalho, optamos por implementar o jogo usando Orientação a Objetos devido a conhecimento prévio de ambos integrantes do grupo.
+
+Acreditamos que será mais fácil implementar o jogo no paradigma funcional como segunda etapa ao invés da primeira, pois agora temos um conhecimento maior acerca da linguagem e das regras do próprio jogo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{REQUISITOS} \label{intro}
 
-A seguir está a lista de requisitos para o paradigma de Orientação a Objetos. Para cada um, há um exemplo retirado do nosso código-fonte.
+A seguir está a lista de requisitos para o paradigma de Orientação a Objetos.
+
+Para cada requisito cumprido na implementação, há um exemplo retirado do nosso código-fonte.
 
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -170,6 +175,9 @@ A seguir está a lista de requisitos para o paradigma de Orientação a Objetos.
 Especificar e utilizar classes (utilitárias ou para representar as estruturas de dados utilizadas pelo programa).
 
 Utilizamos diversas classes no projeto inteiro, seguindo o padrão MVC com leves alterações devido à presença do conceito de GameScene, trazido pela biblioteca de jogos SpriteKit.
+
+Exemplo: classe \texttt{Projectile}, que representa um projétil atirado pelas torres do jogo.
+\texttt{\\class Projectile: StandardBlock \{\\\tab ...\\\}}
 
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -276,7 +284,7 @@ Utilizamos polimorfismo por sobrecarga na classe \texttt{Enemy}, onde temos duas
     
     \texttt{private func move(\_ newDir : [[CGFloat]])}
     
-    Nesta função privada, é realizado o movimento para a primeira posição (x, y) da lista recebida e após, são feitas chamadas recursivas para ela mesma enviando a lista sem o primeiro elemento.
+    Nesta função privada, é realizado o movimento imeira posição (x, y) da lista recebida e após, são feitas chamadas recursivas para ela mesma enviando a lista sem o primeiro elemento.
 \end{itemize}
 
 
@@ -306,7 +314,9 @@ A classe que implementa este delegate é a \texttt{GameScene}. Ela é, portanto,
 %
 \chapter{CONCLUSÃO}
 
-Esta seção será construída no futuro.
+Ao término deste etapa do trabalho, podemos concluir que utilizar Orientação a Objetos em projetos que envolvem um grande número de entidades e elementos com diferentes características é muito apropriado.
+
+Isto se deve ao fato de este paradigma se basear na criação de tipos abstratos (com seus atributos e métodos próprios), que permite uma maior separação nas responsabilidades de cada módulo do programa, resultando em um código-fonte mais organizado e conciso.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
