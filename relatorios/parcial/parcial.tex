@@ -284,7 +284,7 @@ Utilizamos polimorfismo por sobrecarga na classe \texttt{Enemy}, onde temos duas
     
     \texttt{private func move(\_ newDir : [[CGFloat]])}
     
-    Nesta função privada, é realizado o movimento imeira posição (x, y) da lista recebida e após, são feitas chamadas recursivas para ela mesma enviando a lista sem o primeiro elemento.
+    Nesta função privada, é realizado o movimento até a primeira posição (x, y) da lista recebida e após, são feitas chamadas recursivas passando como parâmetro a lista sem o primeiro elemento.
 \end{itemize}
 
 
@@ -306,7 +306,7 @@ Na classe \texttt{Tower} (que modela o conceito de uma torre de defesa dentro do
 
 \texttt{\\ protocol TowerDelegate \{\\\tab func removeTower(tower : Tower)\\\tab func upgradeTower(tower: Tower)\\\}}
 
-A classe que implementa este delegate é a \texttt{GameScene}. Ela é, portanto, a responsável por tomar as ações necessárias quando a classe \\texttt{Tower} acionar algum dos métodos declarados neste protocol. Estas ações envolvem chamadas a métodos de outras classes. O uso deste delegate evita que a classe \texttt{Tower} fique acoplada a estas outras classes, deixando que a \texttt{GameScene} faça a comunicação necessária entre elas.
+A classe que implementa este delegate é a \texttt{GameScene}. Ela é, portanto, a responsável por tomar as ações necessárias quando a classe \texttt{Tower} acionar algum dos métodos declarados neste protocol. Estas ações envolvem chamadas a métodos de outras classes. O uso deste delegate evita que a classe \texttt{Tower} fique acoplada a estas outras classes, deixando que a \texttt{GameScene} faça a comunicação necessária entre elas.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -320,20 +320,64 @@ Isto se deve ao fato de este paradigma se basear na criação de tipos abstratos
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Screenshots
+%
+\chapter{SCREENSHOTS}
+
+A seguir estão listados alguns screenshots tirados durante a execução do nosso jogo.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Menu inicial}
+    \fbox{
+        \includegraphics[width=12cm,height=8cm,keepaspectratio]{images/main-menu.png}
+    }
+    \label{fig:figura1}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Jogo em ação}
+    \fbox{
+        \includegraphics[width=12cm,height=8cm,keepaspectratio]{images/battle.png}
+    }
+    \label{fig:figura1}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Final do jogo: vitória}
+    \fbox{
+        \includegraphics[width=12cm,height=8cm,keepaspectratio]{images/win.png}
+    }
+    \label{fig:figura1}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Final do jogo: derrota}
+    \fbox{
+        \includegraphics[width=12cm,height=8cm,keepaspectratio]{images/lose.png}
+    }
+    \label{fig:figura1}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Referências
 %
 \chapter{REFERÊNCIAS}
 
-Acessos feitos em 28/10:
+Acessos feitos em 1/12:
 
 \begin{itemize}
 \setlength{\itemindent}{1em}
     \item https://developer.apple.com/swift/
-    \item https://insights.stackoverflow.com/survey/2017
-    \item http://www.bestprogramminglanguagefor.me/why-learn-swift
-    \item https://pt.stackoverflow.com/questions/141624/o-que-%C3%A9-paradigma
-    \item https://swift.org
-    \item http://gameranx.com/features/id/13529/article/best-tower-defense-games/
+    \item https://developer.apple.com/spritekit/
+    \item https://www.devmedia.com.br/uso-de-polimorfismo-em-java/26140
+    \item http://nsomar.com/parametric-compile-time-polymorphism-in-swift/
+    \item https://medium.com/@jamesrochabrun/implementing-delegates-in-swift-step-by-step-d3211cbac3ef
+    \item http://www.dca.fee.unicamp.br/cursos/PooJava/metodos/construtor.html
+    \item https://en.wikipedia.org/wiki/Delegation\_(object-oriented\_programming)
 \end{itemize}
 
 \end{document}
