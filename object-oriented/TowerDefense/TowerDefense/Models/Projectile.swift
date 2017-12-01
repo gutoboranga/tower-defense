@@ -16,7 +16,7 @@ class Projectile: StandardBlock {
         
         self.damage = damage
         
-        super.init(texture: nil, color: .purple, size: size)
+        super.init(texture: nil, color: .white, size: size)
         self.position = CGPoint(x: 0, y: 0)
         self.zPosition = 4
         

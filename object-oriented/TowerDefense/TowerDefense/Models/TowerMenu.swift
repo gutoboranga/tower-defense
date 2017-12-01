@@ -45,7 +45,9 @@ class TowerMenu: StandardBlock, ButtonDelegate {
                 button.name = btnNames[index]
                 button.delegate = self
                 button.position = CGPoint(x: -size.width/2 - button.size.width/2 - 5, y: -(CGFloat(index - 1) * 32.0))
+                
                 self.buttons.append(button)
+                
                 if !(level == 3 && index == 2) {
                     addChild(button)
                 }

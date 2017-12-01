@@ -6,6 +6,10 @@
 //  Copyright © 2017 gatosDeSchnorrdinger. All rights reserved.
 //
 
+protocol GameDelegate {
+    func endOfGame(won: Bool, score: Int)
+}
+
 import SpriteKit
 import GameplayKit
 
@@ -15,6 +19,8 @@ enum GameStateMachine {
 }
 
 class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDelegate, SKPhysicsContactDelegate{
+    
+    var gameDelegate: GameDelegate?
     
     private let xIniPos = 732.0
     private let yIniPos = 406.0
@@ -95,7 +101,8 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
             case .idle:
                 
                 if self.spawn.getCurrentLevel() == coinsPerLevel.count {
-                    self.winGame()
+                    self.removeFromParent()
+                    self.gameDelegate?.endOfGame(won: true, score: self.score)
                 } else {
                     self.setCoins(addValue: coinsPerLevel[self.spawn.getCurrentLevel()])
                 }
@@ -223,7 +230,8 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
             if let castle = contact.bodyA.node as? Castle {
                 if let enemy = contact.bodyB.node as? Enemy {
                     castle.loseLife(with: enemy.getDamageValue(), completion: {
-                        self.gameOver()
+                        self.removeFromParent()
+                        self.gameDelegate?.endOfGame(won: false, score: self.score)
                     })
                     spawn.removeEnemy(enemy: enemy)
                 }
@@ -251,7 +259,8 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
                 
                 if let castle = contact.bodyB.node as? Castle {
                     castle.loseLife(with: enemy.getDamageValue(), completion: {
-                        self.gameOver()
+                        self.removeFromParent()
+                        self.gameDelegate?.endOfGame(won: false, score: self.score)
                     })
                     spawn.removeEnemy(enemy: enemy)
                 }
@@ -259,15 +268,17 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
         }
     }
     
-    func gameOver() {
-        //IMPLEMENTAR GAME OVER
-        print("GAME OVER")
-    }
-    
-    func winGame() {
-        //IMPLEMENTAR
-        print("WIN")
-    }
+//    func gameOver() {
+//        //IMPLEMENTAR GAME OVER
+//        print("GAME OVER")
+//
+//        self.gameDelegate?.endOfGame()
+//    }
+//
+//    func winGame() {
+//        //IMPLEMENTAR
+//        print("WIN")
+//    }
     
     func removeEnemyFromGame(enemy: Enemy) {
         self.spawn.removeEnemy(enemy: enemy)

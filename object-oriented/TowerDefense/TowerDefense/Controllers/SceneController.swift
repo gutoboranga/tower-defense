@@ -10,7 +10,7 @@ import Cocoa
 import SpriteKit
 import GameplayKit
 
-class SceneController: NSViewController, MenuDelegate {
+class SceneController: NSViewController, MenuDelegate, EndDelegate, GameDelegate {
     
     @IBOutlet var skView: SKView!
     
@@ -20,11 +20,7 @@ class SceneController: NSViewController, MenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let menuScene = createScene(name: "MenuScene") as! MenuScene? {
-            menuScene.menuDelegate = self
-            self.present(scene: menuScene)
-        }
+        self.mainMenu()
     }
     
     func createScene(name: String) -> SKScene? {
@@ -33,11 +29,6 @@ class SceneController: NSViewController, MenuDelegate {
             return scene.rootNode as! SKScene?
         }
         return SKScene()
-    }
-    
-    func newGame() {
-        let gameScene = GameScene(size: self.skView.scene!.size)
-        self.present(scene: gameScene)
     }
     
     func present(scene : SKScene) {
@@ -56,8 +47,46 @@ class SceneController: NSViewController, MenuDelegate {
         }
     }
     
+    func newGame() {
+        print("New game")
+        
+        let gameScene = GameScene(size: self.skView.scene!.size)
+        gameScene.gameDelegate = self
+        self.present(scene: gameScene)
+    }
+    
     func quit() {
         // TODO: Aqui deve fechar tudo
         print("Quit")
+        exit(0)
+    }
+    
+    func mainMenu() {
+        print("Main menu")
+        
+        if let menuScene = createScene(name: "MenuScene") as! MenuScene? {
+            menuScene.menuDelegate = self
+            self.present(scene: menuScene)
+        }
+    }
+    
+    func endOfGame(won: Bool, score: Int) {
+        print("End of game")
+        
+        var title : String = "Game over!"
+        var description : String = "Mars was invaded :-("
+        if won {
+            title = "You win!"
+            description = "You saved mars ;-D"
+        }
+        
+        if let endScene = createScene(name: "EndScene") as! EndScene? {
+            endScene.setDelegate(delegate: self)
+            endScene.setTitle(title: title)
+            endScene.setDescription(description: description)
+            endScene.setScore(score: score)
+            
+            self.present(scene: endScene)
+        }
     }
 }
