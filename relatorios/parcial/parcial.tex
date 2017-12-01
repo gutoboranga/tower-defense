@@ -1,0 +1,329 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modelo de relatório de Disciplina de MLP a partir da
+% classe latex iiufrgs disponivel em http://github.com/schnorr/iiufrgs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definição do tipo / classe de documento e estilo usado
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\documentclass[rel_mlp]{iiufrgs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Importação de pacotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (a A seguir podem ser importados os pacotes necessários para o documento, de acordo
+% com a necessidade)
+%
+\usepackage[brazilian]{babel}	    % para texto escrito em pt-br
+\usepackage[utf8]{inputenc}         % pacote para acentuação
+\usepackage{graphicx}         	    % pacote para importar figuras
+\usepackage[T1]{fontenc}            % pacote para conj. de caracteres correto
+\usepackage{times}                  % pacote para usar fonte Adobe Times
+\usepackage{enumerate}              % para lista de itens com letras
+\usepackage{breakcites}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{titletoc}
+\usepackage{listings}			    % para listagens de código-fonte
+\usepackage{mathptmx}               % p/ usar fonte Adobe Times nas formulas matematicas
+\usepackage{url}                    % para formatar URLs
+%\usepackage{color}				    % para imagens e outras coisas coloridas
+%\usepackage{fixltx2e}              % para subscript
+%\usepackage{amsmath}               % para \epsilon e matemática
+%\usepackage{amsfonts}
+%\usepackage{setspace}			    % para mudar espaçamento dos parágrafos
+%\usepackage[table,xcdraw]{xcolor}  % para tabelas coloridas
+%\usepackage{longtable}             % para tabelas compridas (mais de uma página)
+%\usepackage{float}
+%\usepackage{booktabs}
+%\usepackage{tabularx}
+%\usepackage{hyperref}
+
+\usepackage[alf,abnt-emphasize=bf]{abntex2cite}	% pacote para usar citações abnt
+
+% isso meio que coloca helvetica no título dos capítulos, mas fica com muito espaçamento
+%\titleformat{\chapter}
+%  {\normalfont\fontsize{12}{0}\sffamily\bfseries}
+%  {\thechapter}
+%  {1em}
+%  {}
+
+
+% isso muda a fonte de tudo:
+% \renewcommand\familydefault{\sfdefault}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Macros, ajustes e definições
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+% define estilo de parágrafo para citação longa direta:
+\newenvironment{citacao}{
+    %\singlespacing
+    %\footnotesize
+    \small
+    \begin{list}{}{
+        \setlength{\leftmargin}{4.0cm}
+        \setstretch{1}
+        \setlength{\topsep}{1.2cm}
+        \setlength{\listparindent}{\parindent}
+    }
+    \item[]}{\end{list}
+}
+
+% adiciona a fonte em figuras e tabelas
+\newcommand{\fonte}[1]{\\Fonte: {#1}}
+
+% Ative o seguinte caso alguma nota de rodapé fique muito longa e quebre entre múltiplas
+% páginas
+%\interfootnotelinepenalty=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Informações gerais
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% título
+\title{Implementação de um Tower Defense em Swift - Entrega parcial}
+
+% autor
+%\author{Autor2}{Aluno} % {sobrenome}{nome} 1 para cada aluno
+\author{Boranga}{Augusto} % {sobrenome}{nome}
+\author{Franzoi Scroferneker}{Rodrigo} % {sobrenome}{nome}
+
+% Professor orientador da disciplina
+\advisor[Prof.~Dr.]{Mello Schnorr}{Lucas}
+
+% Nome do(s) curso(s):
+\course{Curso de Graduação em Ciência da Computa{\c{c}}{\~a}o e Engenharia de Computação}
+
+% local da realização do trabalho
+\location{Porto Alegre}{RS}
+
+% data da entrega do trabalho (mês e ano)
+\date{12}{2017}
+
+
+% Palavras chave
+\keyword{Palavra-chave1}
+\keyword{Palavra-chave2}
+\keyword{Palavra-chave3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Início do documento e elementos pré-textuais
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Declara início do documento
+\begin{document}
+
+% inclui folha de rosto
+\maketitle
+
+\selectlanguage{brazilian}
+
+% Sumario
+\tableofcontents
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui comeca o texto propriamente dito
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%espaçamento entre parágrafos
+%\setlength{\parskip}{6 pt}
+
+\selectlanguage{brazilian}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Intro
+%
+
+\chapter{INTRODUÇÃO} \label{intro}
+
+Escolhemos para implementar o problema do jogo Tower Defense.
+
+Tower Defense é um subgênero de jogos de estratégia, onde o jogador deve defender seu território (que varia de acordo com a temática do jogo) contra o ataque de inimigos, podendo utilizar um montante inicial para adquirir elementos do jogo que o ajudem na defesa.
+
+Nossa implementação encontra-se no seguinte repositório no github: https://github.com/gutoboranga/tower-defense
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{PARADIGMA} \label{intro}
+
+Para a primeira etapa optamos por implementar o jogo usando Orientação a Objetos devido a conhecimento prévio de ambos integrantes do grupo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{REQUISITOS} \label{intro}
+
+A seguir está a lista de requisitos para o paradigma de Orientação a Objetos. Para cada um, há um exemplo retirado do nosso código-fonte.
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Classes}
+
+Especificar e utilizar classes (utilitárias ou para representar as estruturas de dados utilizadas pelo programa).
+
+Utilizamos diversas classes no projeto inteiro, seguindo o padrão MVC com leves alterações devido à presença do conceito de GameScene, trazido pela biblioteca de jogos SpriteKit.
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Encapsulamento}
+
+Fazer uso de encapsulamento e proteção dos atributos, com os devidos métodos de manipulação (setters/getters) ou propriedades de acesso, em especial com validação dos valores (parâmetros) para que estejam dentro do esperado ou gerem exceções caso contrário.
+
+Exemplo:
+
+Praticamos onde possível (e necessária) a proteção dos atributos. Por exemplo, na classe \texttt{LifeBar}, que representa a porcentagem de vida dos personagens do jogo (e seu elemento visual, no formato de uma barra que muda de acordo com o valor associado), há as seguintes funções de get e set.
+
+\texttt{\\public func getLife() -> Double \{\\\tab return self.actualLife\\\}}
+
+\texttt{\\public func setLife(newValue: Double) \{\\\tab self.actualLife = newValue\\\}}
+    
+O objetivo aqui é proteger o atributo privado \texttt{actualLife}, que representa o quanto de vida o objeto que possui este \texttt{LifeBar} ainda possui dentro do jogo.
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Construtores-Padrão}
+
+Especificação e uso de construtores-padrão para a inicialização dos atributos e, sempre que possível, de construtores alternativos.
+
+Na maioria das classes implementadas, criamos apenas um construtor - com parâmetros - pois não encontramos necessidade de criar construtores padrão, uma vez que em Swift pode-se inicializar os atributos de uma classe junto com sua declaração. Ao adotar esta prática, os atributos já terão valores default na criação do objeto.
+
+Na classe \texttt{Enemy}, temos um construtor padrão que inicializa os elementos que ainda não haviam sido inicializados na declaração e chamamos o método \texttt{init} da classe pai (super.init(parâmetros)).
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Destrutores}
+
+Especificação e uso de destrutores (ou métodos de finalização), quando necessário.
+
+Não houve necessidade de criar destrutores nas classes implementadas pois o framework utilizado lida com a desalocação de memória de maneira competente.
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Espaços de nome}
+
+Organizar o código em espaços de nome diferenciados, conforme a função ou estrutura de cada classe ou módulo de programa.
+
+Não foi implementado.
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Herança}
+
+Usar mecanismo de herança, em especial com a especificação de pelo menos três níveis de hierarquia, sendo pelo menos um deles correspondente a uma classe abstrata, mais genérica, a ser implementada nas classes-filhas.
+
+Exemplo:
+
+Temos a classe \texttt{StandardBlock}, que é uma classe abstrata da  qual a maioria dos personagens do jogo herda. \texttt{StandardBlock} possui apenas um atributo de orientação no espaço e métodos para manipular este atributo.
+
+Dentre suas herdeiras está a classe \texttt{Enemy}, que representa o tipo genérico de todos os inimigos presentes no jogo. Esta classe possui atributos e métodos comuns a todas as especificações de inimigos.
+
+Por sua vez, \texttt{Enemy} possui algumas classes herdeiras que especializam e personalizam o conceito genérico de inimigo, com implementações específicas de funções genéricas de acordo com as características deste personagem. Por exemplo, temos a classe \texttt{AstronautEnemy}, que representa o personagem astronauta.
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Polimorfismo por inclusão}
+
+Utilizar polimorfismo por inclusão (variável ou coleção genérica manipulando entidades de classes filhas, chamando métodos ou funções específicas correspondentes).
+
+Como citado anteriormente na seção Herança, temos a classe \texttt{Enemy} representando a classe genérica dos inimigos no jogo. Ela possui alguns métodos que devem ser sobrecarregados pelas suas herdeiras, de acordo com as características destas.
+
+Por exemplo, o método \texttt{getDamageValue()}, que retorna um Double representando o valor do dano que este inimigo causa ao atingir o castelo do jogador. Para a classe \texttt{AstronautEnemy} (que no âmbito do jogo representa um ser humano), esta função é implementada de forma a retornar o valor 0.7, enquanto que na classe \texttt{RoverEnemy} (que representa um veículo de exploração espacial, portanto mais forte do que um ser humano), a implementação desta função retorna o valor 2.0.
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Polimorfismo paramétrico}
+
+Usar polimorfismo paramétrico através da especificação de \textit{algoritmo} (método ou função genérico) utilizando o recurso oferecido pela linguagem (i.e., generics, templates ou similar) e da especificação de \textit{estrutura de dados} genérica utilizando o recurso oferecido pela linguagem.
+
+Exemplo:
+
+Implementamos uma função que previne erros na física da colisão dos elementos do jogo. Esta função recebe dois parâmetros de qualquer tipo e retorna um booleano que indica se seu tipo (mais genérico) é o mesmo.
+
+\texttt{\\func sameType<T,E>(one : T, two: E) -> Bool \{\\\tab if type(of: one) == type(of: two) \{\\\tab \tab return true\\\tab\}\\\tab return false\\\}}
+
+%func sameType<T,E>(one : T, two: E) -> Bool {
+%    if type(of: one) == type(of: two) {
+%        return true
+%    }
+%    return false
+%}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Polimorfismo por sobrecarga}
+
+Usar polimorfismo por sobrecarga (vale construtores alternativos).
+
+Utilizamos polimorfismo por sobrecarga na classe \texttt{Enemy}, onde temos duas implementações (com assinaturas diferentes) para a função \texttt{move()}:
+
+\begin{itemize}
+\setlength{\itemindent}{1em}
+    \item Uma delas é pública e não recebe parâmetros, tendo a seguinte assinatura, portanto:
+    
+    \texttt{public func move()}
+    
+    Esta serve para iniciar o movimento de um inimigo, e é chamada de fora da classe que a implementa, indicando o início do movimento de um inimigo.
+    
+    \item A segunda é privada e recebe como parâmetro uma lista de movimentos (pares ordenados x, y) a serem feitos pelo inimigo em questão. Sua assinatura é a seguinte:
+    
+    \texttt{private func move(\_ newDir : [[CGFloat]])}
+    
+    Nesta função privada, é realizado o movimento para a primeira posição (x, y) da lista recebida e após, são feitas chamadas recursivas para ela mesma enviando a lista sem o primeiro elemento.
+\end{itemize}
+
+
+%- A segunda é privada e recebe como parâmetro uma lista de movimentos pares ordenados (x, y). Sua assinatura é a seguinte::
+%private func move(_ newDir : [[CGFloat]])
+%Nesta função privada, é realizado o movimento para a primeira posição (x, y) da lista recebida e após, são feitas chamadas recursivas %para ela mesma enviando a lista sem o primeiro elemento.
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Delegates}
+
+Especificar e usar delegates.
+
+Utilizamos o conceito de delegate (em Swift conhecido como protocol) para fazer a comunicação entre os elementos visuais do jogo (View, no padrão MVC) com a parte mais conceitual (Model) sem criar dependências desnecessárias entre estas classes.
+
+Exemplo:
+
+Na classe \texttt{Tower} (que modela o conceito de uma torre de defesa dentro do jogo), é declarado o seguinte delegate:
+
+\texttt{\\ protocol TowerDelegate \{\\\tab func removeTower(tower : Tower)\\\tab func upgradeTower(tower: Tower)\\\}}
+
+A classe que implementa este delegate é a \texttt{GameScene}. Ela é, portanto, a responsável por tomar as ações necessárias quando a classe \\texttt{Tower} acionar algum dos métodos declarados neste protocol. Estas ações envolvem chamadas a métodos de outras classes. O uso deste delegate evita que a classe \texttt{Tower} fique acoplada a estas outras classes, deixando que a \texttt{GameScene} faça a comunicação necessária entre elas.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Conclusão
+%
+\chapter{CONCLUSÃO}
+
+Esta seção será construída no futuro.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referências
+%
+\chapter{REFERÊNCIAS}
+
+Acessos feitos em 28/10:
+
+\begin{itemize}
+\setlength{\itemindent}{1em}
+    \item https://developer.apple.com/swift/
+    \item https://insights.stackoverflow.com/survey/2017
+    \item http://www.bestprogramminglanguagefor.me/why-learn-swift
+    \item https://pt.stackoverflow.com/questions/141624/o-que-%C3%A9-paradigma
+    \item https://swift.org
+    \item http://gameranx.com/features/id/13529/article/best-tower-defense-games/
+\end{itemize}
+
+\end{document}

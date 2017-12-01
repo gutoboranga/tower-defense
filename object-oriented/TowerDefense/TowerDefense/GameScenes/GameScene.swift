@@ -223,8 +223,18 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
         self.setCoins(addValue: tower.getPrice())
     }
     
+    func sameType<T,E>(one : T, two: E) -> Bool {
+        if type(of: one) == type(of: two) {
+            return true
+        }
+        return false
+    }
     
-    func didBegin(_ contact: SKPhysicsContact) {
+    func handleContact(_ contact: SKPhysicsContact) -> Int {
+        if !sameType(one: contact.bodyA.node, two: contact.bodyB.node) {
+            print("physics error")
+            return -1
+        }
         
         if contact.bodyA.node?.name == "Castle"  {
             if let castle = contact.bodyA.node as? Castle {
@@ -266,6 +276,12 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
                 }
             }
         }
+        
+        return 0
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let _ = handleContact(contact)
     }
     
 //    func gameOver() {
