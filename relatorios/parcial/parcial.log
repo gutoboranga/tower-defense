@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 DEC 2017 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 DEC 2017 21:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1354,52 +1354,50 @@ Package babel Info: Redefining portuges shorthand "|
  [9]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 315.
+ <images/main-menu.png, id=132, 804.00375pt x 604.2575pt>
+File: images/main-menu.png Graphic file (type png)
+
+<use images/main-menu.png>
+Package pdftex.def Info: images/main-menu.png used on input line 324.
+(pdftex.def)             Requested size: 302.86243pt x 227.61945pt.
+
+<images/battle.png, id=134, 801.99625pt x 597.73312pt>
+File: images/battle.png Graphic file (type png)
+ <use images/battle.png>
+Package pdftex.def Info: images/battle.png used on input line 333.
+(pdftex.def)             Requested size: 305.41032pt x 227.62434pt.
+
+<images/win.png, id=135, 805.0075pt x 602.25pt>
+File: images/win.png Graphic file (type png)
+ <use images/win.png>
+Package pdftex.def Info: images/win.png used on input line 342.
+(pdftex.def)             Requested size: 304.26006pt x 227.62596pt.
+
+<images/lose.png, id=136, 798.985pt x 597.23125pt>
+File: images/lose.png Graphic file (type png)
+ <use images/lose.png>
+Package pdftex.def Info: images/lose.png used on input line 351.
+(pdftex.def)             Requested size: 304.51962pt x 227.62459pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 10
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 358.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 358.
 [10
 
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 325.
- <images/main-menu.png, id=136, 804.00375pt x 604.2575pt>
-File: images/main-menu.png Graphic file (type png)
-
-<use images/main-menu.png>
-Package pdftex.def Info: images/main-menu.png used on input line 334.
-(pdftex.def)             Requested size: 302.86243pt x 227.61945pt.
-
-<images/battle.png, id=138, 801.99625pt x 597.73312pt>
-File: images/battle.png Graphic file (type png)
- <use images/battle.png>
-Package pdftex.def Info: images/battle.png used on input line 343.
-(pdftex.def)             Requested size: 305.41032pt x 227.62434pt.
-
-<images/win.png, id=139, 805.0075pt x 602.25pt>
-File: images/win.png Graphic file (type png)
- <use images/win.png>
-Package pdftex.def Info: images/win.png used on input line 352.
-(pdftex.def)             Requested size: 304.26006pt x 227.62596pt.
-
-<images/lose.png, id=140, 798.985pt x 597.23125pt>
-File: images/lose.png Graphic file (type png)
- <use images/lose.png>
-Package pdftex.def Info: images/lose.png used on input line 361.
-(pdftex.def)             Requested size: 304.51962pt x 227.62459pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 368.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 368.
-
-[11
-
  <./images/main-menu.png> <./images/battle.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 358.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 358.
+ [11 <./images/win.png> <./images/lose.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 358.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 12
  []
@@ -1408,7 +1406,9 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 368.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 368.
-[12 <./images/win.png> <./images/lose.png>]
+[12
+
+]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 368.
 
@@ -1434,7 +1434,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 383.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 383.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 383.
 Package rerunfilecheck Info: File `parcial.out' has not changed.
-(rerunfilecheck)             Checksum: 1C7F650A973AE408AE1A412B9FD59F9F;2346.
+(rerunfilecheck)             Checksum: 6748DDC54C4E65C42C45953134651DCD;2346.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1455,7 +1455,7 @@ xlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on parcial.pdf (13 pages, 569915 bytes).
+Output written on parcial.pdf (13 pages, 569918 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  161 compressed objects within 2 object streams
