@@ -1,0 +1,40 @@
+\select@language {brazilian}
+\select@language {brazilian}
+\select@language {brazilian}
+\contentsline {chapter}{1~INTRODU\IeC {\c C}\IeC {\~A}O}{3}{CHAPTER.1}
+\contentsline {chapter}{2~PROBLEMA}{4}{CHAPTER.2}
+\contentsline {section}{\numberline {2.1}Din\IeC {\^a}mica do jogo}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Historicamente}{4}{section.2.2}
+\contentsline {chapter}{3~LINGUAGEM}{6}{CHAPTER.3}
+\contentsline {section}{\numberline {3.1}Hist\IeC {\'o}ria}{6}{section.3.1}
+\contentsline {section}{\numberline {3.2}Aspectos t\IeC {\'e}cnicos}{6}{section.3.2}
+\contentsline {section}{\numberline {3.3}Utiliza\IeC {\c c}\IeC {\~a}o}{7}{section.3.3}
+\contentsline {section}{\numberline {3.4}Motivo da escolha}{7}{section.3.4}
+\contentsline {section}{\numberline {3.5}An\IeC {\'a}lise}{8}{section.3.5}
+\contentsline {chapter}{4~IMPLEMENTA\IeC {\c C}\IeC {\~A}O}{9}{CHAPTER.4}
+\contentsline {section}{\numberline {4.1}PARADIGMA ORIENTADO A OBJETOS}{9}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Requisitos}{9}{subsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Classes}{9}{subsubsection.4.1.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Encapsulamento}{9}{subsubsection.4.1.1.2}
+\contentsline {subsubsection}{\numberline {4.1.1.3}Construtores-Padr\IeC {\~a}o}{10}{subsubsection.4.1.1.3}
+\contentsline {subsubsection}{\numberline {4.1.1.4}Destrutores}{10}{subsubsection.4.1.1.4}
+\contentsline {subsubsection}{\numberline {4.1.1.5}Espa\IeC {\c c}os de nome}{11}{subsubsection.4.1.1.5}
+\contentsline {subsubsection}{\numberline {4.1.1.6}Heran\IeC {\c c}a}{11}{subsubsection.4.1.1.6}
+\contentsline {subsubsection}{\numberline {4.1.1.7}Polimorfismo por inclus\IeC {\~a}o}{11}{subsubsection.4.1.1.7}
+\contentsline {subsubsection}{\numberline {4.1.1.8}Polimorfismo param\IeC {\'e}trico}{12}{subsubsection.4.1.1.8}
+\contentsline {subsubsection}{\numberline {4.1.1.9}Polimorfismo por sobrecarga}{12}{subsubsection.4.1.1.9}
+\contentsline {subsubsection}{\numberline {4.1.1.10}Delegates}{13}{subsubsection.4.1.1.10}
+\contentsline {section}{\numberline {4.2}PARADIGMA FUNCIONAL}{13}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Requisitos}{13}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}Elementos imut\IeC {\'a}veis e fun\IeC {\c c}\IeC {\~o}es puras}{13}{subsubsection.4.2.1.1}
+\contentsline {subsubsection}{\numberline {4.2.1.2}Fun\IeC {\c c}\IeC {\~o}es lambda}{14}{subsubsection.4.2.1.2}
+\contentsline {subsubsection}{\numberline {4.2.1.3}Currying}{14}{subsubsection.4.2.1.3}
+\contentsline {subsubsection}{\numberline {4.2.1.4}Pattern matching}{14}{subsubsection.4.2.1.4}
+\contentsline {subsubsection}{\numberline {4.2.1.5}Fun\IeC {\c c}\IeC {\~o}es de ordem superior pr\IeC {\'o}prias}{14}{subsubsection.4.2.1.5}
+\contentsline {subsubsection}{\numberline {4.2.1.6}Fun\IeC {\c c}\IeC {\~o}es de ordem superior prontas}{14}{subsubsection.4.2.1.6}
+\contentsline {subsubsection}{\numberline {4.2.1.7}Fun\IeC {\c c}\IeC {\~o}es como elementos de 1\IeC {\textordfeminine } ordem}{14}{subsubsection.4.2.1.7}
+\contentsline {subsubsection}{\numberline {4.2.1.8}Recurs\IeC {\~a}o}{14}{subsubsection.4.2.1.8}
+\contentsline {chapter}{5~SCREENSHOTS}{15}{CHAPTER.5}
+\contentsline {chapter}{6~CONCLUS\IeC {\~A}O}{17}{CHAPTER.6}
+\contentsline {chapter}{7~REFER\IeC {\^E}NCIAS}{18}{CHAPTER.7}
+\contentsfinish 
