@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: final.aux
+The style file: abntex2-alf.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: abntex2-options.bib
+Database file #2: biblio.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--campo year vazio ou faltando em best_tower_defense
+Warning--campo year vazio ou faltando em how_to_use_bibtex
+Warning--campo year vazio ou faltando em o_que_e_paradigma
+Warning--campo year vazio ou faltando em swift
+Warning--campo year vazio ou faltando em tower_defense
+Warning--campo year vazio ou faltando em why_learn_swift
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.1           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://abntex2.googlecode.com                           |
++---------------------------------------------------------+
+You've used 8 entries,
+            6711 wiz_defined-function locations,
+            1217 strings with 9915 characters,
+and the built_in function-call counts, 5115 in all, are:
+= -- 727
+> -- 0
+< -- 0
++ -- 101
+- -- 0
+* -- 207
+:= -- 615
+add.period$ -- 18
+call.type$ -- 8
+change.case$ -- 48
+chr.to.int$ -- 7
+cite$ -- 12
+duplicate$ -- 162
+empty$ -- 445
+format.name$ -- 0
+if$ -- 1448
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 116
+newline$ -- 38
+num.names$ -- 0
+pop$ -- 168
+preamble$ -- 1
+purify$ -- 24
+quote$ -- 0
+skip$ -- 613
+stack$ -- 1
+substring$ -- 168
+swap$ -- 54
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 27
+warning$ -- 6
+while$ -- 14
+width$ -- 0
+write$ -- 86
+(There were 6 warnings)

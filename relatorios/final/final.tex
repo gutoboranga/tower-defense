@@ -38,7 +38,7 @@
 %\usepackage{float}
 %\usepackage{booktabs}
 %\usepackage{tabularx}
-%\usepackage{hyperref}
+\usepackage{hyperref}
 
 \usepackage[alf,abnt-emphasize=bf]{abntex2cite}	% pacote para usar citações abnt
 
@@ -110,7 +110,6 @@
 \keyword{Palavra-chave2}
 \keyword{Palavra-chave3}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Início do documento e elementos pré-textuais
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,10 +122,17 @@
 
 \selectlanguage{brazilian}
 
+% Declarar aqui todas as referências
+\nocite{tower_defense}
+\nocite{best_tower_defense}
+\nocite{swift}
+\nocite{why_learn_swift}
+\nocite{o_que_e_paradigma}
+\nocite{how_to_use_bibtex}
+
+
 % Sumario
 \tableofcontents
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Aqui comeca o texto propriamente dito
@@ -150,6 +156,8 @@ Este relatório discorre sobre o trabalho final da disciplina de Modelos de Ling
 O objetivo deste trabalho é implementar um problema computacional em dois paradigmas diferentes (Orientação a Objetos e Funcional) utilizando uma mesma linguagem.
 
 Escolhemos implementar um jogo do gênero Tower Defense com a linguagem Swift.
+
+% REMOVER CITACAO ACIMA
 
 Nosso código-fonte encontra-se no seguinte repositório:
 \texttt{\\\tab https://github.com/gutoboranga/tower-defense}
@@ -552,19 +560,8 @@ Isto se deve ao fato de este paradigma se basear na criação de tipos abstratos
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Referências
 %
-\chapter{REFERÊNCIAS}
 
-Acessos feitos em 1/12:
-
-\begin{itemize}
-\setlength{\itemindent}{1em}
-    \item https://developer.apple.com/swift/
-    \item https://developer.apple.com/spritekit/
-    \item https://www.devmedia.com.br/uso-de-polimorfismo-em-java/26140
-    \item http://nsomar.com/parametric-compile-time-polymorphism-in-swift/
-    \item https://medium.com/@jamesrochabrun/implementing-delegates-in-swift-step-by-step-d3211cbac3ef
-    \item http://www.dca.fee.unicamp.br/cursos/PooJava/metodos/construtor.html
-    \item https://en.wikipedia.org/wiki/Delegation\_(object-oriented\_programming)
-\end{itemize}
+%\bibliographystyle{unsrt}
+\bibliography{biblio}
 
 \end{document}

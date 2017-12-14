@@ -1,0 +1,41 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.1 }
+
+\bibitem[Best Tower Defense Games of All Time]{best_tower_defense}
+\abntrefinfo{Best\ldots}{BEST\ldots}{}
+{BEST Tower Defense Games of All Time.
+  \url{http://gameranx.com/features/id/13529/article/best-tower-defense-games/}.
+Accessado em: 2017-10-28.}
+
+\bibitem[How to use BibTeX]{how_to_use_bibtex}
+\abntrefinfo{How\ldots}{HOW\ldots}{}
+{HOW to use BibTeX. \url{http://www.bibtex.org/Using/}.
+Accessado em: 2017-12-14.}
+
+\bibitem[O que é paradigma? - stackoverflow]{o_que_e_paradigma}
+\abntrefinfo{O\ldots}{O\ldots}{}
+{O que é paradigma? - stackoverflow.
+  \url{https://pt.stackoverflow.com/questions/141624/o-que-%C3%A9-paradigma}.
+Accessado em: 2017-10-28.}
+
+\bibitem[Swift - Apple Developer]{swift}
+\abntrefinfo{Swift\ldots}{SWIFT\ldots}{}
+{SWIFT - Apple Developer. \url{https://developer.apple.com/swift/}.
+Accessado em: 2017-10-28.}
+
+\bibitem[Tower Defense]{tower_defense}
+\abntrefinfo{Tower\ldots}{TOWER\ldots}{}
+{TOWER Defense. \url{https://en.wikipedia.org/wiki/Tower_defense}.
+Accessado em: 2017-10-28.}
+
+\bibitem[Why Learn Swift]{why_learn_swift}
+\abntrefinfo{Why\ldots}{WHY\ldots}{}
+{WHY Learn Swift.
+  \url{http://www.bestprogramminglanguagefor.me/why-learn-swift}.
+Accessado em: 2017-10-28.}
+
+\end{thebibliography}

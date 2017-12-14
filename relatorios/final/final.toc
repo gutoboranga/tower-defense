@@ -36,5 +36,5 @@
 \contentsline {subsubsection}{\numberline {4.2.1.8}Recurs\IeC {\~a}o}{14}{subsubsection.4.2.1.8}
 \contentsline {chapter}{5~SCREENSHOTS}{15}{CHAPTER.5}
 \contentsline {chapter}{6~CONCLUS\IeC {\~A}O}{17}{CHAPTER.6}
-\contentsline {chapter}{7~REFER\IeC {\^E}NCIAS}{18}{CHAPTER.7}
+\contentsline {chapter}{\xspace {}Refer{\^e}ncias}{18}{schapter.2}
 \contentsfinish 
