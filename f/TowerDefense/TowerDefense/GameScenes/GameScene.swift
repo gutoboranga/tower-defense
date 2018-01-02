@@ -92,11 +92,11 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
             self.hudLayer.setState(newState: newState)
             self.spawn.setState(newState: newState)
             
-            for tower in towers {
-                if let tower = tower as? Tower {
-                    tower.setState(newState: newState)
+            towers.forEach({ (tower) in
+                if let t = tower as? Tower {
+                    t.setState(newState: newState)
                 }
-            }
+            })
             
             switch newState {
             case .idle:
@@ -236,48 +236,61 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
             return -1
         }
         
-        if contact.bodyA.node?.name == "Castle"  {
-            if let castle = contact.bodyA.node as? Castle {
-                if let enemy = contact.bodyB.node as? Enemy {
-                    castle.loseLife(with: enemy.getDamageValue(), completion: {
-                        self.removeFromParent()
-                        self.gameDelegate?.endOfGame(won: false, score: self.score)
-                    })
-                    spawn.removeEnemy(enemy: enemy)
-                }
+        let nodeA = contact.bodyA.node
+        let nodeB = contact.bodyB.node
+        
+        switch nodeA?.name! {
+        case "Castle"?:
+            if nodeB?.name! == "Enemy" {
+                handleEnemyAndCastleContact(enemyNode: nodeB, castleNode: nodeA)
             }
-        } else if contact.bodyA.node?.name == "Projectile" {
-            if let projectile = contact.bodyA.node as? Projectile {
-                if let enemy = contact.bodyB.node as? Enemy {
-                    projectile.removeAllActions()
-                    enemy.loseLife(with: projectile.damage, completion: {
-                        self.removeEnemyFromGame(enemy: enemy)
-                    })
-                    projectile.removeFromParent()
-                }
-            }
-        } else if contact.bodyA.node?.name == "Enemy" {
-            if let enemy = contact.bodyA.node as? Enemy {
-                if let projectile = contact.bodyB.node as? Projectile {
-                    
-                    projectile.removeAllActions()
-                    enemy.loseLife(with: projectile.damage, completion: {
-                        self.removeEnemyFromGame(enemy: enemy)
-                    })
-                    projectile.removeFromParent()
-                }
+            
+        case "Enemy"?:
+            switch nodeB?.name! {
+            case "Castle"?:
+                handleEnemyAndCastleContact(enemyNode: nodeA, castleNode: nodeB)
                 
-                if let castle = contact.bodyB.node as? Castle {
-                    castle.loseLife(with: enemy.getDamageValue(), completion: {
-                        self.removeFromParent()
-                        self.gameDelegate?.endOfGame(won: false, score: self.score)
-                    })
-                    spawn.removeEnemy(enemy: enemy)
-                }
+            case "Projectile"?:
+                handleProjectileAndEnemyContact(projectileNode: nodeB, enemyNode: nodeA)
+                
+            default:
+                break
             }
+        
+        case "Projectile"?:
+            if nodeB?.name! == "Enemy" {
+                handleProjectileAndEnemyContact(projectileNode: nodeA, enemyNode: nodeB)
+            }
+        
+        default:
+            break
         }
         
         return 0
+    }
+    
+    func handleEnemyAndCastleContact(enemyNode: SKNode?, castleNode: SKNode?) {
+        if let castle = castleNode as? Castle {
+            if let enemy = enemyNode as? Enemy {
+                castle.loseLife(with: enemy.getDamageValue(), completion: {
+                    self.removeFromParent()
+                    self.gameDelegate?.endOfGame(won: false, score: self.score)
+                })
+                spawn.removeEnemy(enemy: enemy)
+            }
+        }
+    }
+    
+    func handleProjectileAndEnemyContact(projectileNode: SKNode?, enemyNode: SKNode?) {
+        if let enemy = enemyNode as? Enemy {
+            if let projectile = projectileNode as? Projectile {
+                projectile.removeAllActions()
+                enemy.loseLife(with: projectile.damage, completion: {
+                    self.removeEnemyFromGame(enemy: enemy)
+                })
+                projectile.removeFromParent()
+            }
+        }
     }
     
     func didBegin(_ contact: SKPhysicsContact) {

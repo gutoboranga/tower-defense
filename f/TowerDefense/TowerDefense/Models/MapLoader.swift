@@ -31,11 +31,10 @@ class MapLoader {
             if let layers = gamePhase["layers"] as? [[String:Any?]]{
                 for layer in layers {
                     if let data = layer["data"] as? [Int] {
+                        let spriteSize = CGSize(width: spriteWidth, height: spriteHeight)
+                        
                         for (index, obj) in data.reversed().enumerated() {
-                            
-                            let spriteSize = CGSize(width: spriteWidth, height: spriteHeight)
-                            self.delegate?.nodeForMatrix(mapHeight:  height,mapWidth:  width,index: index, objCode: obj, spriteSize: spriteSize)
-                            
+                            self.delegate?.nodeForMatrix(mapHeight: height,mapWidth: width,index: index, objCode: obj, spriteSize: spriteSize)
                         }
                     }
                 }
@@ -46,10 +45,10 @@ class MapLoader {
     func loadGame(named levelName:String) -> [String:Any?]?{
         if let path : String = Bundle.main.path(forResource: levelName, ofType: "json") {
             if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
-                do{
+                do {
                     let data = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any?]
                     return data
-                }catch{
+                } catch {
                     return nil
                 }
             }

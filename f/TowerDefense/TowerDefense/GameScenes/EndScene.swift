@@ -53,23 +53,23 @@ class EndScene: SKScene {
     }
     
     override func mouseDown(with event: NSEvent) {
-        self.selectedLabel = nil
         
         let point = event.location(in: self)
+        let nodes = self.nodes(at: point)
         
-        for node in self.nodes(at: point) {
-            
-            if let labelNode = node as? SKLabelNode {
-                
-                switch labelNode {
-                case self.newGameLabel!, self.quitLabel!, self.mainMenuLabel!:
-                    self.selectedLabel = labelNode
-                    self.selectedLabel?.fontSize += 6
-                default:
-                    break
-                }
-            }
-        }
+        let labelNodes = nodes.filter({
+            return $0.isMember(of: SKLabelNode.self)
+        })
+        
+        let labelToSelect = labelNodes.first(where: nodeIsClickable)
+        
+        self.selectedLabel = labelToSelect as? SKLabelNode
+    }
+    
+    func nodeIsClickable(node: SKNode) -> Bool {
+        return node == self.newGameLabel! ||
+               node == self.quitLabel! ||
+               node == self.mainMenuLabel!
     }
     
     override func mouseUp(with event: NSEvent) {
