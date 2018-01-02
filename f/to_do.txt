@@ -1,0 +1,49 @@
+- Priorizar o uso de elementos imutáveis e funções puras (por exemplo, sempre precisar manipular listas, criar uma nova e não modificar a original, seja por recursão ou através de funções de ordem maior).
+
+- Especificar e usar funções não nomeadas (ou lambda).
+
+- Especificar e usar funções que usem currying.
+
+- Especificar funções que utilizem pattern matching ao máximo, na sua definição. [DONE]
+// value-binding pattern:
+switch button.name! {
+    case "speed":
+        tower = SpeedTower(size: ground.size, position: ground.position)
+    case "damage":
+        tower = DamageTower(size: ground.size, position: ground.position)
+    case "range":
+        tower = RangeTower(size: ground.size, position: ground.position)
+    default:
+        tower = DoubleShotTower(size: ground.size, position: ground.position)
+    }
+}
+
+- Especificar e usar funções de ordem superior (maior) criadas pelo programador.
+
+- Usar funções de ordem maior prontas (p.ex., map, reduce, foldr/foldl ou similares).
+// reduce passando adiante um booleano:
+// confere se já há um torre no ponto clicado pelo jogador
+let foundTower = towers.reduce(false, { (hasFoundTowerYet, tower) -> Bool in
+    if let t = tower as? Tower {
+        if t.contains(point) {
+            t.mouseDown(with: event)
+            return hasFoundTowerYet || true
+        }
+    }
+    return hasFoundTowerYet || false
+})
+
+- Especificar e usar funções como elementos de 1ª ordem.
+
+- Usar recursão como mecanismo de iteração (pelo menos em funções de ordem superior que manipulem listas). [DONE]
+// spawn: funcao recursiva
+func spawnEnemy(_ enemies: [Int]) {
+        self.enemiesToSpawn -= 1
+        
+        if let enemyType = enemies.first {
+            run(SKAction.wait(forDuration: enemiesDelay), completion: {
+                self.handleEnemyTypes(type: enemyType)
+                self.spawnEnemy(Array(enemies.dropFirst()))
+            })
+        }
+    }
