@@ -5,37 +5,78 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.1 }
 
-\bibitem[Best Tower Defense Games of All Time]{best_tower_defense}
-\abntrefinfo{Best\ldots}{BEST\ldots}{}
-{BEST Tower Defense Games of All Time.
-  \url{http://gameranx.com/features/id/13529/article/best-tower-defense-games/}.
-Accessado em: 2017-10-28.}
+\bibitem[Apple]{swift}
+\abntrefinfo{Apple}{APPLE}{}
+{APPLE. \textbf{Swift - Apple Developer}.
+Available from Internet: \url{https://developer.apple.com/swift/}.}
 
-\bibitem[How to use BibTeX]{how_to_use_bibtex}
-\abntrefinfo{How\ldots}{HOW\ldots}{}
-{HOW to use BibTeX. \url{http://www.bibtex.org/Using/}.
-Accessado em: 2017-12-14.}
+\bibitem[Bibtex]{how_to_use_bibtex}
+\abntrefinfo{Bibtex}{BIBTEX}{}
+{BIBTEX. \textbf{How to use BibTeX}.
+Available from Internet: \url{http://www.bibtex.org/Using/}.}
+
+\bibitem[Brandt]{functional_swift_fold_it_baby}
+\abntrefinfo{Brandt}{BRANDT}{}
+{BRANDT, H. \textbf{Functional Swift: Fold it, baby!}
+Available from Internet:
+  \url{http://thepurecoder.com/functional-swift-fold-it-baby/}.}
+
+\bibitem[Codementor]{why_learn_swift}
+\abntrefinfo{Codementor}{CODEMENTOR}{}
+{CODEMENTOR. \textbf{Why Learn Swift}.
+Available from Internet:
+  \url{http://www.bestprogramminglanguagefor.me/why-learn-swift}.}
+
+\bibitem[Geison]{geison_medium_functional_swift}
+\abntrefinfo{Geison}{GEISON}{}
+{GEISON. \textbf{Geison's Medium - Functional Swift}.
+Available from Internet:
+  \url{https://medium.com/@geisonfgfg/functional-swift-41f1bed646d}.}
+
+\bibitem[Lee]{intro_to_swift_functional_programming_with_bob}
+\abntrefinfo{Lee}{LEE}{}
+{LEE, B. \textbf{Intro to Swift Functional Programming with Bob}.
+Available from Internet:
+  \url{https://blog.bobthedeveloper.io/intro-to-swift-functional-programming-with-bob-9c503ca14f13}.}
 
 \bibitem[O que é paradigma? - stackoverflow]{o_que_e_paradigma}
 \abntrefinfo{O\ldots}{O\ldots}{}
 {O que é paradigma? - stackoverflow.
-  \url{https://pt.stackoverflow.com/questions/141624/o-que-%C3%A9-paradigma}.
-Accessado em: 2017-10-28.}
+Available from Internet:
+  \url{https://pt.stackoverflow.com/questions/141624/o-que-\%C3\%A9-paradigma}.}
 
-\bibitem[Swift - Apple Developer]{swift}
+\bibitem[org]{swift_history}
+\abntrefinfo{org}{ORG}{}
+{ORG, S. \textbf{Swift History}.
+Available from Internet: \url{https://www.swift.com/about-us/history}.}
+
+\bibitem[Reece]{best_tower_defense}
+\abntrefinfo{Reece}{REECE}{}
+{REECE, D. \textbf{Best Tower Defense Games of All Time}.
+Available from Internet:
+  \url{http://gameranx.com/features/id/13529/article/best-tower-defense-games/}.}
+
+\bibitem[Schnorr 2017]{catp_01}
+\abntrefinfo{Schnorr}{SCHNORR}{2017}
+{SCHNORR, L. \textbf{CATP 01 Formulário}. 2017.
+Available from Internet:
+  \url{https://github.com/schnorr/mlp/blob/master/catps/01/formulario.pdf}.}
+
+\bibitem[Swift - Apple Developer - Functions]{swift_apple_developer_functions}
 \abntrefinfo{Swift\ldots}{SWIFT\ldots}{}
-{SWIFT - Apple Developer. \url{https://developer.apple.com/swift/}.
-Accessado em: 2017-10-28.}
+{SWIFT - Apple Developer - Functions.
+Available from Internet:
+  \url{https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift\_Programming\_Language/Functions.html}.}
 
-\bibitem[Tower Defense]{tower_defense}
-\abntrefinfo{Tower\ldots}{TOWER\ldots}{}
-{TOWER Defense. \url{https://en.wikipedia.org/wiki/Tower_defense}.
-Accessado em: 2017-10-28.}
+\bibitem[unknown]{tower_defense}
+\abntrefinfo{unknown}{UNKNOWN}{}
+{UNKNOWN. \textbf{Tower Defense}.
+Available from Internet: \url{https://en.wikipedia.org/wiki/Tower\_defense}.}
 
-\bibitem[Why Learn Swift]{why_learn_swift}
-\abntrefinfo{Why\ldots}{WHY\ldots}{}
-{WHY Learn Swift.
-  \url{http://www.bestprogramminglanguagefor.me/why-learn-swift}.
-Accessado em: 2017-10-28.}
+\bibitem[Yahel]{an_introduction_to_functional_programming_in_swift}
+\abntrefinfo{Yahel}{YAHEL}{}
+{YAHEL, N. \textbf{An Introduction to Functional Programming in Swift}.
+Available from Internet:
+  \url{https://www.raywenderlich.com/157123/introduction-functional-programming-swift-2}.}
 
 \end{thebibliography}

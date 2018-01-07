@@ -85,7 +85,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % título
-\title{Implementação de um Tower Defense em Swift - Entrega parcial}
+\title{Implementação de um Tower Defense em Swift - Entrega final}
 
 % autor
 %\author{Autor2}{Aluno} % {sobrenome}{nome} 1 para cada aluno
@@ -129,6 +129,13 @@
 \nocite{why_learn_swift}
 \nocite{o_que_e_paradigma}
 \nocite{how_to_use_bibtex}
+\nocite{functional_swift_fold_it_baby}
+\nocite{an_introduction_to_functional_programming_in_swift}
+\nocite{swift_apple_developer_functions}
+\nocite{intro_to_swift_functional_programming_with_bob}
+\nocite{geison_medium_functional_swift}
+\nocite{catp_01}
+\nocite{swift_history}
 
 
 % Sumario
@@ -243,7 +250,7 @@ Swift é uma das linguagens de programação mais recentes desenvolvidas no merc
 
 Baseada e influenciada por Objective-C, Ruby e Python, se mostrou uma linguagem poderosa e de fácil compreensão (devido principalmente, à sua sintaxe simples).
 
-Inicialmente, Swift era de uso exclusivo por usuários de Mac OS, visto que este era o único sistema operacional habilitado a compilar a linguagem. Em dezembro de 2015, porém, um grande anúncio mudou o jogo: Swift viraria open source, abrindo um leque ainda maior de possibilidades de uso para a linguagem.
+Inicialmente, Swift era de uso exclusivo por usuários de Mac OS, visto que este era o único sistema operacional habilitado a compilar a linguagem. Em dezembro de 2015, porém, um grande anúncio mudou o jogo: Swift viraria open source, abrindo um leque ainda maior de possibilidades de uso para a linguagem. \cite{swift_history}
 
 
 \section{Aspectos técnicos}
@@ -254,7 +261,7 @@ A linguagem possui tipagem estática, o que proporciona maior segurança (garant
 
 Por ter sido construída pela Apple, possui alta integração com Obj-C, outra linguagem utilizada no ambiente da Apple. Assim sendo, o programador que utiliza Swift tem à sua disposição uma série de bibliotecas em Obj-C, como por exemplo \textit{SpriteKit}, a biblioteca de construção de jogos que utilizaremos no desenvolvimento do trabalho.
 
-Sua sintaxe foi pensada para ser o mais simples e expressiva possível, tornando o código mais fácil de ler e escrever.
+Sua sintaxe foi pensada para ser o mais simples e expressiva possível, tornando o código mais fácil de ler e escrever. \cite{why_learn_swift}
 
 
 \section{Utilização}
@@ -289,13 +296,99 @@ Optamos por Swift por dois motivos:
 
 \section{Análise}
 
-A análise crítica será feita ao término do trabalho.
+Ao término do trabalho estamos habilitados para fazer uma análise mais técnica da linguagem. Para isto, usaremos as características presentes no Formulário de Avaliação de Linguagens \cite{catp_01}.
+
+\subsection{Simplicidade}
+
+Nota: 8/10
+
+Consideramos Swift uma linguagem com sintaxe bem simples e fácil de aprender.
+
+\subsection{Ortogonalidade}
+
+Nota: X/10
+
+TODO
+
+\subsection{Estrutura de Controle}
+
+Nota: 6/10
+
+TODO
+
+\subsection{Tipos de Dados}
+
+Nota: 10/10
+
+A linguagem tem suporte à criação de diversos tipos de dados como classes e enumerações.
+
+\subsection{Estruturas de Dados}
+
+Nota: 9/10
+
+TODO:
+
+\subsection{Suporte a Abstração de Dados}
+
+Nota: 9/10
+
+TODO:
+
+\subsection{Suporte a Abstração de Controle}
+
+Nota: 8/10
+
+TODO:
+
+\subsection{Expressividade}
+
+Nota: 9/10
+
+Swift é uma linguagem bastante expressiva. Isto é, poucos comandos em Swift representam muitos comandos em linguagem de máquina.
+
+\subsection{Checagem de Tipos}
+
+Nota: 8/10
+
+Swift é uma linguagem compilada com checagem de tipos.
+
+\subsection{Restrições de Aliasing}
+
+Nota: ?
+
+TODO
+
+\subsection{Suporte ao Tratamento de Exceções}
+
+Nota: 8/10
+
+O tratamento de exceções é bem simples e prático de ser implementado em Swift.
+
+\subsection{Portabilidade}
+
+Nota: 6/10
+
+A linguagem tornou-se \textit{open source} há pouco tempo. Portanto, a portabilidade aumentou bastante de lá pra cá. Entretanto, seu maior uso ainda é em sistemas fechados, como o desenvolvimento para plataformas proprietárias: iOS, macOS e watchOS (todos da Apple), por exemplo.
+
+\subsection{Reusabilidade}
+
+Nota: 7/10
+
+A linguagem permite a criação de frameworks, que podem ser distribuídos através de gerenciadores de dependências (como o \textit{Cocoa Pods}, por exemplo). Isto promove a reusabilidade de projetos em Swift.
+
+\subsection{Tamanho de Código}
+
+Nota: 9/10
+
+A linguagem permite expressar muitas ações em poucas linhas de código, se comparada com funções correspondentes em C ou Objective-C.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{IMPLEMENTAÇÃO} \label{intro}
 
-\section{PARADIGMA ORIENTADO A OBJETOS} \label{intro}
+\section{Paradigma Orientado a Objetos} \label{intro}
 
 Na primeira etapa do trabalho, optamos por implementar o jogo usando Orientação a Objetos devido a conhecimento prévio de ambos integrantes do grupo.
 
@@ -446,7 +539,7 @@ A classe que implementa este delegate é a \texttt{GameScene}. Ela é, portanto,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Funcional
 %
-\section{PARADIGMA FUNCIONAL}
+\section{Paradigma Funcional}
 
 Na segunda etapa do trabalho, implementamos o jogo utilizando técnicas do paradigma de Programação Funcional. Não fizemos uma implementação completamente funcional devido à algumas limitações do framework utilizado para a criação do jogo, mas sempre que possível aplicamos os mecanismos de programação funcional vistos em aula.
 
@@ -530,8 +623,8 @@ Além disso, utilizamos pattern matching nas \texttt{enumerations}:
 \\\tab\tab\tab return "You won!"
 \\\tab\tab default:
 \\\tab\tab\tab return "Game over"
-\\\tab\tab \}
 \\\tab \}
+\\\}
 }
 
 Aqui, o \texttt{switch} tenta dar match no valor de \texttt{self} (o objeto do tipo do \texttt{enum}) com os possíveis valores (\texttt{won} ou \texttt{lost}, que fica como default) para retornar uma \texttt{String} associada.
@@ -657,10 +750,15 @@ A seguir estão listados alguns screenshots tirados durante a execução do noss
 %
 \chapter{CONCLUSÃO}
 
-Ao término deste etapa do trabalho, podemos concluir que utilizar Orientação a Objetos em projetos que envolvem um grande número de entidades e elementos com diferentes características é muito apropriado.
+Ao término do trabalho, podemos concluir que utilizar Orientação a Objetos em projetos que envolvem um grande número de entidades e elementos com diferentes características é muito apropriado.
 
 Isto se deve ao fato de este paradigma se basear na criação de tipos abstratos (com seus atributos e métodos próprios), que permite uma maior separação nas responsabilidades de cada módulo do programa, resultando em um código-fonte mais organizado e conciso.
 
+Já o paradigma funcional não se mostrou tão adequado a um projeto de larga escala com frameworks que dependem de outros paradigmas. Ao menos nossa experiência neste trabalho deixou a impressão de que um projeto grande totalmente funcional não é muito viável.
+
+Entretanto, certos mecanismos associados ao paradigma funcional se mostraram bastante adequados ao projeto, mesmo junto com o uso de orientação a objetos. O uso de funções como \textit{map}, \textit{reduce}, \textit{filter}, e etc reduz a complexidade do código e o torna mais legível e elegante. O mesmo vale para o uso de funções lambda, muito utilizadas em \textit{Javascript} e linguagens de script em geral.
+
+Podemos concluir, por fim, que este trabalho nos auxiliou no aprendizado - através da prática - dos conceitos apresentados em ambos modelos de linguagens de programação (Orientação a Objetos e Funcional) e também na observação dos pontos positivos e negativos de cada um.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Referências
