@@ -448,7 +448,7 @@ A classe que implementa este delegate é a \texttt{GameScene}. Ela é, portanto,
 %
 \section{PARADIGMA FUNCIONAL}
 
-Na segunda etapa do trabalho, implementamos o jogo utilizando o paradigma de Programação Funcional.
+Na segunda etapa do trabalho, implementamos o jogo utilizando técnicas do paradigma de Programação Funcional. Não fizemos uma implementação completamente funcional devido à algumas limitações do framework utilizado para a criação do jogo, mas sempre que possível aplicamos os mecanismos de programação funcional vistos em aula.
 
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -460,49 +460,154 @@ A seguir estão listados os requisitos para o paradigma funcional. Para cada req
 
 \subsubsection{Elementos imutáveis e funções puras}
 
-Priorizar o uso de elementos imutáveis e funções puras (por exemplo, sempre precisar manipular listas, criar uma nova e não modificar a original, seja por recursão ou através de funções de ordem maior).
+Demos prioridade ao uso de elementos imutáveis sempre que possível. Uma exemplo disto é na manipulação de listas com recursão, em que criamos uma nova instância da lista e a passamos adiante, ao invés de alterar a lista original.
+
+No item \texttt{recursão} abaixo, está o trecho de código completo, mas aqui a chamada recursiva que fazemos enviando como parâmetro um novo array, criado a partir do array atual, mas retirando o primeiro elemento.
+
+\texttt{
+\\self.spawnEnemy(Array(enemies.dropFirst()))
+}
 
 %%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Funções lambda}
 
-Especificar e usar funções não nomeadas (ou lambda).
+Algumas funções que utilizamos recebem como parâmetro um pedaço de código (um \texttt{callback}, ou \texttt{completion}) a ser executado após certa instrução.
+
+Nosso exemplo é a função \texttt{loseLife}, que faz com que um elemento do jogo tenha sua quantidade de vida descrescida em um dado valor, e após, executa o trecho de código recebido por parâmetro.
+
+Declaração da função \texttt{loseLife}:
+
+\texttt{
+\\func loseLife(with damage:Double, completion: () -> ()) \{
+\\\tab lifeBar.loseLife(with: damage) \{
+\\\tab\tab completion()
+\\\tab \}
+\\\}
+}
+
+Exemplo de chamada da função passando uma função anônima por parâmetro:
+
+\texttt{
+\\castle.loseLife(with: enemy.getDamageValue(), completion: \{
+\\\tab self.removeFromParent()
+\\\tab self.gameDelegate?.endOfGame(won: false, score: self.score)
+\\\}
+}
 
 %%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Currying}
 
-Especificar e usar funções que usem currying.
+Não foi implementado.
 
 %%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Pattern matching}
 
-Especificar funções que utilizem pattern matching ao máximo, na sua definição.
+O tipo de pattern-matching que usamos é chamado em Swift \texttt{Value-binding pattern}. Este tipo é, em outras palavras, o uso do mecanismo de \texttt{switch} na asserção de valores possíveis acerca de uma variável ou constante.
+
+\texttt{
+\\switch button.name! {
+\\\tab case "speed":
+\\\tab\tab tower = SpeedTower(size: s, position: p)
+\\\tab case "damage":
+\\\tab\tab tower = DamageTower(size: s, position: p)
+\\\tab case "range":
+\\\tab\tab tower = RangeTower(size: s, position: p)
+\\\tab default:
+\\\tab\tab tower = DoubleShotTower(size: s, position: p)
+\\\tab }
+\\\}
+}
+
+Além disso, utilizamos pattern matching nas \texttt{enumerations}:
+
+\texttt{
+\\var title : String \{
+\\\tab switch self \{
+\\\tab\tab case .won:
+\\\tab\tab\tab return "You won!"
+\\\tab\tab default:
+\\\tab\tab\tab return "Game over"
+\\\tab\tab \}
+\\\tab \}
+}
+
+Aqui, o \texttt{switch} tenta dar match no valor de \texttt{self} (o objeto do tipo do \texttt{enum}) com os possíveis valores (\texttt{won} ou \texttt{lost}, que fica como default) para retornar uma \texttt{String} associada.
 
 %%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Funções de ordem superior próprias}
 
-Especificar e usar funções de ordem superior (maior) criadas pelo programador.
+Não foi implementado.
 
 %%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Funções de ordem superior prontas}
 
-Usar funções de ordem maior prontas (p.ex., map, reduce, foldr/foldl ou similares).
+Utilizamos sempre que possível as funções de ordem superior oferecidas pela linguagem. Alguns exemplos:
+
+Na função que trata o clique do usuário na tela, precisamos descobrir se no ponto x,y clicado há uma torre, para então tomar as devidas providências em caso positivo ou negativo.
+Para isto, aplicamos a função \texttt{reduce} (que retorna um valor ao final da iteração sobre a lista) sobre a lista de torres em atividade no momento, de modo a retornar um booleano no final que indica se alguma das torres foi clicada.
+
+\texttt{
+\\let foundTower = towers.reduce(false, \{ (hasFoundTowerYet, tower) \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab-> Bool in
+    \\\tab if let t = tower as? Tower \{
+    \\\tab\tab if t.contains(point) \{
+    \\\tab\tab\tab t.mouseDown(with: event)
+    \\\tab\tab\tab return hasFoundTowerYet || true
+    \\\tab\tab \}
+    \\\tab \}
+    \\\tab return hasFoundTowerYet || false
+\\\})}
+
+No menu final do jogo, há vários botões de ações que podem ser tomadas, entre elas recomeçar o jogo e voltar ao menu inicial.
+Para tratar o clique neste menu, precisamos descobrir se ele ocorreu em algum dos nodos (o nodeo é a estrutura básica do framework, para qualquer tipo de representação visual) que podem ser clicados (no caso, nodos de texto, os \texttt{SKLabelNode}). Isto é, precisamos filtrar os nodos que estavam no ponto x,y clicado para pegar apenas os nodos de texto.
+
+\texttt{
+\\let labelNodes = allNodes.filter(\{
+\\\tab return \$0.isMember(of: SKLabelNode.self)
+\\\})}
 
 %%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Funções como elementos de 1ª ordem}
 
-Especificar e usar funções como elementos de 1ª ordem.
+A função nodeIsClickable recebe um \texttt{SKNode} (elemento visual mais básico) e retorna um booleano. Serve como um filtro pra saber se será necessário tratar o clique do usuário (se clicou em um nodo que desencadeia uma ação) ou se foi um clique sem consequências.
+
+Implementação da função:
+
+\texttt{
+\\func nodeIsClickable(node: SKNode) -> Bool \{
+\\\tab return node == self.newGameLabel! ||
+\\\tab\tab\tab node == self.quitLabel! ||
+\\\tab\tab\tab node == self.mainMenuLabel!
+\\\}}
+    
+Uso com o método \texttt{first(where: f)}, que recebe uma função do tipo \texttt{(SKNode) -> (Bool)} como parâmetro e retorna o primeiro elemento que satisfizer a condição da funcao recebida (ou seja, quando a função retornar true). Aqui referenciamos nossa função definida acima.
+
+\texttt{\\let labelToSelect = labelNodes.first(where: nodeIsClickable)}
 
 %%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Recursão}
 
-Usar recursão como mecanismo de iteração (pelo menos em funções de ordem superior que manipulem listas).
+Utilizamos recursão em alguns momentos em que era necessário manipular listas passando adiante cópias da lista original removendo seus elementos.
+Nosso exemplo é da função \texttt{spawnEnemy}, que serve para adicionar os inimigos na tela.
+
+\texttt{
+\\func spawnEnemy(\_ enemies: [Int]) \{
+\\\tab self.enemiesToSpawn -= 1
+\\\tab if let enemyType = enemies.first \{
+\\\tab\tab run(SKAction.wait(forDuration: enemiesDelay), completion:
+\\\tab\tab \{
+\\\tab\tab\tab self.handleEnemyTypes(type: enemyType)
+\\\tab\tab\tab self.spawnEnemy(Array(enemies.dropFirst()))
+\\\tab\tab \})
+\\\tab \}
+\\\}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Screenshots

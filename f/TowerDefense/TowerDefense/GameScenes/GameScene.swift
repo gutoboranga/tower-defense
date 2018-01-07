@@ -61,16 +61,18 @@ class GameScene: SKScene, MapDelegate, HudLayerDelegate, SpawnDelegate, TowerDel
         
         if let button = hudLayer?.selectedButton {
             var tower : Tower!
+            let s = ground.size
+            let p = ground.position
             
             switch button.name! {
             case "speed":
-                tower = SpeedTower(size: ground.size, position: ground.position)
+                tower = SpeedTower(size: s, position: p)
             case "damage":
-                tower = DamageTower(size: ground.size, position: ground.position)
+                tower = DamageTower(size: s, position: p)
             case "range":
-                tower = RangeTower(size: ground.size, position: ground.position)
+                tower = RangeTower(size: s, position: p)
             default:
-                tower = DoubleShotTower(size: ground.size, position: ground.position)
+                tower = DoubleShotTower(size: s, position: p)
             }
             
             tower.delegate = self

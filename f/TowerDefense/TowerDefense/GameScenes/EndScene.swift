@@ -53,11 +53,10 @@ class EndScene: SKScene {
     }
     
     override func mouseDown(with event: NSEvent) {
-        
         let point = event.location(in: self)
-        let nodes = self.nodes(at: point)
+        let allNodes = self.nodes(at: point)
         
-        let labelNodes = nodes.filter({
+        let labelNodes = allNodes.filter({
             return $0.isMember(of: SKLabelNode.self)
         })
         

@@ -22,7 +22,6 @@ func loseLife(with damage:Double, completion: () ->()) {
 castle.loseLife(with: enemy.getDamageValue(), completion: {
     self.removeFromParent()
     self.gameDelegate?.endOfGame(won: false, score: self.score)
-})
 
 
 
@@ -44,6 +43,9 @@ switch button.name! {
     }
 }
 
+#TODO: trocar ground;position por p
+#TODO: ground.size por s
+
 // vários enums com cases
 enum ObjectFaceOrientation : Float {
     case right = 270.0
@@ -53,6 +55,14 @@ enum ObjectFaceOrientation : Float {
     ...
 
 
+var title : String {
+        switch self {
+        case .won:
+            return "You won!"
+        default:
+            return "Game over"
+        }
+    }
 
 
 - Especificar e usar funções de ordem superior (maior) criadas pelo programador.
@@ -77,7 +87,7 @@ let labelNodes = nodes.filter({
     return $0.isMember(of: SKLabelNode.self)
 })
 
-
+#TODO: trocar nodes por allNodes
 
 - Especificar e usar funções como elementos de 1ª ordem. [DONE]
 // função nodeIsClickable, recebe um SKNode e retorna um Bool. Serve como um filtro pra saber se será necessário tratar o clique do usuário (se clicou em um nodo - elemento visual do framework - que desencadeia uma ação) ou se foi um clique sem consequências.
@@ -92,6 +102,16 @@ func nodeIsClickable(node: SKNode) -> Bool {
 // uso com o método first(where: f), que recebe uma função do tipo (SKNode) -> (Bool) como parâmetro e retorna o primeiro elemento que satisfizer a condição da funcao recebida (aka, quando a função retornar true). Aqui referenciamos nossa funcao definida acima.
 let labelToSelect = labelNodes.first(where: nodeIsClickable)
 
+
+\\func spawnEnemy(\_ enemies: [Int]) \{
+\\\tab self.enemiesToSpawn -= 1
+    
+\\\tab if let enemyType = enemies.first \{
+\\\tab\tab run(SKAction.wait(forDuration: enemiesDelay), completion: \{
+\\\tab\tab\tab self.handleEnemyTypes(type: enemyType)
+\\\tab\tab\tab self.spawnEnemy(Array(enemies.dropFirst()))
+\\\tab\tab \})
+\\\tab \}
 
 
 - Usar recursão como mecanismo de iteração (pelo menos em funções de ordem superior que manipulem listas). [DONE]
