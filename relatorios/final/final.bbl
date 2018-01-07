@@ -21,9 +21,9 @@ Available from Internet: \url{http://www.bibtex.org/Using/}.}
 Available from Internet:
   \url{http://thepurecoder.com/functional-swift-fold-it-baby/}.}
 
-\bibitem[Codementor]{why_learn_swift}
-\abntrefinfo{Codementor}{CODEMENTOR}{}
-{CODEMENTOR. \textbf{Why Learn Swift}.
+\bibitem[Codementor 2016]{why_learn_swift}
+\abntrefinfo{Codementor}{CODEMENTOR}{2016}
+{CODEMENTOR. \textbf{Why Learn Swift}. 2016.
 Available from Internet:
   \url{http://www.bestprogramminglanguagefor.me/why-learn-swift}.}
 
@@ -45,11 +45,6 @@ Available from Internet:
 Available from Internet:
   \url{https://pt.stackoverflow.com/questions/141624/o-que-\%C3\%A9-paradigma}.}
 
-\bibitem[org]{swift_history}
-\abntrefinfo{org}{ORG}{}
-{ORG, S. \textbf{Swift History}.
-Available from Internet: \url{https://www.swift.com/about-us/history}.}
-
 \bibitem[Reece]{best_tower_defense}
 \abntrefinfo{Reece}{REECE}{}
 {REECE, D. \textbf{Best Tower Defense Games of All Time}.
@@ -62,15 +57,20 @@ Available from Internet:
 Available from Internet:
   \url{https://github.com/schnorr/mlp/blob/master/catps/01/formulario.pdf}.}
 
+\bibitem[stackoverflow 2017]{stack_overflow_developer_survey_results}
+\abntrefinfo{stackoverflow}{STACKOVERFLOW}{2017}
+{STACKOVERFLOW. \textbf{Stack Overflow - Developer Survey Results}. 2017.
+Available from Internet: \url{https://insights.stackoverflow.com/survey/2017}.}
+
 \bibitem[Swift - Apple Developer - Functions]{swift_apple_developer_functions}
 \abntrefinfo{Swift\ldots}{SWIFT\ldots}{}
 {SWIFT - Apple Developer - Functions.
 Available from Internet:
   \url{https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift\_Programming\_Language/Functions.html}.}
 
-\bibitem[unknown]{tower_defense}
-\abntrefinfo{unknown}{UNKNOWN}{}
-{UNKNOWN. \textbf{Tower Defense}.
+\bibitem[Wikipedia 2017]{tower_defense}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2017}
+{WIKIPEDIA. \textbf{Tower Defense}. 2017.
 Available from Internet: \url{https://en.wikipedia.org/wiki/Tower\_defense}.}
 
 \bibitem[Yahel]{an_introduction_to_functional_programming_in_swift}

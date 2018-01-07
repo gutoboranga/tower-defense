@@ -16,29 +16,29 @@ Database file #2: biblio.bib
 Warning--entry type for "tower_defense" isn't style-file defined
 --line 1 of file biblio.bib
 Warning--entry type for "best_tower_defense" isn't style-file defined
---line 8 of file biblio.bib
+--line 9 of file biblio.bib
 Warning--entry type for "swift" isn't style-file defined
---line 15 of file biblio.bib
+--line 16 of file biblio.bib
 Warning--entry type for "why_learn_swift" isn't style-file defined
---line 22 of file biblio.bib
+--line 23 of file biblio.bib
 Warning--entry type for "o_que_e_paradigma" isn't style-file defined
---line 29 of file biblio.bib
+--line 31 of file biblio.bib
 Warning--entry type for "how_to_use_bibtex" isn't style-file defined
---line 35 of file biblio.bib
+--line 37 of file biblio.bib
 Warning--entry type for "functional_swift_fold_it_baby" isn't style-file defined
---line 42 of file biblio.bib
+--line 44 of file biblio.bib
 Warning--entry type for "an_introduction_to_functional_programming_in_swift" isn't style-file defined
---line 50 of file biblio.bib
+--line 52 of file biblio.bib
 Warning--entry type for "swift_apple_developer_functions" isn't style-file defined
---line 58 of file biblio.bib
+--line 60 of file biblio.bib
 Warning--entry type for "intro_to_swift_functional_programming_with_bob" isn't style-file defined
---line 64 of file biblio.bib
+--line 66 of file biblio.bib
 Warning--entry type for "geison_medium_functional_swift" isn't style-file defined
---line 72 of file biblio.bib
+--line 74 of file biblio.bib
 Warning--entry type for "catp_01" isn't style-file defined
---line 79 of file biblio.bib
-Warning--entry type for "swift_history" isn't style-file defined
---line 87 of file biblio.bib
+--line 81 of file biblio.bib
+Warning--entry type for "stack_overflow_developer_survey_results" isn't style-file defined
+--line 89 of file biblio.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -46,14 +46,11 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Warning--campo year vazio ou faltando em swift
 Warning--campo year vazio ou faltando em how_to_use_bibtex
 Warning--campo year vazio ou faltando em functional_swift_fold_it_baby
-Warning--campo year vazio ou faltando em why_learn_swift
 Warning--campo year vazio ou faltando em geison_medium_functional_swift
 Warning--campo year vazio ou faltando em intro_to_swift_functional_programming_with_bob
 Warning--campo year vazio ou faltando em o_que_e_paradigma
-Warning--campo year vazio ou faltando em swift_history
 Warning--campo year vazio ou faltando em best_tower_defense
 Warning--campo year vazio ou faltando em swift_apple_developer_functions
-Warning--campo year vazio ou faltando em tower_defense
 Warning--campo year vazio ou faltando em an_introduction_to_functional_programming_in_swift
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.1           |
@@ -62,43 +59,43 @@ Warning--campo year vazio ou faltando em an_introduction_to_functional_programmi
 +---------------------------------------------------------+
 You've used 15 entries,
             6711 wiz_defined-function locations,
-            1248 strings with 10871 characters,
-and the built_in function-call counts, 23731 in all, are:
-= -- 3215
+            1249 strings with 10943 characters,
+and the built_in function-call counts, 24039 in all, are:
+= -- 3260
 > -- 165
-< -- 817
-+ -- 936
+< -- 825
++ -- 944
 - -- 55
-* -- 1237
-:= -- 2867
-add.period$ -- 38
+* -- 1263
+:= -- 2904
+add.period$ -- 41
 call.type$ -- 15
 change.case$ -- 82
 chr.to.int$ -- 14
-cite$ -- 25
-duplicate$ -- 2737
-empty$ -- 766
+cite$ -- 22
+duplicate$ -- 2767
+empty$ -- 784
 format.name$ -- 253
-if$ -- 4543
+if$ -- 4600
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 214
+missing$ -- 217
 newline$ -- 73
 num.names$ -- 55
-pop$ -- 284
+pop$ -- 290
 preamble$ -- 1
 purify$ -- 45
 quote$ -- 0
-skip$ -- 3128
+skip$ -- 3137
 stack$ -- 1
-substring$ -- 976
-swap$ -- 904
+substring$ -- 1020
+swap$ -- 918
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 8
-warning$ -- 12
-while$ -- 75
+warning$ -- 9
+while$ -- 78
 width$ -- 0
-write$ -- 176
-(There were 25 warnings)
+write$ -- 179
+(There were 22 warnings)
