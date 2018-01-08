@@ -300,21 +300,65 @@ Ao término do trabalho estamos habilitados para fazer uma análise mais técnic
 
 \subsection{Simplicidade}
 
-Nota: 8/10
+Nota: 9/10
 
-Consideramos Swift uma linguagem com sintaxe bem simples e fácil de aprender.
+Swift se mostrou uma linguagem muito simples. Suas operações são bem específicas e claras. Além disso, é possível perceber que ao longo do amadurecimento da linguagem, muitas ambiguidades foram retiradas, por exemplo, cont++ já foi possível fazer em versões anteriores da linguagem, hoje não é mais possível, pois era ambígua com cont += 1.
+
+\texttt{
+\\self.score += value
+}
 
 \subsection{Ortogonalidade}
 
-Nota: X/10
+Nota: 8/10
 
-TODO
+Apesar de muito simples de utilizar e com uma expectativa muito alta, Swift deixou um pouco a desejar quanto a Ortogonalidade.
+
+\texttt{
+\\let action = SKAction.resize(toWidth: CGFloat(self.actualLife * Double(lifeBarSize) / self.life) , duration: 0.2)
+}
+
+Como podemos observar no trecho de código acima, muitas vezes fomos obrigados a mudar o tipo de alguns valores, pois não era possível fazer operações entre os tipos primitivos da linguagem.
 
 \subsection{Estrutura de Controle}
 
 Nota: 6/10
 
-TODO
+A linguagem de programação apresentou uma variada disposição de estrutura de controle, além disso elas são bem expressivas e legíveis:
+
+\texttt{
+\\switch button.name! {
+\\\tab case "speed":
+\\\tab\tab tower = SpeedTower(size: s, position: p)
+\\\tab case "damage":
+\\\tab\tab tower = DamageTower(size: s, position: p)
+\\\tab case "range":
+\\\tab\tab tower = RangeTower(size: s, position: p)
+\\\tab default:
+\\\tab\tab tower = DoubleShotTower(size: s, position: p)
+\\\tab }
+\\\}
+}
+
+\texttt{
+\\for tower in towers {
+\\\tab if let tower = tower as? Tower {
+\\\tab\tab if tower.contains(point) {
+\\\tab\tab\tab tower.towerMenu.activate()
+\\\tab\tab\tab tower.towerMenu.mouseDown(with: event)
+\\\tab\tab} else {
+\\\tab\tab\tabtower.towerMenu.disable()
+\\\tab\tab}
+\\\tab}
+\\}
+}
+
+\texttt{
+\\towers.forEach({ tower in
+\\\tab (tower as! Tower).towerMenu.disable()
+\\})
+}
+
 
 \subsection{Tipos de Dados}
 
