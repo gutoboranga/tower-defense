@@ -364,7 +364,16 @@ A linguagem de programação apresentou uma variada disposição de estrutura de
 
 Nota: 10/10
 
-A linguagem tem suporte à criação de diversos tipos de dados como classes e enumerações.
+Swift tem suporte à criação de diversos tipos de dados como classes, enumerações, booleanos e tipos genéricos.
+
+\texttt{
+\\func sameType<T,E>(one : T, two: E) -> Bool {
+\\\tab if type(of: one) == type(of: two) {
+\\\tab\tab return true
+\\\tab}
+\\return false
+\\}
+}
 
 \subsection{Estruturas de Dados}
 
@@ -394,7 +403,7 @@ Swift é uma linguagem bastante expressiva. Isto é, poucos comandos em Swift re
 
 Nota: 8/10
 
-Swift é uma linguagem compilada com checagem de tipos.
+Swift é uma linguagem compilada com checagem de tipos. Isso permitiu um código muito mais confiável permitindo rápidas soluções em erros, no entanto, diminuiu, e muito, a legibilidade do código. 
 
 \subsection{Restrições de Aliasing}
 
@@ -412,7 +421,7 @@ O tratamento de exceções é bem simples e prático de ser implementado em Swif
 
 Nota: 6/10
 
-A linguagem tornou-se \textit{open source} há pouco tempo. Portanto, a portabilidade aumentou bastante de lá pra cá. Entretanto, seu maior uso ainda é em sistemas fechados, como o desenvolvimento para plataformas proprietárias: iOS, macOS e watchOS (todos da Apple), por exemplo.
+A linguagem tornou-se \textit{open source} há pouco tempo. Portanto, a portabilidade aumentou bastante de lá pra cá. Entretanto, seu maior uso ainda é em sistemas fechados, como o desenvolvimento para plataformas proprietárias: iOS, macOS, watchOS e tvOS (todos da Apple), por exemplo.
 
 \subsection{Reusabilidade}
 
