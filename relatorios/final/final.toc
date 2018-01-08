@@ -19,12 +19,11 @@
 \contentsline {subsection}{\numberline {3.5.6}Suporte a Abstra\IeC {\c c}\IeC {\~a}o de Dados}{11}{subsection.3.5.6}
 \contentsline {subsection}{\numberline {3.5.7}Suporte a Abstra\IeC {\c c}\IeC {\~a}o de Controle}{11}{subsection.3.5.7}
 \contentsline {subsection}{\numberline {3.5.8}Expressividade}{11}{subsection.3.5.8}
-\contentsline {subsection}{\numberline {3.5.9}Checagem de Tipos}{12}{subsection.3.5.9}
-\contentsline {subsection}{\numberline {3.5.10}Restri\IeC {\c c}\IeC {\~o}es de Aliasing}{12}{subsection.3.5.10}
-\contentsline {subsection}{\numberline {3.5.11}Suporte ao Tratamento de Exce\IeC {\c c}\IeC {\~o}es}{12}{subsection.3.5.11}
-\contentsline {subsection}{\numberline {3.5.12}Portabilidade}{12}{subsection.3.5.12}
-\contentsline {subsection}{\numberline {3.5.13}Reusabilidade}{13}{subsection.3.5.13}
-\contentsline {subsection}{\numberline {3.5.14}Tamanho de C\IeC {\'o}digo}{13}{subsection.3.5.14}
+\contentsline {subsection}{\numberline {3.5.9}Checagem de Tipos}{11}{subsection.3.5.9}
+\contentsline {subsection}{\numberline {3.5.10}Suporte ao Tratamento de Exce\IeC {\c c}\IeC {\~o}es}{12}{subsection.3.5.10}
+\contentsline {subsection}{\numberline {3.5.11}Portabilidade}{12}{subsection.3.5.11}
+\contentsline {subsection}{\numberline {3.5.12}Reusabilidade}{12}{subsection.3.5.12}
+\contentsline {subsection}{\numberline {3.5.13}Tamanho de C\IeC {\'o}digo}{13}{subsection.3.5.13}
 \contentsline {chapter}{4~IMPLEMENTA\IeC {\c C}\IeC {\~A}O}{14}{CHAPTER.4}
 \contentsline {section}{\numberline {4.1}Paradigma Orientado a Objetos}{14}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Requisitos}{14}{subsection.4.1.1}
